@@ -36,7 +36,7 @@
 - [x] チャート系: Apple + LINE + スペースシャワー採用 (Melon見送り、レコチョク後回し)
 - [x] fetch_apple / fetch_line / fetch_spaceshower / mine_chart_ids / 外部ID縦持ち
 - [ ] artist_external_ids.csv の unmatched を人手で confirmed へ確定し続ける
-- [ ] Databricks Deltaテーブルへ書き込み
+- [ ] Databricks Deltaテーブルへ書き込み ([databricks/README.md](databricks/README.md) · Free Edition: Volume → Notebook)
 - [ ] Slack通知 (取得成功/失敗 + キリ番アラート + 他事務所TOP15入れ替えアラート)
 
 ### 制作環境 (W3-4)

@@ -52,5 +52,5 @@ kpop_agent_power_data/
 | データソース | YouTube / Wikipedia / Apple / LINE / Space Shower |
 | OTHERプール | 20〜30組目標。集計はTOP15 (チャート勢い+YouTube+ヒステリシス) |
 | 楽曲マスタ | タイトル曲のみ。YouTube TOP10 + チャート出現曲で初期選定 |
-| 保存先 | GitHubリポジトリの `data/` (CSV)。DatabricksはPhase 4 |
+| 保存先 | GitHubリポジトリの `data/` (CSV)。DatabricksはPhase 4 — Free Edition手順は [databricks/README.md](databricks/README.md) |
 | 実行タイミング | 毎日 JST 6:00 |
