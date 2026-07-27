@@ -82,8 +82,16 @@ HYBE内のマッピング例: BTS/TXT/CORTIS→BIGHIT MUSIC、SEVENTEEN→PLEDIS
 
 [scripts/track_external_ids.csv](scripts/track_external_ids.csv)。`(platform, external_track_id)` → `artist_name_en` + `track_name`。
 
-- `track_master.csv` = 「追いたい公式タイトル曲」(YouTube等の日次スナップショット用)
-- `track_external_ids.csv` = 「チャートに出た曲のIDレジストリ」(チャート名寄せ用)
+- `track_master.csv` = 「追いたい楽曲」の canonical マスタ (`track_id` 付き。チャート横断＋代表MV)
+- `track_external_ids.csv` = 「チャートに出た曲のIDレジストリ」(apple / line / spaceshower → アーティスト・曲名)
+
+初期構築: [scripts/mine_chart_ids.py](scripts/mine_chart_ids.py) → [scripts/build_track_master.py](scripts/build_track_master.py)  
+日次ランキング: [scripts/rank_songs.py](scripts/rank_songs.py) → `data/song_rankings/top_*.csv` / `hot_*.csv`
+
+| ランキング | 意味 | 主指標 |
+|---|---|---|
+| TOP SONG 20 | 定着・総合力 | 直近7日チャート加点 + YouTube累積再生 |
+| HOT SONG 20 | 勢い | 直近3日−前3日のチャートデルタ + 新規/上昇ボーナス + YTエンゲージメント |
 
 ### 「他事務所TOP15」インデックスの設計
 

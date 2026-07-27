@@ -34,8 +34,8 @@ jobs:
           set -e
           git config user.name "riverstone-bot"
           git config user.email "riverstone0228@gmail.com"
-          git add data/raw/ data/youtube_videos/ data/apple_charts/ data/line_charts/ data/spaceshower_charts/ data/other_agency_top15/
-          git add scripts/artist_external_ids.csv scripts/track_external_ids.csv scripts/artist_external_candidates.csv || true
+          git add data/raw/ data/youtube_videos/ data/apple_charts/ data/line_charts/ data/spaceshower_charts/ data/other_agency_top15/ data/song_rankings/
+          git add scripts/artist_external_ids.csv scripts/track_external_ids.csv scripts/artist_external_candidates.csv scripts/track_master.csv || true
           if git diff --quiet --cached; then
             echo "No data changes to commit."
           else

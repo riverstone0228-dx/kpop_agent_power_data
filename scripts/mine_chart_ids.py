@@ -49,7 +49,15 @@ CANDIDATE_FIELDS = [
 ]
 
 
-def collect_from_files(paths, artist_id_col, track_id_col, artist_name_col, track_name_col, date_col):
+def collect_from_files(
+    paths,
+    artist_id_col,
+    track_id_col,
+    artist_name_col,
+    track_name_col,
+    date_col,
+    master_artist_col=None,
+):
     artists = {}
     tracks = {}
     for path in paths:
@@ -60,12 +68,16 @@ def collect_from_files(paths, artist_id_col, track_id_col, artist_name_col, trac
                 tid = (row.get(track_id_col) or "").strip()
                 aname = (row.get(artist_name_col) or "").strip()
                 tname = (row.get(track_name_col) or "").strip()
+                master_artist = (
+                    (row.get(master_artist_col) or "").strip() if master_artist_col else ""
+                )
 
                 if aid:
                     cur = artists.get(aid)
                     if not cur:
                         artists[aid] = {
                             "observed_name": aname,
+                            "master_artist_name": master_artist,
                             "first_seen": date,
                             "last_seen": date,
                         }
@@ -76,6 +88,8 @@ def collect_from_files(paths, artist_id_col, track_id_col, artist_name_col, trac
                                 cur["first_seen"] = date
                         if aname:
                             cur["observed_name"] = aname
+                        if master_artist:
+                            cur["master_artist_name"] = master_artist
 
                 if tid:
                     cur = tracks.get(tid)
@@ -83,6 +97,7 @@ def collect_from_files(paths, artist_id_col, track_id_col, artist_name_col, trac
                         tracks[tid] = {
                             "observed_artist_name": aname,
                             "observed_track_name": tname,
+                            "master_artist_name": master_artist,
                             "first_seen": date,
                             "last_seen": date,
                         }
@@ -95,6 +110,8 @@ def collect_from_files(paths, artist_id_col, track_id_col, artist_name_col, trac
                             cur["observed_artist_name"] = aname
                         if tname:
                             cur["observed_track_name"] = tname
+                        if master_artist:
+                            cur["master_artist_name"] = master_artist
     return artists, tracks
 
 
@@ -119,13 +136,35 @@ def suggest_match(observed_name, master_index):
     return None, "no_master_match"
 
 
-def merge_artist_rows(existing, mined, platform, master_index, promote_candidates):
+def merge_artist_rows(
+    existing, mined, platform, master_index, promote_candidates, id_master_lookup=None
+):
     by_key = {(r["platform"], r["external_artist_id"]): dict(r) for r in existing}
     candidates_out = []
+    id_master_lookup = id_master_lookup or {}
 
     for eid, info in mined.items():
         key = (platform, eid)
-        master, reason = suggest_match(info["observed_name"], master_index)
+        master = id_master_lookup.get(eid)
+        reason = "apple_artist_id" if master else ""
+        if not master:
+            master, reason = suggest_match(info["observed_name"], master_index)
+            # チャート上の artist_name_master があれば優先
+            chart_master = (info.get("master_artist_name") or "").strip()
+            if chart_master and not master:
+                # 名前で再検索
+                master, reason = suggest_match(chart_master, master_index)
+                if master:
+                    reason = "chart_artist_name_master"
+                else:
+                    # マスタに無い場合でも chart の英語名を採用候補に
+                    master = {
+                        "artist_name_en": chart_master,
+                        "_source_file": "",
+                        "agency": "",
+                    }
+                    reason = "chart_artist_name_master_unverified"
+
         row = by_key.get(key)
 
         if row is None:
@@ -152,8 +191,12 @@ def merge_artist_rows(existing, mined, platform, master_index, promote_candidate
 
         if row.get("match_status") == "confirmed" and row.get("artist_name_en"):
             pass
-        elif master:
-            status = "confirmed" if promote_candidates else "candidate"
+        elif master and master.get("artist_name_en"):
+            status = "confirmed" if (
+                promote_candidates or reason in ("apple_artist_id", "chart_artist_name_master", "exact_name")
+            ) else "candidate"
+            if reason == "chart_artist_name_master_unverified":
+                status = "candidate"
             row["artist_name_en"] = master["artist_name_en"]
             row["source_file"] = master.get("_source_file", "")
             row["match_status"] = status
@@ -221,6 +264,15 @@ def merge_track_rows(existing, mined, platform, artist_lookup_by_observed):
 
         if row.get("match_status") == "confirmed" and row.get("artist_name_en"):
             continue
+
+        master_artist = (info.get("master_artist_name") or "").strip()
+        if master_artist:
+            row["artist_name_en"] = master_artist
+            row["match_status"] = "confirmed"
+            row["track_name"] = row.get("track_name") or info["observed_track_name"]
+            row["notes"] = "chart_artist_name_master"
+            continue
+
         if linked and linked.get("artist_name_en"):
             row["artist_name_en"] = linked["artist_name_en"]
             row["source_file"] = linked.get("source_file", "")
@@ -264,6 +316,7 @@ def main():
             "artist_name_local",
             "track_name",
             "chart_date",
+            "artist_name_master",
         ),
         (
             "spaceshower",
@@ -273,6 +326,17 @@ def main():
             "artist_name_local",
             "track_name",
             "chart_date",
+            "artist_name_master",
+        ),
+        (
+            "apple",
+            chart_paths("apple_charts"),
+            "apple_artist_id",
+            "apple_track_id",
+            "artist_name_local",
+            "track_name",
+            "date",
+            "artist_name_master",
         ),
     ]
 
@@ -280,18 +344,30 @@ def main():
     existing_tracks = load_track_external_ids()
     all_candidates = []
 
-    for platform, paths, aid_col, tid_col, aname_col, tname_col, date_col in sources:
+    apple_id_lookup = {
+        r["apple_artist_id"].strip(): r
+        for r in load_all_artists()
+        if (r.get("apple_artist_id") or "").strip()
+    }
+
+    for platform, paths, aid_col, tid_col, aname_col, tname_col, date_col, master_col in sources:
         if not paths:
             print(f"[SKIP] {platform}: チャートCSVがありません")
             continue
 
         artists, tracks = collect_from_files(
-            paths, aid_col, tid_col, aname_col, tname_col, date_col
+            paths, aid_col, tid_col, aname_col, tname_col, date_col, master_artist_col=master_col
         )
         print(f"{platform}: artists={len(artists)} tracks={len(tracks)} from {len(paths)} files")
 
+        id_lookup = apple_id_lookup if platform == "apple" else None
         existing_artists, cands = merge_artist_rows(
-            existing_artists, artists, platform, master_index, args.promote_candidates
+            existing_artists,
+            artists,
+            platform,
+            master_index,
+            args.promote_candidates,
+            id_master_lookup=id_lookup,
         )
         all_candidates.extend(cands)
 
@@ -331,8 +407,11 @@ def main():
     print(f"保存: track_external_ids.csv ({len(existing_tracks)}行)")
     print(f"保存: artist_external_candidates.csv ({len(all_candidates)}行)")
     print("\n--- artist match_status ---")
-    for platform in ("line", "spaceshower"):
+    for platform in ("line", "spaceshower", "apple"):
         print(f"  {platform}: {count_status(existing_artists, platform)}")
+    print("--- track match_status ---")
+    for platform in ("line", "spaceshower", "apple"):
+        print(f"  {platform}: {count_status(existing_tracks, platform)}")
 
 
 if __name__ == "__main__":

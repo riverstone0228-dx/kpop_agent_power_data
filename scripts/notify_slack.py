@@ -80,6 +80,8 @@ def build_file_stats(today: Optional[datetime.date] = None) -> dict:
     apple = DATA / "apple_charts" / f"{d}.csv"
     line = DATA / "line_charts" / f"{d}.csv"
     other = DATA / "other_agency_top15" / f"{d}.csv"
+    top_songs = DATA / "song_rankings" / f"top_{d}.csv"
+    hot_songs = DATA / "song_rankings" / f"hot_{d}.csv"
     sstv = _latest_dated_csv(DATA / "spaceshower_charts")
 
     return {
@@ -91,6 +93,8 @@ def build_file_stats(today: Optional[datetime.date] = None) -> dict:
         "apple_rows": _csv_row_count(apple),
         "line_rows": _csv_row_count(line),
         "other_rows": _csv_row_count(other),
+        "top_song_rows": _csv_row_count(top_songs),
+        "hot_song_rows": _csv_row_count(hot_songs),
         "spaceshower_file": sstv.name if sstv else None,
         "spaceshower_rows": _csv_row_count(sstv) if sstv else None,
         "date": d,
@@ -124,6 +128,8 @@ def format_message(
         f" / Wiki ja {_fmt_count(stats['wiki_ja_filled'])}"
         f" / en {_fmt_count(stats['wiki_en_filled'])}",
         f"• YouTube videos: {_fmt_count(stats.get('youtube_video_rows'))}",
+        f"• TOP/HOT SONG20: {_fmt_count(stats.get('top_song_rows'))}"
+        f" / {_fmt_count(stats.get('hot_song_rows'))}",
         f"• Apple charts: {_fmt_count(stats['apple_rows'])}",
         f"• LINE MUSIC: {_fmt_count(stats['line_rows'])}",
         f"• Space Shower: {_fmt_count(stats['spaceshower_rows'])}"

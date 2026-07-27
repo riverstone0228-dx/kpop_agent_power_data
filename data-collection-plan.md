@@ -10,7 +10,8 @@ GitHub Actions (日次cron JST 6:00)
  ├─ ① アーティスト日次スナップショット (YouTube + Wikipedia) → data/raw/
  ├─ ①b YouTube動画 (直近10 + 再生TOP10: 再生/いいね/コメント) → data/youtube_videos/
  ├─ ② Apple / LINE / スペースシャワー チャート → data/*_charts/
- ├─ ③ mine_chart_ids.py → scripts/artist_external_ids.csv 更新
+ ├─ ③ mine_chart_ids.py → external_ids 更新 → build_track_master.py
+ ├─ ③b rank_songs.py → data/song_rankings/ (TOP20 / HOT20)
  ├─ ④ OTHER TOP15 リバランス → data/other_agency_top15/
  └─ ⑤ git commit & push (リポジトリの data/ が原本)
       └─ (Phase 4) Databricks Delta にも書き込み

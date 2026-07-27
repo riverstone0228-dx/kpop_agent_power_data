@@ -6,7 +6,7 @@
 3. Apple Music チャート (jp/kr/us)
 4. LINE MUSIC K-Pop Top 50 (日次)
 5. スペースシャワー KOREAN HITS (週次)
-6. チャートから外部ID採掘 → OTHER TOP15 リバランス
+6. チャートから外部ID採掘 → track_master 更新 → TOP/HOT SONG20 → OTHER TOP15
 7. Slack に収集サマリーを通知
 
 GitHub Actionsの日次cronから呼び出される想定。
@@ -156,6 +156,16 @@ def collect_charts():
     print("\n=== Re-enrich LINE / Space Shower with updated ID map ===")
     safe_call("LINE MUSIC charts (re-enrich)", fetch_line_main)
     safe_call("Space Shower charts (re-enrich)", fetch_sstv_main)
+
+    print("\n=== Build track master ===")
+    from build_track_master import main as build_track_main
+
+    safe_call("build_track_master", build_track_main)
+
+    print("\n=== TOP / HOT SONG 20 ===")
+    from rank_songs import main as rank_songs_main
+
+    safe_call("song rankings", rank_songs_main)
 
     print("\n=== OTHER TOP15 rebalance ===")
     from rank_other_agency_top15 import main as rank_other_main
