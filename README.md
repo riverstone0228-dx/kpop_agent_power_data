@@ -26,6 +26,13 @@
 3. **自動化パイプライン**: データ取得→蓄積→AI要約→Slack通知→レポート出力の一気通貫デモ
 4. **KPOP Analyzerサイト連携**: Google Analyticsデータを Looker Studio / Databricks / Tableau に連携したアクセス解析レポート自動化
 
+### 公開レポート (GitHub Pages)
+
+日次データから生成するインタラクティブHTML: [`docs/`](docs/)  
+公開手順は [docs/README.md](docs/README.md)。有効化後のURL例:
+
+`https://riverstone0228-dx.github.io/kpop_agent_power_data/`
+
 ## ドキュメント構成
 
 - [roadmap.md](roadmap.md) — 2年ロードマップ + 3ヶ月詳細プラン
