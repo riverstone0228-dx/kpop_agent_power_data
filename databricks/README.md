@@ -1,71 +1,59 @@
-# Databricks Free Edition — K-POP データ格納ガイド
+# Databricks Free Edition — K-POP データ自動反映ガイド
 
 関連: [data-model.md](../data-model.md) · [Free Edition limitations](https://docs.databricks.com/aws/en/getting-started/free-edition-limitations)
 
-## なぜ Volume 経由か
-
-Free Edition は **outbound インターネットが制限**されています。GitHub から直接 `curl` / `spark.read.csv("https://...")` が失敗することがあるため、最初は次の流れが確実です。
+## 仕組み
 
 ```text
-ローカル / GitHub の CSV
-    ↓ (ブラウザで Upload)
-Volume: /Volumes/workspace/kpop_bronze/landing/...
-    ↓ (このリポジトリの Notebook)
-Delta tables in workspace.kpop_bronze.*
-    ↓
-Views in workspace.kpop_gold.*
+GitHub Actions (毎日 JST 6:00)
+  → data/*.csv を収集・commit・push
+  → Databricks Job をトリガー
+      → Git folder 経由で data/ と scripts/ を直接読む
+      → Delta tables に MERGE
 ```
 
-GitHub Actions からの自動書き込みは、接続が安定してから Phase 2 でよいです。
+Volume は使いません。Git folder がリポジトリのファイルを直接見ます。
 
-## 30分でやる手順
+## セットアップ手順
 
 ### 1. スキーマ作成
 
 Databricks → **SQL Editor** で [`01_ddl.sql`](01_ddl.sql) を実行。
-
-できるもの:
 
 | 名前 | 役割 |
 |------|------|
 | `workspace.kpop_bronze` | 統合テーブル（日別CSVを1つに） |
 | `workspace.kpop_gold` | 7日差分などの VIEW |
 
-※ カタログは Free Edition 既定の **`workspace`** を使います。独自 catalog も作れますが、権限トラブルを避けるためまずこれで十分です。
+### 2. Git folder を接続
 
-### 2. Volume を作る
+1. Databricks → **Workspace** → 好きな場所で **Add → Git folder**
+2. リポジトリURL: `https://github.com/riverstone0228-dx/kpop_agent_power_data`
+3. Branch: `main`
+4. 接続完了すると `databricks/02_load.py` が Notebook として見える
 
-1. Catalog → `workspace` → `kpop_bronze`
-2. **Create Volume** → 名前 `landing`（managed でOK）
-3. 次のフォルダ構成で Upload（ローカルから）:
+### 3. Job を作成
 
-```text
-landing/
-  raw/                 ← data/raw/*.csv
-  apple_charts/        ← data/apple_charts/YYYY-MM-DD.csv（summary除外）
-  line_charts/
-  youtube_videos/
-  song_rankings/       ← top_*.csv / hot_*.csv
-  masters/
-    artist_master.csv
-    other_agency_master.csv
-    track_master.csv
-```
+1. **Workflows → Jobs → Create Job**
+2. Task: Notebook → Git folder 内の `databricks/02_load.py` を指定
+3. Compute: Serverless
+4. Save → Job ID をメモ
 
-### 3. ロード Notebook
+### 4. GitHub Secrets を登録
 
-1. Repo の [`02_load_from_volume.py`](02_load_from_volume.py) を Databricks にインポート  
-   （または内容を新規 Notebook に貼り付け）
-2. **Serverless** で Run All
-3. セル末尾の件数表示を確認
+リポジトリの Settings → Secrets → Actions に以下を追加:
 
-再実行しても `MERGE` なので同じ日付は上書きされ、二重化しません。
+| Secret名 | 値 |
+|-----------|------|
+| `DATABRICKS_HOST` | `https://dbc-xxxx.cloud.databricks.com`（あなたのワークスペースURL） |
+| `DATABRICKS_TOKEN` | Databricks PAT（User Settings → Developer → Access tokens） |
+| `DATABRICKS_JOB_ID` | 手順3でメモした Job ID |
 
-### 4. Gold VIEW
+これで毎日の GitHub Actions 完了後に自動で Databricks Job が起動します。
 
-[`03_gold_views.sql`](03_gold_views.sql) を実行。
+### 5. Gold VIEW
 
-例:
+[`03_gold_views.sql`](03_gold_views.sql) を SQL Editor で実行。
 
 ```sql
 SELECT * FROM workspace.kpop_gold.v_agency_power_daily ORDER BY date DESC, youtube_subscribers DESC;
@@ -85,18 +73,13 @@ SELECT * FROM workspace.kpop_gold.v_artist_metrics_7d WHERE date = current_date(
 | `fact_song_rank_daily` | `data/song_rankings/top_*.csv` + `hot_*.csv` |
 | `dim_artist` / `dim_track` | `scripts/*master*.csv` |
 
-## 運用リズム（推奨）
+## 手動実行
 
-| 頻度 | 作業 |
-|------|------|
-| 毎日 | GitHub Actions が CSV を更新（現状どおり） |
-| 週1〜毎日手動 | Volume に差分 Upload → Notebook Run All |
-| 後で自動化 | Databricks Job + Git folder / Token（Free Edition の制限を見て判断） |
+Databricks で Git folder を開き `02_load.py` → **Run All** でも OK。  
+`MERGE` なので同じ日付は上書きされ、二重化しません。
 
-## 次のステップ（余裕ができたら）
+## 次のステップ
 
-1. Space Shower / OTHER TOP15 も同様に fact 化  
-2. Pages レポートを Databricks SQL から読む（または gold を CSV export）  
-3. Databricks AI で「今日のサマリー」→ Slack  
-
-まずは **`fact_artist_daily` が日付横断で SELECT できる**ところまで行けば、Phase 4 の第一関門クリアです。
+1. Space Shower / OTHER TOP15 も同様に fact 化
+2. Pages レポートを Databricks SQL から読む
+3. Databricks AI で「今日のサマリー」→ Slack
