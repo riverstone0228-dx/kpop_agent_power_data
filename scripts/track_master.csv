@@ -1,6 +1,6 @@
 track_id,agency,sub_agency,artist_name_en,track_name,release_date,track_type,youtube_video_id,selection_reason,status,platforms,first_seen,last_seen
 trk_53f2f3538ccc,HYBE,KOZ Entertainment,BOYNEXTDOOR,Count To Love,,chart,,chart:spaceshower,active,spaceshower,2026-07-24,2026-07-24
-trk_ca2922a24d63,HYBE,KOZ Entertainment,BOYNEXTDOOR,VIRAL,,chart,,chart:apple|chart:spaceshower,active,apple|spaceshower,2026-07-17,2026-07-26
+trk_ca2922a24d63,HYBE,KOZ Entertainment,BOYNEXTDOOR,VIRAL,,chart,x1uJq8iYST4,chart:apple|chart:spaceshower|youtube,active,apple|spaceshower|youtube,2026-07-17,2026-07-27
 trk_d4d46923b488,HYBE,BIGHIT MUSIC,BTS,2.0,,chart,,chart:line,active,line,2026-07-26,2026-07-26
 trk_f0f1e3086c75,HYBE,BIGHIT MUSIC,BTS,Body to Body,,chart,,chart:line,active,line,2026-07-26,2026-07-26
 trk_1ef945c3bbad,HYBE,BIGHIT MUSIC,BTS,Boy With Luv (feat. Halsey),,chart,,chart:line,active,line,2026-07-26,2026-07-26
@@ -9,41 +9,41 @@ trk_df78abcac274,HYBE,BIGHIT MUSIC,BTS,Come Over,,chart,,chart:line,active,line,
 trk_ab669bd9e0b3,HYBE,BIGHIT MUSIC,BTS,Dynamite,,chart,,chart:line,active,line,2026-07-26,2026-07-26
 trk_5ccf53213cb5,HYBE,BIGHIT MUSIC,BTS,Film out,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_9a14b99ff8e0,HYBE,BIGHIT MUSIC,BTS,Hooligan,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_a80ee09b32f3,HYBE,BIGHIT MUSIC,BTS,NORMAL,,chart,,chart:line,active,line,2026-07-26,2026-07-26
+trk_a80ee09b32f3,HYBE,BIGHIT MUSIC,BTS,NORMAL,,chart,NySBAMooqOc,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
 trk_41b44394014e,HYBE,BIGHIT MUSIC,BTS,Permission to Dance,,chart,,chart:line,active,line,2026-07-26,2026-07-26
 trk_7cac2a1b7019,HYBE,BIGHIT MUSIC,BTS,SWIM,,chart,,chart:line|chart:spaceshower,active,line|spaceshower,2026-07-17,2026-07-26
-trk_c533290f9a24,HYBE,BIGHIT MUSIC,CORTIS,ACAI,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_5bc9ff4e0438,HYBE,BIGHIT MUSIC,CORTIS,FaSHioN,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_12d9ff192e97,HYBE,BIGHIT MUSIC,CORTIS,GO!,,chart,,chart:apple|chart:spaceshower,active,apple|spaceshower,2026-07-17,2026-07-26
-trk_0f1f6c0fbd90,HYBE,BIGHIT MUSIC,CORTIS,JoyRide,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_4385d0e22e4d,HYBE,BIGHIT MUSIC,CORTIS,REDRED,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_d91d53be7619,HYBE,BIGHIT MUSIC,CORTIS,TNT,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_c7a7e1fb7dab,HYBE,BIGHIT MUSIC,CORTIS,What You Want,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_6542fd2f52f8,HYBE,BIGHIT MUSIC,CORTIS,YOUNGCREATORCREW,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_c533290f9a24,HYBE,BIGHIT MUSIC,CORTIS,ACAI,,chart,ysg6GVlzz9Y,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_5bc9ff4e0438,HYBE,BIGHIT MUSIC,CORTIS,FaSHioN,,chart,cyMmsWjDEB0,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_12d9ff192e97,HYBE,BIGHIT MUSIC,CORTIS,GO!,,chart,,chart:apple|chart:spaceshower,active,apple|spaceshower,2026-07-17,2026-07-27
+trk_0f1f6c0fbd90,HYBE,BIGHIT MUSIC,CORTIS,JoyRide,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_4385d0e22e4d,HYBE,BIGHIT MUSIC,CORTIS,REDRED,,chart,Q-ItC3Xcl3c,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_d91d53be7619,HYBE,BIGHIT MUSIC,CORTIS,TNT,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_c7a7e1fb7dab,HYBE,BIGHIT MUSIC,CORTIS,What You Want,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_6542fd2f52f8,HYBE,BIGHIT MUSIC,CORTIS,YOUNGCREATORCREW,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_72326ba1fb1d,HYBE,BELIFT LAB,ENHYPEN,Shine On Me,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_11ee4c1b8b2a,HYBE,BELIFT LAB,ILLIT,Almond Chocolate,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_5eeb53e07d6b,HYBE,BELIFT LAB,ILLIT,It's Me,,chart,,chart:apple|chart:line|chart:spaceshower,active,apple|line|spaceshower,2026-07-17,2026-07-27
-trk_4a6a679f3d4e,HYBE,BELIFT LAB,ILLIT,Lucky Girl Syndrome,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_48b7e43a1746,HYBE,BELIFT LAB,ILLIT,Magnetic,,chart,,chart:apple|chart:line|chart:spaceshower,active,apple|line|spaceshower,2026-07-17,2026-07-26
+trk_5eeb53e07d6b,HYBE,BELIFT LAB,ILLIT,It's Me,,chart,a9NDoFxm_1w,chart:apple|chart:line|chart:spaceshower|youtube,active,apple|line|spaceshower|youtube,2026-07-17,2026-07-27
+trk_4a6a679f3d4e,HYBE,BELIFT LAB,ILLIT,Lucky Girl Syndrome,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_48b7e43a1746,HYBE,BELIFT LAB,ILLIT,Magnetic,,chart,,chart:apple|chart:line|chart:spaceshower,active,apple|line|spaceshower,2026-07-17,2026-07-27
 trk_8aee380ff6f3,HYBE,BELIFT LAB,ILLIT,NOT CUTE ANYMORE,,chart,,chart:spaceshower,active,spaceshower,2026-07-24,2026-07-24
 trk_2cf61031d727,HYBE,BELIFT LAB,ILLIT,jellyous,,chart,,chart:line,active,line,2026-07-26,2026-07-26
 trk_dcc8e95a9b16,HYBE,BELIFT LAB,ILLIT,時よ止まれ,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
-trk_ffd9d4ff4b3f,HYBE,BELIFT LAB,ILLIT,빌려온 고양이 (Do the Dance),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_6ffc212b2517,HYBE,SOURCE MUSIC,LE SSERAFIM,BOOMPALA,,chart,,chart:apple|chart:spaceshower,active,apple|spaceshower,2026-07-17,2026-07-26
+trk_ffd9d4ff4b3f,HYBE,BELIFT LAB,ILLIT,빌려온 고양이 (Do the Dance),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_6ffc212b2517,HYBE,SOURCE MUSIC,LE SSERAFIM,BOOMPALA,,chart,zM8dtPTvxMU,chart:apple|chart:spaceshower|youtube,active,apple|spaceshower|youtube,2026-07-17,2026-07-27
 trk_c7aa97925c88,HYBE,SOURCE MUSIC,LE SSERAFIM,CRAZY,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_99d225b0b558,HYBE,SOURCE MUSIC,LE SSERAFIM,ICONIC BY MISTAKE,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_99d225b0b558,HYBE,SOURCE MUSIC,LE SSERAFIM,ICONIC BY MISTAKE,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_14db1c8d6313,HYBE,SOURCE MUSIC,LE SSERAFIM,Perfect Night,,chart,,chart:line,active,line,2026-07-26,2026-07-26
 trk_97077c6f6b53,HYBE,SOURCE MUSIC,LE SSERAFIM,SPAGHETTI (feat. j-hope of BTS),,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_f56f09453227,HYBE,ADOR,NewJeans,Attention,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_d4b0cb96aa10,HYBE,ADOR,NewJeans,Bubble Gum,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_9e732db79ce5,HYBE,ADOR,NewJeans,Cookie,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_b7dc211cb266,HYBE,ADOR,NewJeans,Ditto,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_07f30cd63216,HYBE,ADOR,NewJeans,How Sweet,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_f8712f1e6a5f,HYBE,ADOR,NewJeans,Hurt,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_92d2f00a715a,HYBE,ADOR,NewJeans,Hype Boy,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_18d2e827f63d,HYBE,ADOR,NewJeans,New Jeans,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_445021acb2a9,HYBE,ADOR,NewJeans,OMG,,chart,,chart:apple|chart:line,active,apple|line,2026-07-26,2026-07-26
-trk_66ce875a9a87,HYBE,ADOR,NewJeans,Supernatural,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_f56f09453227,HYBE,ADOR,NewJeans,Attention,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_d4b0cb96aa10,HYBE,ADOR,NewJeans,Bubble Gum,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_9e732db79ce5,HYBE,ADOR,NewJeans,Cookie,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_b7dc211cb266,HYBE,ADOR,NewJeans,Ditto,,chart,Km71Rr9K-Bw,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_07f30cd63216,HYBE,ADOR,NewJeans,How Sweet,,chart,Ec0Z1v7jKDQ,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_f8712f1e6a5f,HYBE,ADOR,NewJeans,Hurt,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_92d2f00a715a,HYBE,ADOR,NewJeans,Hype Boy,,chart,KrtYasOGibU,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_18d2e827f63d,HYBE,ADOR,NewJeans,New Jeans,,chart,Km71Rr9K-Bw,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_445021acb2a9,HYBE,ADOR,NewJeans,OMG,,chart,_Xs1ZCMfa2Y,chart:apple|chart:line|youtube,active,apple|line|youtube,2026-07-26,2026-07-27
+trk_66ce875a9a87,HYBE,ADOR,NewJeans,Supernatural,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_783e93960328,HYBE,PLEDIS Entertainment,SEVENTEEN,Super,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-17
 trk_400b402fcb57,HYBE,PLEDIS Entertainment,SEVENTEEN,THUNDER,,chart,,chart:spaceshower,active,spaceshower,2026-07-24,2026-07-24
 trk_9e203c25def6,HYBE,PLEDIS Entertainment,SEVENTEEN,今 -明日 世界が終わっても-,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
@@ -53,96 +53,96 @@ trk_55070a56402f,HYBE,BIGHIT MUSIC,TOMORROW X TOGETHER,ひとつの誓い (We'll
 trk_220204c45424,HYBE,PLEDIS Entertainment,TWS,OVERDRIVE,,chart,,chart:spaceshower,active,spaceshower,2026-07-24,2026-07-24
 trk_30568b0e9586,HYBE,PLEDIS Entertainment,TWS,"You, You",,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_aca3994d74c4,HYBE,PLEDIS Entertainment,TWS,はじめまして,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
-trk_2b4640732bf3,HYBE,(旧PLEDIS→契約終了),fromis_9,Vitamin ME,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_dabcbff94733,JYP,JYP Entertainment,ITZY,Motto,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-17
-trk_a2fb1362bdaa,JYP,JYP Entertainment,NMIXX,Heavy Serenade,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_2b4640732bf3,HYBE,(旧PLEDIS→契約終了),fromis_9,Vitamin ME,,chart,sLk8zWUuYTA,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_dabcbff94733,JYP,JYP Entertainment,ITZY,Motto,,chart,_YKYSVXmMdk,chart:spaceshower|youtube,active,spaceshower|youtube,2026-07-17,2026-07-17
+trk_a2fb1362bdaa,JYP,JYP Entertainment,NMIXX,Heavy Serenade,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_024baf62e94c,JYP,JYP Entertainment,Stray Kids,CEREMONY,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_3041a0d4a319,JYP,JYP Entertainment,Stray Kids,Chk Chk Boom,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_28024fd9716a,JYP,JYP Entertainment,Stray Kids,Do It,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_50993449092a,JYP,JYP Entertainment,Stray Kids,Hollow,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-17
-trk_9cb460a4ed24,JYP,JYP Entertainment,Stray Kids,RUN IT,,chart,,chart:line,active,line,2026-07-26,2026-07-26
+trk_9cb460a4ed24,JYP,JYP Entertainment,Stray Kids,RUN IT,,chart,B-yO3eVgl3M,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
 trk_cdcb042f95b6,JYP,JYP Entertainment,Stray Kids,Scars,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-17
 trk_f96b1563eecb,JYP,JYP Entertainment,Stray Kids,Walkin On Water,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_798e45bb6d66,JYP,JYP Entertainment,TWICE,Feel Special,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_a241180373ba,JYP,JYP Entertainment,TWICE,THIS IS FOR,,chart,,chart:line,active,line,2026-07-26,2026-07-26
+trk_a241180373ba,JYP,JYP Entertainment,TWICE,THIS IS FOR,,chart,tRGj-9aqXg4,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
 trk_6d89c7f070ab,JYP,JYP Entertainment,TWICE,What is Love?,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_69c5375146af,OTHER,KQ Entertainment,ATEEZ,BAD,,chart,,chart:apple|chart:line|chart:spaceshower,active,apple|line|spaceshower,2026-07-17,2026-07-26
-trk_3487a10937e9,OTHER,Starship Entertainment,IVE,BANG BANG,,chart,,chart:line,active,line,2026-07-26,2026-07-26
+trk_69c5375146af,OTHER,KQ Entertainment,ATEEZ,BAD,,chart,xhZT2-0DoMI,chart:apple|chart:line|chart:spaceshower|youtube,active,apple|line|spaceshower|youtube,2026-07-17,2026-07-27
+trk_3487a10937e9,OTHER,Starship Entertainment,IVE,BANG BANG,,chart,rNGPgQB4Be8,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
 trk_1b3154ab5197,OTHER,Starship Entertainment,IVE,BLACKHOLE,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-17
 trk_e97f002a11a5,OTHER,Starship Entertainment,IVE,Be Alright,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
-trk_a6bcdf44c58b,OTHER,Starship Entertainment,IVE,LUCID DREAM,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
-trk_48adb02ce6fa,OTHER,Starship Entertainment,KiiiKiii,404 (New Era),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_a6bcdf44c58b,OTHER,Starship Entertainment,IVE,LUCID DREAM,,chart,MBXc7SHt4Oo,chart:spaceshower|youtube,active,spaceshower|youtube,2026-07-17,2026-07-24
+trk_48adb02ce6fa,OTHER,Starship Entertainment,KiiiKiii,404 (New Era),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_85367b3fa952,OTHER,VLAST,PLAVE,Born Savage,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
-trk_5b92e5e30ce8,OTHER,THE MUZE Entertainment,RESCENE,Deja Vu,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_d563686936bf,OTHER,THE MUZE Entertainment,RESCENE,LOVE ATTACK,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_a3a47d09e88b,OTHER,THE MUZE Entertainment,RESCENE,Pinball,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_c8e7de4fc5c8,OTHER,THE MUZE Entertainment,RESCENE,Pretty Girl,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_dea76cfdb6b3,OTHER,THE MUZE Entertainment,RESCENE,Runaway,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_836bb64662cb,OTHER,Yuehua Entertainment,YENA,0+0,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_d3a06b3f61c7,OTHER,Yuehua Entertainment,YENA,And July (feat. DEAN & dj friz),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_2233c657706c,OTHER,Yuehua Entertainment,YENA,Antifreeze,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_5b92e5e30ce8,OTHER,THE MUZE Entertainment,RESCENE,Deja Vu,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_d563686936bf,OTHER,THE MUZE Entertainment,RESCENE,LOVE ATTACK,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_a3a47d09e88b,OTHER,THE MUZE Entertainment,RESCENE,Pinball,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_c8e7de4fc5c8,OTHER,THE MUZE Entertainment,RESCENE,Pretty Girl,,chart,bd42NE8dFDI,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_dea76cfdb6b3,OTHER,THE MUZE Entertainment,RESCENE,Runaway,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_836bb64662cb,OTHER,Yuehua Entertainment,YENA,0+0,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_d3a06b3f61c7,OTHER,Yuehua Entertainment,YENA,And July (feat. DEAN & dj friz),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_2233c657706c,OTHER,Yuehua Entertainment,YENA,Antifreeze,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_b5d2ba96ea64,OTHER,Yuehua Entertainment,YENA,Automatic (Remastered 2014),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_91ee149013f1,OTHER,Yuehua Entertainment,YENA,Catch Catch,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_0e3c15f60cc1,OTHER,Yuehua Entertainment,YENA,EVERYTHING,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_91ee149013f1,OTHER,Yuehua Entertainment,YENA,Catch Catch,,chart,UpKONXXhBXs,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_0e3c15f60cc1,OTHER,Yuehua Entertainment,YENA,EVERYTHING,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_0e5b05fda3f3,OTHER,Yuehua Entertainment,YENA,Five,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_19f18125318f,OTHER,Yuehua Entertainment,YENA,Flying High With U,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_19f18125318f,OTHER,Yuehua Entertainment,YENA,Flying High With U,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_87c976a6f3db,OTHER,Yuehua Entertainment,YENA,Happiness,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_8175d6f5e3ba,OTHER,Yuehua Entertainment,YENA,IRIS OUT,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_86204fdaa47f,OTHER,Yuehua Entertainment,YENA,It's You (feat. NO:EL),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_86204fdaa47f,OTHER,Yuehua Entertainment,YENA,It's You (feat. NO:EL),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_bffe8963852d,OTHER,Yuehua Entertainment,YENA,JANE DOE,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_2d12517a1f30,OTHER,Yuehua Entertainment,YENA,LOV3 (feat. Bryan Chase & Okasian),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_32f130ac98f8,OTHER,Yuehua Entertainment,YENA,Lemon,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_670e32e8c94b,OTHER,Yuehua Entertainment,YENA,Less than a Lover,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_71376947324e,OTHER,Yuehua Entertainment,YENA,Ling Ling,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_100e416aeeb0,OTHER,Yuehua Entertainment,YENA,Love Love Love (feat. 융진),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_2d12517a1f30,OTHER,Yuehua Entertainment,YENA,LOV3 (feat. Bryan Chase & Okasian),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_32f130ac98f8,OTHER,Yuehua Entertainment,YENA,Lemon,,chart,nCngHAkOZJc,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
+trk_670e32e8c94b,OTHER,Yuehua Entertainment,YENA,Less than a Lover,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_71376947324e,OTHER,Yuehua Entertainment,YENA,Ling Ling,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_100e416aeeb0,OTHER,Yuehua Entertainment,YENA,Love Love Love (feat. 융진),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_aec5e9526801,OTHER,Yuehua Entertainment,YENA,Love so sweet,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_473f4bcee41e,OTHER,Yuehua Entertainment,YENA,Never Grow Up,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_2f5358737059,OTHER,Yuehua Entertainment,YENA,Rose (feat. Skinny Brown & Homeboy),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_2f5358737059,OTHER,Yuehua Entertainment,YENA,Rose (feat. Skinny Brown & Homeboy),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_f4caf0af95e5,OTHER,Yuehua Entertainment,YENA,SAD SONG,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_70b249c95c16,OTHER,Yuehua Entertainment,YENA,Skrr (feat. 지젤),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_70b249c95c16,OTHER,Yuehua Entertainment,YENA,Skrr (feat. 지젤),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_2a38681fb01d,OTHER,Yuehua Entertainment,YENA,TSUNAMI,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_3e83dfdc3960,OTHER,Yuehua Entertainment,YENA,Trip (feat. Hannah),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_6adcaf9a3121,OTHER,Yuehua Entertainment,YENA,U,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_eadf360f4118,OTHER,Yuehua Entertainment,YENA,toxic till the end,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_43b6ebcf8391,OTHER,Yuehua Entertainment,YENA,yours,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_3e83dfdc3960,OTHER,Yuehua Entertainment,YENA,Trip (feat. Hannah),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_6adcaf9a3121,OTHER,Yuehua Entertainment,YENA,U,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_eadf360f4118,OTHER,Yuehua Entertainment,YENA,toxic till the end,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_43b6ebcf8391,OTHER,Yuehua Entertainment,YENA,yours,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_3170923919b5,OTHER,Yuehua Entertainment,YENA,夜鷹 - Yodaka,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_c38947bf3d2a,OTHER,Yuehua Entertainment,YENA,烏 - Raven,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_00944e3b0a12,OTHER,Yuehua Entertainment,YENA,革命道中 - On The Way,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_aa56d4e71ca0,OTHER,Yuehua Entertainment,YENA,사랑은 봄비처럼...이별은 겨울비처럼,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
-trk_9537bef900d0,OTHER,Yuehua Entertainment,YENA,시차 (feat. 로꼬 & 그레이),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_0cf55a944760,OTHER,Yuehua Entertainment,YENA,한시 오분 (1:05),,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_9537bef900d0,OTHER,Yuehua Entertainment,YENA,시차 (feat. 로꼬 & 그레이),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_0cf55a944760,OTHER,Yuehua Entertainment,YENA,한시 오분 (1:05),,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_54536e4585b8,OTHER,WakeOne,ZEROBASEONE,TOP 5,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_5a86d2db28fc,OTHER,WakeOne,izna,METRONOME,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
-trk_271a78b1f72b,SM,SM Entertainment,Hearts2Hearts,FOCUS,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_41908562b1e2,SM,SM Entertainment,Hearts2Hearts,Lemon Tang,,chart,,chart:apple|chart:line|chart:spaceshower,active,apple|line|spaceshower,2026-07-17,2026-07-26
-trk_f35879686881,SM,SM Entertainment,Hearts2Hearts,RUDE!,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_0861b1f029fe,SM,SM Entertainment,Hearts2Hearts,STYLE,,chart,,chart:apple|chart:line,active,apple|line,2026-07-26,2026-07-26
-trk_296e76ea80a0,SM,SM Entertainment,Hearts2Hearts,The Chase,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_abe3185bdab1,SM,SM Entertainment,NCT WISH,BOY MEETS GIRL,,chart,,chart:apple|chart:line,active,apple|line,2026-07-26,2026-07-26
+trk_271a78b1f72b,SM,SM Entertainment,Hearts2Hearts,FOCUS,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_41908562b1e2,SM,SM Entertainment,Hearts2Hearts,Lemon Tang,,chart,w3_duAs2ONs,chart:apple|chart:line|chart:spaceshower|youtube,active,apple|line|spaceshower|youtube,2026-07-17,2026-07-27
+trk_f35879686881,SM,SM Entertainment,Hearts2Hearts,RUDE!,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_0861b1f029fe,SM,SM Entertainment,Hearts2Hearts,STYLE,,chart,,chart:apple|chart:line,active,apple|line,2026-07-26,2026-07-27
+trk_296e76ea80a0,SM,SM Entertainment,Hearts2Hearts,The Chase,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_abe3185bdab1,SM,SM Entertainment,NCT WISH,BOY MEETS GIRL,,chart,25mtgbb3xXs,chart:apple|chart:line|youtube,active,apple|line|youtube,2026-07-26,2026-07-27
 trk_95e319088911,SM,SM Entertainment,NCT WISH,Sticky,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24
 trk_f197c763d50d,SM,SM Entertainment,RIIZE,All of You,,chart,,chart:spaceshower,active,spaceshower,2026-07-24,2026-07-24
-trk_4507f24e5d9f,SM,SM Entertainment,RIIZE,Do your dance,,chart,,chart:apple|chart:spaceshower,active,apple|spaceshower,2026-07-17,2026-07-26
-trk_329a3f576bac,SM,SM Entertainment,aespa,Armageddon,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_4507f24e5d9f,SM,SM Entertainment,RIIZE,Do your dance,,chart,9it8ySJJuVY,chart:apple|chart:spaceshower|youtube,active,apple|spaceshower|youtube,2026-07-17,2026-07-27
+trk_329a3f576bac,SM,SM Entertainment,aespa,Armageddon,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_38e951f8de13,SM,SM Entertainment,aespa,Hot Mess,,chart,,chart:spaceshower,active,spaceshower,2026-07-24,2026-07-24
 trk_bec2f0946c41,SM,SM Entertainment,aespa,In Halo,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_1629be49e57a,SM,SM Entertainment,aespa,KISS N TELL,,chart,,chart:apple|chart:line,active,apple|line,2026-07-26,2026-07-27
+trk_1629be49e57a,SM,SM Entertainment,aespa,KISS N TELL,,chart,Q0vS9QuscvI,chart:apple|chart:line|youtube,active,apple|line|youtube,2026-07-26,2026-07-27
 trk_42ade9a07a70,SM,SM Entertainment,aespa,LEMONADE,,chart,,chart:apple|chart:line|chart:spaceshower,active,apple|line|spaceshower,2026-07-17,2026-07-27
-trk_582ffdc6a635,SM,SM Entertainment,aespa,Next Level,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_582ffdc6a635,SM,SM Entertainment,aespa,Next Level,,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
 trk_bb23d572516e,SM,SM Entertainment,aespa,Orbit Pop,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_02509c67ff9a,SM,SM Entertainment,aespa,Spicy,,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
+trk_02509c67ff9a,SM,SM Entertainment,aespa,Spicy,,chart,Ikso2rATf6Q,chart:apple|youtube,active,apple|youtube,2026-07-26,2026-07-27
 trk_25273ee290f7,SM,SM Entertainment,aespa,Supernova,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_f16825960a82,SM,SM Entertainment,aespa,WDA (Whole Different Animal) [feat. G-DRAGON],,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_9896ca6e0e91,SM,SM Entertainment,aespa,Whiplash,,chart,,chart:apple|chart:line,active,apple|line,2026-07-26,2026-07-26
-trk_9f2ae3b7e4bb,YG,YG Entertainment,AKMU,"어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",,chart,,chart:apple,active,apple,2026-07-26,2026-07-26
-trk_4a4c7d13a4b2,YG,YG Entertainment,BABYMONSTER,DRIP,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_fac54e58f5b3,YG,YG Entertainment,BABYMONSTER,I LIKE IT,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_e13ef882cbb0,YG,YG Entertainment,BABYMONSTER,PSYCHO,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_69015eb1489e,YG,YG Entertainment,BABYMONSTER,SUGAR HONEY ICE TEA,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_cce67484bca4,YG,YG Entertainment,BABYMONSTER,WE GO UP,,chart,,chart:line|chart:spaceshower,active,line|spaceshower,2026-07-24,2026-07-26
+trk_f16825960a82,SM,SM Entertainment,aespa,WDA (Whole Different Animal) [feat. G-DRAGON],,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_9896ca6e0e91,SM,SM Entertainment,aespa,Whiplash,,chart,,chart:apple|chart:line,active,apple|line,2026-07-26,2026-07-27
+trk_9f2ae3b7e4bb,YG,YG Entertainment,AKMU,"어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",,chart,,chart:apple,active,apple,2026-07-26,2026-07-27
+trk_4a4c7d13a4b2,YG,YG Entertainment,BABYMONSTER,DRIP,,chart,Zp-Jhuhq0bQ,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_fac54e58f5b3,YG,YG Entertainment,BABYMONSTER,I LIKE IT,,chart,WSpEKdb7xi0,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_e13ef882cbb0,YG,YG Entertainment,BABYMONSTER,PSYCHO,,chart,yAXnEHFKKaY,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_69015eb1489e,YG,YG Entertainment,BABYMONSTER,SUGAR HONEY ICE TEA,,chart,naoGk-Zjc1s,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_cce67484bca4,YG,YG Entertainment,BABYMONSTER,WE GO UP,,chart,wlHwjkYpSr0,chart:line|chart:spaceshower|youtube,active,line|spaceshower|youtube,2026-07-24,2026-07-26
 trk_a7032e8e6f36,YG,YG Entertainment,BABYMONSTER,춤 (CHOOM),,chart,,chart:line|chart:spaceshower,active,line|spaceshower,2026-07-17,2026-07-26
 trk_c555c691638f,YG,YG Entertainment,BIGBANG,BANG BANG BANG,,chart,,chart:line,active,line,2026-07-26,2026-07-26
 trk_3a142cc144d6,YG,YG Entertainment,BIGBANG,FANTASTIC BABY,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_0e208aef5f47,YG,YG Entertainment,BLACKPINK,AS IF IT'S YOUR LAST,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_4da487262df5,YG,YG Entertainment,BLACKPINK,JUMP,,chart,,chart:line,active,line,2026-07-26,2026-07-26
-trk_f242146b486f,YG,THE BLACK LABEL,MEOVV,DDI RO RI,,chart,,chart:apple|chart:spaceshower,active,apple|spaceshower,2026-07-24,2026-07-26
+trk_0e208aef5f47,YG,YG Entertainment,BLACKPINK,AS IF IT'S YOUR LAST,,chart,Amq-qlqbjYA,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_4da487262df5,YG,YG Entertainment,BLACKPINK,JUMP,,chart,yQhbf7BW_wI,chart:line|youtube,active,line|youtube,2026-07-26,2026-07-26
+trk_f242146b486f,YG,THE BLACK LABEL,MEOVV,DDI RO RI,,chart,,chart:apple|chart:spaceshower,active,apple|spaceshower,2026-07-24,2026-07-27
 trk_ea0f26a4368f,YG,YG Entertainment,TREASURE,IF I,,chart,,chart:spaceshower,active,spaceshower,2026-07-17,2026-07-24

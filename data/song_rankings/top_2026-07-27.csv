@@ -1,21 +1,21 @@
 rank,track_id,artist_name_en,track_name,agency,sub_agency,score,chart_points,chart_norm,youtube_views,youtube_norm,platforms_hit,platforms,youtube_video_id
-1,trk_5eeb53e07d6b,ILLIT,It's Me,HYBE,BELIFT LAB,1.0,434.0,1.0,,,4,apple_jp|apple_kr|line|spaceshower,
-2,trk_42ade9a07a70,aespa,LEMONADE,SM,SM Entertainment,0.679724,295.0,0.6797,,,4,apple_jp|apple_kr|line|spaceshower,
-3,trk_69c5375146af,ATEEZ,BAD,OTHER,KQ Entertainment,0.587558,255.0,0.5876,,,3,apple_kr|line|spaceshower,
-4,trk_41908562b1e2,Hearts2Hearts,Lemon Tang,SM,SM Entertainment,0.465438,202.0,0.4654,,,3,apple_kr|line|spaceshower,
-5,trk_48b7e43a1746,ILLIT,Magnetic,HYBE,BELIFT LAB,0.447005,194.0,0.447,,,3,apple_kr|line|spaceshower,
-6,trk_7cac2a1b7019,BTS,SWIM,HYBE,BIGHIT MUSIC,0.343318,149.0,0.3433,,,2,line|spaceshower,
-7,trk_9896ca6e0e91,aespa,Whiplash,SM,SM Entertainment,0.324885,141.0,0.3249,,,2,apple_kr|line,
-8,trk_a7032e8e6f36,BABYMONSTER,춤 (CHOOM),YG,YG Entertainment,0.322581,140.0,0.3226,,,2,line|spaceshower,
-9,trk_4507f24e5d9f,RIIZE,Do your dance,SM,SM Entertainment,0.276498,120.0,0.2765,,,2,apple_kr|spaceshower,
-10,trk_1629be49e57a,aespa,KISS N TELL,SM,SM Entertainment,0.24424,106.0,0.2442,,,2,apple_jp|line,
-11,trk_4385d0e22e4d,CORTIS,REDRED,HYBE,BIGHIT MUSIC,0.228111,99.0,0.2281,,,1,apple_kr,
-12,trk_ca2922a24d63,BOYNEXTDOOR,VIRAL,HYBE,KOZ Entertainment,0.223502,97.0,0.2235,,,2,apple_kr|spaceshower,
-13,trk_d563686936bf,RESCENE,LOVE ATTACK,OTHER,THE MUZE Entertainment,0.221198,96.0,0.2212,,,1,apple_kr,
-14,trk_c8e7de4fc5c8,RESCENE,Pretty Girl,OTHER,THE MUZE Entertainment,0.218894,95.0,0.2189,,,1,apple_kr,
-15,trk_5b92e5e30ce8,RESCENE,Deja Vu,OTHER,THE MUZE Entertainment,0.214286,93.0,0.2143,,,1,apple_kr,
-16,trk_11ee4c1b8b2a,ILLIT,Almond Chocolate,HYBE,BELIFT LAB,0.211982,92.0,0.212,,,1,line,
-17,trk_f35879686881,Hearts2Hearts,RUDE!,SM,SM Entertainment,0.209677,91.0,0.2097,,,1,apple_kr,
-18,trk_d4d46923b488,BTS,2.0,HYBE,BIGHIT MUSIC,0.207373,90.0,0.2074,,,1,line,
-19,trk_c533290f9a24,CORTIS,ACAI,HYBE,BIGHIT MUSIC,0.207373,90.0,0.2074,,,1,apple_kr,
-20,trk_48adb02ce6fa,KiiiKiii,404 (New Era),OTHER,Starship Entertainment,0.205069,89.0,0.2051,,,1,apple_kr,
+1,trk_5eeb53e07d6b,ILLIT,It's Me,HYBE,BELIFT LAB,0.846388,528.0,1.0,3863859,0.488,4,apple_jp|apple_kr|line|spaceshower,a9NDoFxm_1w
+2,trk_69c5375146af,ATEEZ,BAD,OTHER,KQ Entertainment,0.588878,347.0,0.6572,1951121,0.4295,3,apple_kr|line|spaceshower,xhZT2-0DoMI
+3,trk_42ade9a07a70,aespa,LEMONADE,SM,SM Entertainment,0.519697,392.0,0.7424,,0.0,4,apple_jp|apple_kr|line|spaceshower,
+4,trk_41908562b1e2,Hearts2Hearts,Lemon Tang,SM,SM Entertainment,0.483765,300.0,0.5682,368524,0.2868,3,apple_kr|line|spaceshower,w3_duAs2ONs
+5,trk_4385d0e22e4d,CORTIS,REDRED,HYBE,BIGHIT MUSIC,0.462827,198.0,0.375,31561225,0.6678,1,apple_kr,Q-ItC3Xcl3c
+6,trk_07f30cd63216,NewJeans,How Sweet,HYBE,ADOR,0.417359,166.0,0.3144,28033450,0.6576,1,apple_kr,Ec0Z1v7jKDQ
+7,trk_92d2f00a715a,NewJeans,Hype Boy,HYBE,ADOR,0.395282,143.0,0.2708,38904013,0.6857,1,apple_kr,KrtYasOGibU
+8,trk_c533290f9a24,CORTIS,ACAI,HYBE,BIGHIT MUSIC,0.39276,180.0,0.3409,5221968,0.5137,1,apple_kr,ysg6GVlzz9Y
+9,trk_4a4c7d13a4b2,BABYMONSTER,DRIP,YG,YG Entertainment,0.360556,72.0,0.1364,393113154,0.8837,1,line,Zp-Jhuhq0bQ
+10,trk_5bc9ff4e0438,CORTIS,FaSHioN,HYBE,BIGHIT MUSIC,0.3548,133.0,0.2519,13477603,0.5949,1,apple_kr,cyMmsWjDEB0
+11,trk_12d9ff192e97,CORTIS,GO!,HYBE,BIGHIT MUSIC,0.354118,136.0,0.2576,11241449,0.5794,2,apple_kr|spaceshower,
+12,trk_0e208aef5f47,BLACKPINK,AS IF IT'S YOUR LAST,YG,YG Entertainment,0.347727,36.0,0.0682,1529914418,1.0,1,line,Amq-qlqbjYA
+13,trk_48b7e43a1746,ILLIT,Magnetic,HYBE,BELIFT LAB,0.346023,261.0,0.4943,,0.0,3,apple_kr|line|spaceshower,
+14,trk_cce67484bca4,BABYMONSTER,WE GO UP,YG,YG Entertainment,0.341548,69.0,0.1307,218947343,0.8336,2,line|spaceshower,wlHwjkYpSr0
+15,trk_18d2e827f63d,NewJeans,New Jeans,HYBE,ADOR,0.334877,64.0,0.1212,218592046,0.8334,1,apple_kr,Km71Rr9K-Bw
+16,trk_4507f24e5d9f,RIIZE,Do your dance,SM,SM Entertainment,0.332323,165.0,0.3125,1076734,0.3786,2,apple_kr|spaceshower,9it8ySJJuVY
+17,trk_c8e7de4fc5c8,RESCENE,Pretty Girl,OTHER,THE MUZE Entertainment,0.331159,190.0,0.3598,283098,0.2642,1,apple_kr,bd42NE8dFDI
+18,trk_69015eb1489e,BABYMONSTER,SUGAR HONEY ICE TEA,YG,YG Entertainment,0.324674,68.0,0.1288,119511277,0.7817,1,line,naoGk-Zjc1s
+19,trk_445021acb2a9,NewJeans,OMG,HYBE,ADOR,0.318732,92.0,0.1742,27470862,0.6559,2,apple_kr|line,_Xs1ZCMfa2Y
+20,trk_2b4640732bf3,fromis_9,Vitamin ME,HYBE,(旧PLEDIS→契約終了),0.300401,101.0,0.1913,8454824,0.555,1,apple_kr,sLk8zWUuYTA
