@@ -13,6 +13,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -29,12 +31,17 @@ jobs:
 
       - name: Commit and push data
         run: |
+          set -e
           git config user.name "riverstone-bot"
           git config user.email "riverstone0228@gmail.com"
           git add data/raw/ data/apple_charts/ data/line_charts/ data/spaceshower_charts/ data/other_agency_top15/
           git add scripts/artist_external_ids.csv scripts/track_external_ids.csv scripts/artist_external_candidates.csv || true
-          git diff --quiet --cached || git commit -m "chore: daily data collection $(date -u +%Y-%m-%d)"
-          # 手動pushや並行実行で remote が進んでいる場合に備える
+          if git diff --quiet --cached; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore: daily data collection $(date -u +%Y-%m-%d)"
+          fi
+          git fetch origin main
           git pull --rebase origin main
           git push origin HEAD:main
 
