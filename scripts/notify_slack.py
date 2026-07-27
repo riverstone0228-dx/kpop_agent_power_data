@@ -76,6 +76,7 @@ def build_file_stats(today: Optional[datetime.date] = None) -> dict:
     d = today.isoformat()
 
     raw = DATA / "raw" / f"{d}.csv"
+    yt_videos = DATA / "youtube_videos" / f"{d}.csv"
     apple = DATA / "apple_charts" / f"{d}.csv"
     line = DATA / "line_charts" / f"{d}.csv"
     other = DATA / "other_agency_top15" / f"{d}.csv"
@@ -86,6 +87,7 @@ def build_file_stats(today: Optional[datetime.date] = None) -> dict:
         "youtube_filled": _nonempty_col_count(raw, "youtube_subscribers"),
         "wiki_ja_filled": _nonempty_col_count(raw, "wikipedia_pv_ja"),
         "wiki_en_filled": _nonempty_col_count(raw, "wikipedia_pv_en"),
+        "youtube_video_rows": _csv_row_count(yt_videos),
         "apple_rows": _csv_row_count(apple),
         "line_rows": _csv_row_count(line),
         "other_rows": _csv_row_count(other),
@@ -121,6 +123,7 @@ def format_message(
         f" / YT埋まり {_fmt_count(stats['youtube_filled'])}"
         f" / Wiki ja {_fmt_count(stats['wiki_ja_filled'])}"
         f" / en {_fmt_count(stats['wiki_en_filled'])}",
+        f"• YouTube videos: {_fmt_count(stats.get('youtube_video_rows'))}",
         f"• Apple charts: {_fmt_count(stats['apple_rows'])}",
         f"• LINE MUSIC: {_fmt_count(stats['line_rows'])}",
         f"• Space Shower: {_fmt_count(stats['spaceshower_rows'])}"

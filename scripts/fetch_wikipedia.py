@@ -1,9 +1,11 @@
 """
-Wikipedia Pageviews API から前日のページビュー数を取得する。
+Wikipedia Pageviews API からページビュー数を取得する。
 認証不要・完全無料。artist_master.csv の wikipedia_title_ja / wikipedia_title_en を使う。
 
+デフォルトは「一昨日」分 (APIは直近1〜2日分が未公開のことが多い)。
+
 実行:
-  python fetch_wikipedia.py            # 前日分を取得しCSV出力
+  python fetch_wikipedia.py            # 一昨日分を取得しCSV出力
   python fetch_wikipedia.py 2026-07-24 # 日付指定
 """
 
@@ -47,7 +49,7 @@ def main():
     target_date = (
         datetime.datetime.strptime(sys.argv[1], "%Y-%m-%d").date()
         if len(sys.argv) > 1
-        else datetime.date.today() - datetime.timedelta(days=1)
+        else datetime.date.today() - datetime.timedelta(days=2)
     )
 
     rows = load_all_artists()

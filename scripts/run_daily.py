@@ -2,11 +2,12 @@
 日次収集オーケストレータ。
 
 1. YouTube / Wikipedia → data/raw/YYYY-MM-DD.csv
-2. Apple Music チャート (jp/kr/us)
-3. LINE MUSIC K-Pop Top 50 (日次)
-4. スペースシャワー KOREAN HITS (週次)
-5. チャートから外部ID採掘 → OTHER TOP15 リバランス
-6. Slack に収集サマリーを通知
+2. YouTube 動画 (直近10 + 再生TOP10) → data/youtube_videos/
+3. Apple Music チャート (jp/kr/us)
+4. LINE MUSIC K-Pop Top 50 (日次)
+5. スペースシャワー KOREAN HITS (週次)
+6. チャートから外部ID採掘 → OTHER TOP15 リバランス
+7. Slack に収集サマリーを通知
 
 GitHub Actionsの日次cronから呼び出される想定。
 1ソースが失敗しても他は継続する。
@@ -56,7 +57,8 @@ def safe_call(label, func, *args, report_step: bool = True, **kwargs):
 def collect_artist_snapshots():
     rows = load_all_artists()
     today = datetime.date.today()
-    yesterday = today - datetime.timedelta(days=1)
+    # Pageviews API は直近1〜2日分が未公開のことが多いため一昨日を取る
+    yesterday = today - datetime.timedelta(days=2)
 
     if not os.environ.get("YOUTUBE_API_KEY", "").strip():
         REPORT.warn("YOUTUBE_API_KEY 未設定 — YouTube列は空になります")
@@ -126,6 +128,13 @@ def collect_artist_snapshots():
     return len(merged)
 
 
+def collect_youtube_videos():
+    from fetch_youtube_videos import main as fetch_yt_videos_main
+
+    print("\n=== YouTube videos (recent10 + top10 views) ===")
+    safe_call("YouTube videos", fetch_yt_videos_main)
+
+
 def collect_charts():
     from fetch_apple_charts import main as fetch_apple_main
     from fetch_line_charts import main as fetch_line_main
@@ -159,6 +168,7 @@ def main():
         print("=== Artist daily snapshots ===")
         safe_call("artist snapshots", collect_artist_snapshots)
 
+        collect_youtube_videos()
         collect_charts()
         print("\n日次収集完了。")
     finally:
