@@ -241,12 +241,95 @@ def notify_job_failure(reason: str = "workflow step failed") -> bool:
     return post_slack("\n".join(lines))
 
 
+def _token_renewal_steps() -> list[str]:
+    return [
+        "*更新手順*",
+        "1. *Databricks で新しい PAT を発行*",
+        "   • 左下ユーザーアイコン → *Settings*",
+        "   • *Developer* → *Access tokens* → *Generate new token*",
+        "   • Lifetime は 90日推奨。発行日と期限を控える",
+        "2. *GitHub Secrets に入れる*",
+        "   • リポジトリ → *Settings* → *Secrets and variables* → *Actions*",
+        "   • Secret `DATABRICKS_TOKEN` を Update（新しい PAT）",
+        "3. *期限日も更新（忘れ防止）*",
+        "   • 同じ画面の *Variables* タブ",
+        "   • `DATABRICKS_TOKEN_EXPIRES_ON` = `YYYY-MM-DD`（新トークンの期限）",
+        "",
+        "※ 他に期限がある場合も同様:",
+        "• GitHub PAT（Databricks の Git 連携用）→ Databricks *Settings* → *Linked accounts*",
+        "• Slack Incoming Webhook は通常期限なし（無効化時のみ再発行）",
+    ]
+
+
+def notify_token_reminder(
+    *,
+    expires_on: Optional[str] = None,
+    warn_days: int = 14,
+    force: bool = False,
+) -> bool:
+    """
+    Databricks PAT の期限リマインダー。
+
+    環境変数 DATABRICKS_TOKEN_EXPIRES_ON (YYYY-MM-DD) を見て、
+    期限まで warn_days 以内 / 期限切れ / force のとき Slack 通知する。
+    期限未設定なら四半期リマインダー（1/4/7/10月の第1月曜想定）だけ送る。
+    """
+    today = datetime.date.today()
+    expires_raw = (expires_on or os.environ.get("DATABRICKS_TOKEN_EXPIRES_ON", "")).strip()
+    warn_days = int(os.environ.get("TOKEN_WARN_DAYS", str(warn_days)))
+
+    should_notify = force
+    headline = ""
+    detail = ""
+
+    if expires_raw:
+        try:
+            expires = datetime.date.fromisoformat(expires_raw)
+        except ValueError:
+            print(f"[WARN] DATABRICKS_TOKEN_EXPIRES_ON が不正: {expires_raw}")
+            return False
+        days_left = (expires - today).days
+        if days_left < 0:
+            should_notify = True
+            headline = f":warning: *Databricks TOKEN 期限切れ*（{expires.isoformat()} / {abs(days_left)}日前）"
+            detail = "日次の Databricks 自動反映が止まっている可能性があります。すぐ更新してください。"
+        elif days_left <= warn_days:
+            should_notify = True
+            headline = f":hourglass_flowing_sand: *Databricks TOKEN 期限が近い*（あと {days_left}日 / {expires.isoformat()}）"
+            detail = "期限前に更新してください。更新後は GitHub Variable も合わせて変更。"
+        else:
+            print(f"[INFO] TOKEN 期限まで {days_left}日（通知なし）")
+    else:
+        # 期限未登録: 四半期の月初週だけリマインダー（1/4/7/10月）
+        if force or (today.month in (1, 4, 7, 10) and today.day <= 7):
+            should_notify = True
+            headline = ":calendar: *Databricks TOKEN 定期確認（期限日未登録）*"
+            detail = (
+                "GitHub Variables に `DATABRICKS_TOKEN_EXPIRES_ON`（YYYY-MM-DD）を入れると、"
+                f"期限 {warn_days} 日前から自動で警告します。"
+            )
+        else:
+            print("[INFO] TOKEN 期限未設定のため今回はスキップ（四半期の月初週のみ通知）")
+
+    if not should_notify:
+        return False
+
+    lines = [headline, detail, ""] + _token_renewal_steps()
+    print("\n--- Slack TOKENリマインダー ---\n" + "\n".join(lines) + "\n------------------------------\n")
+    return post_slack("\n".join(lines))
+
+
 if __name__ == "__main__":
     import sys
 
     if len(sys.argv) > 1 and sys.argv[1] == "--failure":
         reason = sys.argv[2] if len(sys.argv) > 2 else "workflow failed"
         ok = notify_job_failure(reason)
+        sys.exit(0 if ok or not os.environ.get("SLACK_WEBHOOK_URL") else 1)
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--token-reminder":
+        force = "--force" in sys.argv
+        ok = notify_token_reminder(force=force)
         sys.exit(0 if ok or not os.environ.get("SLACK_WEBHOOK_URL") else 1)
 
     # ドライラン: 現在の data/ からサマリーだけ表示

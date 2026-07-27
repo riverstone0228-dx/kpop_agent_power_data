@@ -69,6 +69,22 @@ GitHub リポジトリ → **Settings → Secrets and variables → Actions → 
 
 既存の `YOUTUBE_API_KEY` / `SLACK_WEBHOOK_URL` はそのまま残します。
 
+加えて **Variables**（Secrets ではなく Variables タブ）に期限日を登録すると、Slack で更新リマインドが来ます。
+
+| Variable名 | 値の例 | 用途 |
+|------------|--------|------|
+| `DATABRICKS_TOKEN_EXPIRES_ON` | `2026-10-25` | PAT 期限の 14日前から毎週月曜に Slack 通知 |
+
+期限未登録の場合は、1/4/7/10月に「定期確認」通知が来ます。
+
+#### TOKEN 更新時の手順（Slackにも同じ文面が届きます）
+
+1. Databricks → Settings → Developer → Access tokens → Generate new token（90日推奨）
+2. GitHub → Settings → Secrets → Actions → `DATABRICKS_TOKEN` を Update
+3. GitHub → Settings → Variables → Actions → `DATABRICKS_TOKEN_EXPIRES_ON` を新しい期限に更新
+
+手動テスト: Actions → `Token Expiry Reminder` → Run workflow（force=true）
+
 ### 6. 疎通テスト
 
 1. GitHub → **Actions** → **Daily K-pop Data Collection** → **Run workflow**
