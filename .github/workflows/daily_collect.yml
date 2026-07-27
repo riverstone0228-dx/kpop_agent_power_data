@@ -24,6 +24,7 @@ jobs:
       - name: Run daily collection
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: python scripts/run_daily.py
 
       - name: Commit and push data
@@ -33,4 +34,12 @@ jobs:
           git add data/raw/ data/apple_charts/ data/line_charts/ data/spaceshower_charts/ data/other_agency_top15/
           git add scripts/artist_external_ids.csv scripts/track_external_ids.csv scripts/artist_external_candidates.csv || true
           git diff --quiet --cached || git commit -m "chore: daily data collection $(date -u +%Y-%m-%d)"
-          git push
+          # 手動pushや並行実行で remote が進んでいる場合に備える
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Slack notify on job failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python scripts/notify_slack.py --failure "GitHub Actions job failed before/during collection"

@@ -6,6 +6,7 @@
 3. LINE MUSIC K-Pop Top 50 (日次)
 4. スペースシャワー KOREAN HITS (週次)
 5. チャートから外部ID採掘 → OTHER TOP15 リバランス
+6. Slack に収集サマリーを通知
 
 GitHub Actionsの日次cronから呼び出される想定。
 1ソースが失敗しても他は継続する。
@@ -21,19 +22,34 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 
+from dotenv import load_dotenv
+
+load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+
 from fetch_youtube import fetch_all as fetch_youtube_all
 from fetch_wikipedia import get_pageviews
 from master_data import load_all_artists
+from notify_slack import CollectionReport, notify_collection
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "raw")
 
+# 実行全体で共有するレポート
+REPORT = CollectionReport()
 
-def safe_call(label, func, *args, **kwargs):
+
+def safe_call(label, func, *args, report_step: bool = True, **kwargs):
     """1つのソースがエラーでも他は止めない。"""
     try:
-        return func(*args, **kwargs)
+        result = func(*args, **kwargs)
+        if report_step:
+            REPORT.mark_ok(label)
+        return result
     except Exception as e:
         print(f"[WARN] {label} の取得に失敗しました: {e}")
+        if report_step:
+            REPORT.mark_fail(label, e)
+        else:
+            REPORT.warn(f"{label}: {e}")
         return None
 
 
@@ -42,28 +58,38 @@ def collect_artist_snapshots():
     today = datetime.date.today()
     yesterday = today - datetime.timedelta(days=1)
 
+    if not os.environ.get("YOUTUBE_API_KEY", "").strip():
+        REPORT.warn("YOUTUBE_API_KEY 未設定 — YouTube列は空になります")
+
     yt_results = safe_call("YouTube", fetch_youtube_all) or []
     yt_by_key = {(r["agency"], r["artist_name"]): r for r in yt_results}
 
+    wiki_errors = 0
+    wiki_missing = 0
     merged = []
     for row in rows:
         key = (row["agency"], row["artist_name_en"])
         yt = yt_by_key.get(key, {})
 
-        pv_ja = safe_call(
-            f"Wikipedia(ja) {row['artist_name_en']}",
-            get_pageviews,
-            row.get("wikipedia_title_ja", ""),
-            "ja",
-            yesterday,
-        )
-        pv_en = safe_call(
-            f"Wikipedia(en) {row['artist_name_en']}",
-            get_pageviews,
-            row.get("wikipedia_title_en", ""),
-            "en",
-            yesterday,
-        )
+        pv_ja = None
+        pv_en = None
+        title_ja = row.get("wikipedia_title_ja", "")
+        title_en = row.get("wikipedia_title_en", "")
+        try:
+            pv_ja = get_pageviews(title_ja, "ja", yesterday)
+            if title_ja and pv_ja is None:
+                wiki_missing += 1
+        except Exception as e:
+            wiki_errors += 1
+            REPORT.warn(f"Wikipedia(ja) {row['artist_name_en']}: {e}")
+
+        try:
+            pv_en = get_pageviews(title_en, "en", yesterday)
+            if title_en and pv_en is None:
+                wiki_missing += 1
+        except Exception as e:
+            wiki_errors += 1
+            REPORT.warn(f"Wikipedia(en) {row['artist_name_en']}: {e}")
 
         merged.append(
             {
@@ -79,6 +105,16 @@ def collect_artist_snapshots():
             }
         )
 
+    if wiki_missing:
+        REPORT.warn(f"Wikipedia 記事なし/PV無し: {wiki_missing}件")
+    if wiki_errors:
+        REPORT.mark_fail("Wikipedia", f"API例外 {wiki_errors}件")
+    else:
+        REPORT.mark_ok("Wikipedia")
+
+    if not merged:
+        raise RuntimeError("アーティストマスタが空のため snapshot を書けません")
+
     os.makedirs(OUT_DIR, exist_ok=True)
     out_path = os.path.join(OUT_DIR, f"{today.isoformat()}.csv")
     with open(out_path, "w", newline="", encoding="utf-8") as f:
@@ -87,6 +123,7 @@ def collect_artist_snapshots():
         writer.writerows(merged)
 
     print(f"\n{len(merged)}件を {out_path} に保存しました。")
+    return len(merged)
 
 
 def collect_charts():
@@ -118,11 +155,17 @@ def collect_charts():
 
 
 def main():
-    print("=== Artist daily snapshots ===")
-    safe_call("artist snapshots", collect_artist_snapshots)
+    try:
+        print("=== Artist daily snapshots ===")
+        safe_call("artist snapshots", collect_artist_snapshots)
 
-    collect_charts()
-    print("\n日次収集完了。")
+        collect_charts()
+        print("\n日次収集完了。")
+    finally:
+        try:
+            notify_collection(REPORT)
+        except Exception as e:
+            print(f"[WARN] Slack通知処理で例外: {e}")
 
 
 if __name__ == "__main__":

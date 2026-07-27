@@ -34,10 +34,23 @@ YOUTUBE_API_KEY=AIza...
 | Name | Value |
 |---|---|
 | YOUTUBE_API_KEY | 上記で取得したキー |
+| SLACK_WEBHOOK_URL | 下記「Slack通知」で取得した Incoming Webhook URL |
 
 登録済みかどうかは `accounts.md` の「GitHub Actions Secrets 登録済み一覧」でキー名だけ管理する(値は書かない)。
 
 Apple / LINE / スペースシャワー / Wikipedia は認証不要のため Secrets 不要。
+
+## 2b. Slack 通知 (Incoming Webhook)
+
+日次収集の終わりに、件数サマリー・エラー有無を Slack へ投稿する (`scripts/notify_slack.py`)。
+
+1. Slack ワークスペースで [Incoming Webhooks](https://api.slack.com/messaging/webhooks) を有効化  
+   （または Apps → Incoming Webhooks → Add to Slack）
+2. 通知先チャンネルを選び、表示された Webhook URL (`https://hooks.slack.com/services/...`) をコピー
+3. ローカル検証: `scripts/.env` に `SLACK_WEBHOOK_URL=...` を追加
+4. GitHub Secrets に同名で登録（上表参照）
+
+未設定のまま実行しても収集自体は動き、通知だけスキップされる。
 
 ## 3. 動作確認
 

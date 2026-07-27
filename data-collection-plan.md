@@ -39,9 +39,9 @@ kpop_agent_power_data/
 ## 次のアクション (GitHub本稼働)
 
 1. このワークスペースの内容を `kpop_agent_power_data` に push
-2. GitHub Secrets に `YOUTUBE_API_KEY` のみ登録
+2. GitHub Secrets に `YOUTUBE_API_KEY` と `SLACK_WEBHOOK_URL` を登録
 3. Actions → Daily K-pop Data Collection → Run workflow (手動テスト)
-4. `data/` にCSVがコミットされることを確認 → cron本稼働
+4. `data/` にCSVがコミットされること・Slackにサマリーが届くことを確認 → cron本稼働
 
 ## 決定事項サマリ
 
