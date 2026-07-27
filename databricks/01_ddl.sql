@@ -159,3 +159,22 @@ CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_song_rank_daily (
 )
 USING DELTA
 PARTITIONED BY (date);
+
+CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_stock_price_daily (
+  date DATE,            -- 収集日
+  trade_date DATE,      -- 実際の取引日（休場時は直近営業日）
+  agency STRING,        -- HYBE / JYP / YG / SM
+  ticker STRING,        -- 352820 等
+  market STRING,        -- KRX / KOSDAQ
+  exchange STRING,      -- KOSPI / KOSDAQ
+  yahoo_symbol STRING,
+  currency STRING,
+  open DOUBLE,
+  high DOUBLE,
+  low DOUBLE,
+  close DOUBLE,
+  volume BIGINT,
+  loaded_at TIMESTAMP
+)
+USING DELTA
+PARTITIONED BY (date);

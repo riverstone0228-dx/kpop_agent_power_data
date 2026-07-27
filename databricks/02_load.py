@@ -357,6 +357,39 @@ if rank_frames:
 # COMMAND ----------
 
 # MAGIC %md
+# MAGIC ## fact_stock_price_daily（任意）
+
+# COMMAND ----------
+
+stock_dir = os.path.join(DATA_DIR, "stock_prices")
+stock_files = [f for f in list_csv(stock_dir) if os.path.basename(f)[:1].isdigit()]
+if not stock_files:
+    print("skip stocks: not found")
+else:
+    stocks = (
+        read_csv(stock_files)
+        .withColumn("date", to_date("date"))
+        .withColumn("trade_date", to_date("trade_date"))
+        .withColumn("open", to_double("open"))
+        .withColumn("high", to_double("high"))
+        .withColumn("low", to_double("low"))
+        .withColumn("close", to_double("close"))
+        .withColumn("volume", to_bigint("volume"))
+        .withColumn("loaded_at", F.lit(LOADED_AT).cast("timestamp"))
+    )
+    stocks.createOrReplaceTempView("stg_stocks")
+    spark.sql("""
+        MERGE INTO workspace.kpop_bronze.fact_stock_price_daily t
+        USING stg_stocks s
+        ON t.date = s.date AND t.agency = s.agency
+        WHEN MATCHED THEN UPDATE SET *
+        WHEN NOT MATCHED THEN INSERT *
+    """)
+    print("fact_stock_price_daily merge done:", stocks.count())
+
+# COMMAND ----------
+
+# MAGIC %md
 # MAGIC ## 確認
 
 # COMMAND ----------
@@ -369,6 +402,7 @@ for t in [
     "workspace.kpop_bronze.fact_apple_chart_daily",
     "workspace.kpop_bronze.fact_youtube_video_daily",
     "workspace.kpop_bronze.fact_song_rank_daily",
+    "workspace.kpop_bronze.fact_stock_price_daily",
 ]:
     try:
         n = spark.table(t).count()

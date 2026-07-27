@@ -3,16 +3,17 @@
 
 1. YouTube / Wikipedia → data/raw/YYYY-MM-DD.csv
 2. YouTube 動画 (直近10 + 再生TOP10) → data/youtube_videos/
-3. Apple Music チャート (jp/kr/us)
-4. LINE MUSIC K-Pop Top 50 (日次)
-5. スペースシャワー KOREAN HITS (週次)
-6. チャートから外部ID採掘 → track_master 更新 → TOP/HOT SONG20 → OTHER TOP15
-7. Slack に収集サマリーを通知
+3. 4大事務所株価 (HYBE/JYP/YG/SM) → data/stock_prices/
+4. Apple Music チャート (jp/kr/us)
+5. LINE MUSIC K-Pop Top 50 (日次)
+6. スペースシャワー KOREAN HITS (週次)
+7. チャートから外部ID採掘 → track_master 更新 → TOP/HOT SONG20 → OTHER TOP15
+8. Slack に収集サマリーを通知
 
 GitHub Actionsの日次cronから呼び出される想定。
 1ソースが失敗しても他は継続する。
 
-データソース方針: YouTube / Wikipedia / Apple / LINE / Space Shower。
+データソース方針: YouTube / Wikipedia / Apple / LINE / Space Shower / 株価。
 Spotifyは2026年2月のAPI変更により不使用 (spotify-api-change-2026.md)。
 """
 
@@ -136,6 +137,13 @@ def collect_youtube_videos():
     safe_call("YouTube videos", fetch_yt_videos_main)
 
 
+def collect_stock_prices():
+    from fetch_stock_prices import main as fetch_stock_main
+
+    print("\n=== Agency stock prices (HYBE/JYP/YG/SM) ===")
+    safe_call("stock prices", fetch_stock_main)
+
+
 def collect_charts():
     from fetch_apple_charts import main as fetch_apple_main
     from fetch_line_charts import main as fetch_line_main
@@ -190,6 +198,7 @@ def main():
         safe_call("artist snapshots", collect_artist_snapshots)
 
         collect_youtube_videos()
+        collect_stock_prices()
         collect_charts()
         print("\n日次収集完了。")
     finally:

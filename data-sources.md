@@ -11,6 +11,7 @@ K-popアーティスト/事務所パワー計測に使うデータソース。
 | **Apple Music RSS** | jp/kr/us チャート (日次) | 不要 |
 | **LINE MUSIC** | K-Pop Top 50 (日次) | 不要 |
 | **スペースシャワーTV** | KOREAN HITS (週次) | 不要 |
+| **Yahoo Finance** | 4大事務所株価 HYBE/JYP/YG/SM (日次) | 不要 |
 
 ### YouTube Data API v3
 - 無料枠: **1日10,000ユニット**。`channels.list` は1ユニット、`search` は100ユニット
@@ -35,8 +36,8 @@ K-popアーティスト/事務所パワー計測に使うデータソース。
 
 ## 設計方針
 
-- 主力は **YouTube + Wikipedia + Apple + LINE + Space Shower**
-- 日次取得を早く始めるほど時系列が資産になる
+- 主力は **YouTube + Wikipedia + Apple + LINE + Space Shower + 4大事務所株価**
+- 日次取得を早く始めるほど時系列が資産になる（パワー指標と株価の相関分析にも使える）
 - 取得は GitHub Actions → リポジトリの `data/` にCSVコミット。Databricks連携はPhase 4
 
 ## 出典
