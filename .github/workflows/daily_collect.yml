@@ -45,13 +45,29 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
+      # secrets は if: で直接参照できないため、先に有無を判定する
+      - name: Check Databricks secrets
+        id: databricks
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_JOB_ID: ${{ secrets.DATABRICKS_JOB_ID }}
+          DATABRICKS_REPO_PATH: ${{ secrets.DATABRICKS_REPO_PATH }}
+        run: |
+          if [ -n "${DATABRICKS_HOST}" ] && [ -n "${DATABRICKS_TOKEN}" ] && [ -n "${DATABRICKS_JOB_ID}" ] && [ -n "${DATABRICKS_REPO_PATH}" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Databricks secrets incomplete; skip sync"
+          fi
+
       - name: Setup Databricks CLI
-        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' && secrets.DATABRICKS_REPO_PATH != '' }}
+        if: steps.databricks.outputs.enabled == 'true'
         uses: databricks/setup-cli@main
 
       # Workspace Git folder は自動更新されないため、Job実行前に Pull する
       - name: Pull Databricks Git folder
-        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' && secrets.DATABRICKS_REPO_PATH != '' }}
+        if: steps.databricks.outputs.enabled == 'true'
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
@@ -62,7 +78,7 @@ jobs:
           databricks repos update "${DATABRICKS_REPO_PATH}" --branch main --output json
 
       - name: Trigger Databricks bronze load job
-        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' && secrets.DATABRICKS_REPO_PATH != '' }}
+        if: steps.databricks.outputs.enabled == 'true'
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
