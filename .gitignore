@@ -1,0 +1,5 @@
+accounts.md
+logs/
+.env
+scripts/.env
+scripts/candidates_report.csv

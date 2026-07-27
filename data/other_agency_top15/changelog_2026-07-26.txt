@@ -1,0 +1,5 @@
+OTHER TOP15 rebalance 2026-07-26
+pool_size=17 has_youtube=False
+weights: chart=0.7 youtube=0
+hysteresis: enter<=14 drop>=17
+entered: ATEEZ, CIX, IVE, Kep1er, KiiiKiii, MAMAMOO, ONEUS, P1Harmony, PLAVE, RESCENE, STAYC, YENA, ZEROBASEONE, i-dle, izna

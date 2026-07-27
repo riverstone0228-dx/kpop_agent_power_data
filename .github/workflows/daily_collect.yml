@@ -1,0 +1,36 @@
+name: Daily K-pop Data Collection
+
+on:
+  schedule:
+    # JST 6:00 = UTC 21:00 (前日)
+    - cron: "0 21 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run daily collection
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/run_daily.py
+
+      - name: Commit and push data
+        run: |
+          git config user.name "riverstone-bot"
+          git config user.email "riverstone0228@gmail.com"
+          git add data/raw/ data/apple_charts/ data/line_charts/ data/spaceshower_charts/ data/other_agency_top15/
+          git add scripts/artist_external_ids.csv scripts/track_external_ids.csv scripts/artist_external_candidates.csv || true
+          git diff --quiet --cached || git commit -m "chore: daily data collection $(date -u +%Y-%m-%d)"
+          git push

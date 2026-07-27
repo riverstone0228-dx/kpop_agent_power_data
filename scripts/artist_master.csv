@@ -1,0 +1,53 @@
+agency,sub_agency,artist_name_en,artist_name_ja,youtube_channel_id,apple_artist_id,wikipedia_title_ja,wikipedia_title_en,status,notes
+HYBE,BIGHIT MUSIC,BTS,BTS,UCLkAepWjdylmXSltofFvsYQ,883131348,BTS,BTS,収集対象(要ID解決),
+HYBE,BIGHIT MUSIC,TOMORROW X TOGETHER,TOMORROW X TOGETHER,UCtiObj3CsEAdNU6ZPWDsddQ,1454642552,TOMORROW X TOGETHER,Tomorrow X Together,収集対象(要ID解決),通称TXT
+HYBE,PLEDIS Entertainment,SEVENTEEN,SEVENTEEN,UCfkXDY7vwkcJ8ddFGz8KusA,999644772,SEVENTEEN,Seventeen (South Korean band),収集対象(要ID解決),
+HYBE,BELIFT LAB,ENHYPEN,ENHYPEN,UCArLZtok93cO5R9RI4_Y5Jw,1541011620,ENHYPEN,Enhypen,収集対象(要ID解決),
+HYBE,SOURCE MUSIC,LE SSERAFIM,ル・セラフィム,UCs-QBT4qkj_YiQw1ZntDO3g,1616740364,ル・セラフィム,Le Sserafim,収集対象(要ID解決),
+HYBE,ADOR,NewJeans,ニュージーンズ,UCMki_UkHb4qSc0qyEcOHHJw,1635469693,NewJeans,NewJeans,収集対象(要ID解決),運営元と係争中の報道あり要確認
+HYBE,BELIFT LAB,ILLIT,アイリット,UCEpFoWeCMCo5z3EvWaz6hQQ,1734551937,ILLIT,Illit,収集対象(要ID解決),
+HYBE,KOZ Entertainment,BOYNEXTDOOR,ボーイネクストドア,UChhKBlh_wvspTh5n4mL0b5g,1687612559,BOYNEXTDOOR,Boynextdoor,収集対象(要ID解決),
+HYBE,(旧PLEDIS→契約終了),fromis_9,フロミス9,UCXbRURMKT3H_w8dT-DWLIxA,1319150216,fromis_9,Fromis 9,要判断,2024年末にPLEDIS(HYBE)との契約終了。5名は新事務所ASND、3名は個別活動へ。**現在HYBE非所属**。収集は継続するが集計上HYBEに含めるか要判断
+HYBE,HYBE LABELS JAPAN,&TEAM,アンドチーム,UCHD1jo5RhijLfx5-0Ehe_cg,1654437478,and TEAM,And Team,収集対象(要ID解決),HYBE Japan/Universal Music Japan
+HYBE,SOURCE MUSIC,GFRIEND,ジーフレンド,UCRDd3x33kfF0IW6g2MRUkRw,958416186,GFRIEND,GFriend,収集対象(要ID解決),2021年契約終了/2024年9月に期間限定再結成発表。データ的には活動休止扱い要検討
+HYBE,HYBE America(Geffen Records),KATSEYE,キャッツアイ,UCA61H4fWOMHikLcUFKyQUog,1754284416,KATSEYE,Katseye,収集対象(要ID解決),2024年デビューのグローバルガールズグループ
+HYBE,BIGHIT MUSIC,CORTIS,コルティス,UCZMYvSPulDSUdx7bdtTFdrg,1831651635,CORTIS,Cortis,収集対象(要ID解決),2025-08-18デビュー。ユーザー指定時は「他事務所」候補だったが調査の結果BIGHIT MUSIC(HYBE)所属と判明したためHYBEに分類
+JYP,JYP Entertainment,TWICE,TWICE,UCzgxx_DM2Dcb9Y1spb9mUJA,1203816887,TWICE,Twice,収集対象(要ID解決),
+JYP,JYP Entertainment,Stray Kids,Stray Kids,UC9rMiEjNaCSsebs31MRDCRA,1304823362,Stray Kids,Stray Kids,収集対象(要ID解決),
+JYP,JYP Entertainment,ITZY,ITZY,UCDhM2k2Cua-JdobAh5moMFg,1451964345,ITZY,Itzy,収集対象(要ID解決),
+JYP,JYP Entertainment,NMIXX,NMIXX,UCnUAyD4t2LkvW68YrDh7fDg,1600411676,NMIXX,Nmixx,収集対象(要ID解決),
+JYP,JYP Entertainment,DAY6,DAY6,UCp-pqXsizklX3ZHvLxXyhxw,1037939997,DAY6,Day6,収集対象(要ID解決),
+JYP,JYP Entertainment Japan,NiziU,NiziU,UCHp2q2i85qt_9nn2H7AvGOw,1519410581,NiziU,NiziU,収集対象(要ID解決),Niziプロジェクト
+JYP,JYP Entertainment,Xdinary Heroes,エクスディナリーヒーローズ,UCO9GhtdQcCRf67GIdSQ0HNQ,1594215221,Xdinary Heroes,Xdinary Heroes,収集対象(要ID解決),
+JYP,JYP USA (A2K),VCHA,ブイチャ,UCi_BRK1tLd-UIR3FatHO1_g,1707071276,VCHA,VCHA,収集対象(要ID解決),
+JYP,JYP Entertainment,2PM,2PM,UCBpzJvEhkemwMOkYLq9yUsA,183292586,2PM,2PM,収集対象(要ID解決),活動頻度低め・要確認
+JYP,(契約終了),GOT7,GOT7,UC8HEl74jL3bLLwfDP1OALxw,802694659,GOT7,Got7,要判断,2021年にJYPとの専属契約終了、グループとしては現在事務所非所属(メンバー個別活動)。データ収集対象とするか要再検討
+JYP,INNIT Entertainment,OURBIRTHDAY,アワーバースデー,UCTKAsxI3zuPPGGrcCJOqvzg,6783251556,OURBIRTHDAY,Ourbirthday,収集対象(要ID解決),2026-07-22プレデビュー(3名体制→将来7名)。データ蓄積は今から始めるほど貴重
+JYP,JYP Entertainment Japan(Sony Music Japan),NEXZ,ネクスト,UC-o9yrZxu5Ru-DVGhnmeTug,1719566463,NEXZ,Nexz,収集対象(要ID解決),ニジプロ2。2024-05-20デビュー
+YG,YG Entertainment,BLACKPINK,BLACKPINK,UCOmHUn--16B90oW2L6FRR3A,1141774019,BLACKPINK,Blackpink,収集対象(要ID解決),
+YG,YG Entertainment,TREASURE,TREASURE,UCx9hXYOCvUYwrprEqe4ZQHA,1526319335,TREASURE,Treasure (band),収集対象(要ID解決),
+YG,YG Entertainment,WINNER,WINNER,UCr-QRfaObv0ylqV6b-v14BQ,908222845,WINNER,Winner (band),収集対象(要ID解決),
+YG,YG Entertainment,BABYMONSTER,ベビーモンスター,UCqwUnggBBct-AY2lAdI88jQ,1715981813,BABYMONSTER,Babymonster,収集対象(要ID解決),
+YG,YG Entertainment,AKMU,AKMU (アッコムグァチャン),UCIcXK1CI8URMIqNO_1cehiQ,747306596,AKMU,Akmu,収集対象(要ID解決),
+YG,YG Entertainment,Taeyang,テヤン,UCDJnRpq0DnQhrwi1ruuQa7g,1683284485,テヤン,Taeyang,収集対象(要ID解決),BIGBANGソロ
+YG,YG Entertainment,G-Dragon,ジードラゴン,UCeU5qTuBiqTU5z-hyL6WITQ,320373708,G-DRAGON,G-Dragon,収集対象(要ID解決),2024年YG復帰・要現況確認
+YG,YG Entertainment,BIGBANG,BIGBANG,UCzw-C7fNfs018R1FzIKnlaA,318754656,BIGBANG,Bigbang,収集対象(要ID解決),活動頻度低め・要確認
+YG,(移籍報道あり),iKON,iKON,UCWxCyZibDIWIrGIgP25mbfw,1044506362,iKON,iKon,要判断,2023年YG退所・143 Entertainment移籍の報道あり要確認削除
+YG,YG Entertainment,Lee Hi,イ・ハイ,UCT86dWwZWeJWGQCDzbipU-A,1484046668,イ・ハイ,Lee Hi,収集対象(要ID解決),
+YG,THE BLACK LABEL,MEOVV,ミヤオ,UCowiwt93gqGlNG4k5VDxO-w,1765256889,MEOVV,Meovv,収集対象(要ID解決),2024-09-06デビュー。THE BLACK LABELはYGが出資しTEDDY氏が設立したレーベル。ユーザー指示により「他事務所」からYGに移動(2026-07-25)
+SM,SM Entertainment,aespa,aespa,UC9GtSLeksfK4yuJ_g1lgQbg,1540251304,aespa,Aespa,収集対象(要ID解決),
+SM,SM Entertainment,NCT DREAM,NCT DREAM,UCXURHJRGr4-EB3l87kcbElw,1208839599,NCT DREAM,NCT Dream,収集対象(要ID解決),
+SM,SM Entertainment,NCT 127,NCT 127,UCk2E0dbAyEJWnrN2bbQOcbg,1235849306,NCT 127,NCT 127,収集対象(要ID解決),
+SM,SM Entertainment,RIIZE,ライズ,UCdVD0MsYecQaIE5Ru-pOIQQ,1702435257,RIIZE,Riize,収集対象(要ID解決),
+SM,SM Entertainment,Red Velvet,レッドベルベット,UCk9GmdlDTBfgGRb7vXeRMoQ,906961899,Red Velvet,Red Velvet,収集対象(要ID解決),
+SM,SM Entertainment,EXO,EXO,UCzCedBCSSltI1TFd3bKyN6g,657630070,EXO,Exo,収集対象(要ID解決),
+SM,SM Entertainment,SHINee,SHINee,UCyPwRgc3gQGqhk6RoGS50Ug,433371033,SHINee,Shinee,収集対象(要ID解決),
+SM,SM Entertainment,TVXQ,東方神起,UC6dXhxQtzjlEGauwEGtLuSw,540125745,東方神起,TVXQ,収集対象(要ID解決),
+SM,SM Entertainment,Girls' Generation,少女時代,UCPENYtHg4Xhmm6oX8zaQA7Q,357463500,少女時代,Girls' Generation,収集対象(要ID解決),グループ活動は不定期・要確認
+SM,SM Entertainment,WayV,WayV,UC-ZHt5Zgadfx-B1CM63Lqew,1449462311,WayV,WayV,収集対象(要ID解決),NCT中国ユニット
+SM,SM Entertainment,SUPER JUNIOR,スーパージュニア,UCFipx49muiJ8-d2YsnLlNVw,284066214,SUPER JUNIOR,Super Junior,収集対象(要ID解決),
+SM,SM Entertainment,NCT U,エヌシーティー・ユー,UCmJp1GNTNL-7ElxZSsYAd0Q,1614202131,NCT U,NCT U,収集対象(要ID解決),NCTのプロジェクトユニット(曲ごとにメンバー変動)
+SM,SM Entertainment,NCT WISH,エヌシーティー・ウィッシュ,UCiZqWVAeChfqlom5ZPR3ZJA,1710322244,NCT WISH,NCT Wish,収集対象(要ID解決),NCT日本発ユニット。2024年デビュー
+SM,SM Entertainment,f(x),エフエックス,UC6qbHF5Aql0EbXn52P7ofXA,425076892,f(x),F(x) (group),収集対象(要ID解決),2019年頃から活動休止状態、メンバー個別活動中。データが薄い可能性あり
+SM,SM Entertainment,Hearts2Hearts,ハツハツ,UC7Q3HUnJA3nvjZR2JeMn2Cw,1793698498,Hearts2Hearts,Hearts2Hearts,収集対象(要ID解決),SM新人ガールズグループ。2025年デビュー
+HYBE,PLEDIS Entertainment,TWS,TWS,UC8C6QOPDVYwmuaSBZksefdg,1721226191,TWS,TWS (group),収集対象(要ID解決),2024-01-22デビュー。PLEDIS(HYBE)所属のためOTHERではなくHYBEに分類

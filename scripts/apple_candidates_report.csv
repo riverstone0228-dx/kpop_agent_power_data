@@ -1,0 +1,60 @@
+source_file,agency,artist_name_en,jp_store_candidates,kr_store_candidates
+artist_master.csv,HYBE,BTS,BTS | 883131348 | K-Pop / Jung Kook | 785052275 | K-Pop / RM | 1439549457 | K-Pop,BTS | 883131348 | K-Pop / Jung Kook | 785052275 | K-Pop / SUGA | 80159541 | 일렉트로니카
+artist_master.csv,HYBE,TOMORROW X TOGETHER,TOMORROW X TOGETHER | 1454642552 | K-Pop / X JAPAN | 254545979 | ロック / Tomorrow | 6854474 | ロック,TOMORROW X TOGETHER | 1454642552 | K-Pop / X JAPAN | 254545979 | 록 / NCT DREAM | 1208839599 | K-Pop
+artist_master.csv,HYBE,SEVENTEEN,SEVENTEEN | 999644772 | K-Pop / BSS | 1361943504 | K-Pop / SEUNGKWAN | 1359505531 | K-Pop,SEVENTEEN | 999644772 | K-Pop / SEUNGKWAN | 1359505531 | K-Pop / BSS | 1361943504 | K-Pop
+artist_master.csv,HYBE,ENHYPEN,ENHYPEN | 1541011620 | K-Pop / JAY (ENHYPEN) | 1715395839 | ポップ / SUGA | 80159541 | エレクトロニカ,ENHYPEN | 1541011620 | K-Pop / I-LAND2 : N/a | 1738345967 | K-Pop / JAY (ENHYPEN) | 1715395839 | 팝
+artist_master.csv,HYBE,LE SSERAFIM,LE SSERAFIM | 1616740364 | K-Pop / DJ松永 | 598541573 | ヒップホップ／ラップ / j-hope | 1354883995 | K-Pop,LE SSERAFIM | 1616740364 | K-Pop / EXO | 657630070 | K-Pop / ILLIT | 1734551937 | K-Pop
+artist_master.csv,HYBE,NewJeans,NewJeans | 1635469693 | K-Pop / New Jeans | 1637640324 | ダンス / hanni_from_newjeans | 1707424656 | ポップ,NewJeans | 1635469693 | K-Pop / New Jeans | 1637640324 | 댄스 / TAEYEON | 435966642 | K-Pop
+artist_master.csv,HYBE,BOYNEXTDOOR,BOYNEXTDOOR | 1687612559 | K-Pop / Boy Next Door | 582079002 | エレクトロニック / BOYNEXTDOOR | 1489646529 | ヒップホップ／ラップ,BOYNEXTDOOR | 1687612559 | K-Pop / BOYNEXTDOOR | 1489646529 | 힙합/랩 / Boy Next Door | 582079002 | 일렉트로닉
+artist_master.csv,HYBE,fromis_9,fromis_9 | 1319150216 | K-Pop / Kitadani Hiroshi | 260700751 | アニメ / Mac DeMarco | 501437762 | オルタナティブ,(該当なし)
+artist_master.csv,HYBE,&TEAM,&TEAM | 1654437478 | J-Pop / ATLUS Sound Team | 410494066 | サウンドトラック / Capcom Sound Team | 331258611 | テレビゲーム,&TEAM | 1654437478 | J-Pop / ATLUS Sound Team | 410494066 | OST / Team Luke Worship | 1562078315 | 크리스천
+artist_master.csv,HYBE,GFRIEND,GFRIEND | 958416186 | K-Pop / Umji | 1370607082 | K-Pop / SinB | 1147741914 | K-Pop,GFRIEND | 958416186 | K-Pop / SinB | 1147741914 | K-Pop / Umji | 1370607082 | K-Pop
+artist_master.csv,HYBE,KATSEYE,KATSEYE | 1754284416 | ポップ / Katseye | 655290304 | ダンス / benny blanco | 1410841257 | ポップ,Katseye | 655290304 | 댄스 / Mini Katseye | 1895220112 | 팝
+artist_master.csv,JYP,TWICE,TWICE | 1203816887 | K-Pop / MISAMO | 1670795714 | J-Pop / NAYEON | 1625812861 | K-Pop,TWICE | 1203816887 | K-Pop / NAYEON | 1625812861 | K-Pop / MISAMO | 1670795714 | J-Pop
+artist_master.csv,JYP,Stray Kids,Stray Kids | 1304823362 | K-Pop / Seungmin | 1589044070 | サウンドトラック / Changbin | 1363844963 | ポップ,Stray Kids | 1441789569 | 팝 / I.N | 1531542300 | K-Pop / NMIXX | 1600411676 | K-Pop
+artist_master.csv,JYP,ITZY,ITZY | 1451964345 | K-Pop / Itzy | 549720681 | エレクトロニック / Itzy | 1498223497 | R&B／ソウル,ITZY | 1451964345 | K-Pop / Itzy | 549720681 | 일렉트로닉 / Itzy | 1498223497 | R&B/소울
+artist_master.csv,JYP,NMIXX,NMIXX | 1600411676 | K-Pop / LILY | 1840120984 | ? / BABYMONSTER | 1715981813 | K-Pop,NMIXX | 1600411676 | K-Pop / LILY | 1840120984 | ? / 배이 (NMIXX) | 1852679063 | ?
+artist_master.csv,JYP,DAY6,DAY6 | 1037939997 | K-Pop / Young K of DAY6 | 1547269822 | ポップ / DAY6 (Even of Day) | 1528946635 | K-Pop,DAY6 | 1037939997 | K-Pop / Young K of DAY6 | 1547269822 | 팝 / DAY6 (Even of Day) | 1528946635 | K-Pop
+artist_master.csv,JYP,NiziU,NiziU | 1519410581 | J-Pop / RM | 1439549457 | K-Pop / SUGA | 80159541 | エレクトロニカ,NiziU | 1519410581 | J-Pop
+artist_master.csv,JYP,Xdinary Heroes,Xdinary Heroes | 1594215221 | K-Pop / 가온 | 1088748487 | K-Pop / My Chemical Romance | 14748659 | オルタナティブ,Xdinary Heroes | 1594215221 | K-Pop / 가온 | 1088748487 | K-Pop / My Chemical Romance | 14748659 | 얼터너티브
+artist_master.csv,JYP,VCHA,VCHA | 1707071276 | K-Pop / V. Cha | 1511222806 | ? / Ludacris | 352073 | ヒップホップ／ラップ,VCHA | 1707071276 | K-Pop / V. Cha | 1511222806 | ?
+artist_master.csv,JYP,2PM,2PM | 183292586 | K-Pop / LEE JUNHO | 527791287 | K-Pop / Jay Park | 384641776 | R&B／ソウル,2PM | 183292586 | K-Pop / LEE JUNHO | 527791287 | K-Pop / Jay Park | 384641776 | R&B/소울
+artist_master.csv,JYP,GOT7,GOT7 | 802694659 | K-Pop / Jinyoung | 1280903192 | K-Pop / Jackson Wang | 1219157172 | ポップ,GOT7 | 802694659 | K-Pop / JAY B | 1532055760 | K-Pop / Jinyoung | 1280903192 | K-Pop
+artist_master.csv,JYP,OURBIRTHDAY,OURBIRTHDAY | 6783251556 | ? / SKY-HI | 461313262 | ヒップホップ／ラップ / JO1 | 1500272115 | J-Pop,(該当なし)
+artist_master.csv,JYP,NEXZ,NEXZ | 1719566463 | K-Pop / Nexz | 1555472601 | ダンス / NEXZ (AR) | 1810085529 | エレクトロニック,NEXZ | 1719566463 | K-Pop / Nexz | 1555472601 | 댄스 / Nexz (AR) | 1864555397 | ?
+artist_master.csv,YG,BLACKPINK,BLACKPINK | 1141774019 | K-Pop / ROSÉ | 1406242696 | K-Pop / JENNIE | 913944 | K-Pop,BLACKPINK | 1141774019 | K-Pop / ROSÉ | 1406242696 | K-Pop / LISA | 1583908668 | 팝
+artist_master.csv,YG,TREASURE,TREASURE | 1526319335 | K-Pop / Treasure | 1475194695 | ポップ / BANG YEDAM | 1272575933 | K-Pop,TREASURE | 1526319335 | K-Pop / Treasure | 1475194695 | 팝 / BANG YEDAM | 1272575933 | K-Pop
+artist_master.csv,YG,WINNER,WINNER | 908222845 | K-Pop / MINO | 847965934 | K-Pop / Kang Seung Yoon | 398344134 | K-Pop,WINNER | 908222845 | K-Pop / MINO | 847965934 | K-Pop / Kang Seung Yoon | 398344134 | K-Pop
+artist_master.csv,YG,BABYMONSTER,BABYMONSTER | 1715981813 | K-Pop / Baby Monster | 326700947 | チルドレン・ミュージック / 安崎 | 1552659993 | マンドポップ,BABYMONSTER | 1715981813 | K-Pop / Baby Monster | 326700947 | 어린이 음악 / 安崎 | 1552659993 | 만다린 팝
+artist_master.csv,YG,AKMU,AKMU | 747306596 | K-Pop / LEE CHANHYUK | 1517345497 | K-Pop / LEE SUHYUN | 1299101341 | サウンドトラック,AKMU | 747306596 | K-Pop / LEE CHANHYUK | 1517345497 | K-Pop / LEE SUHYUN | 1299101341 | OST
+artist_master.csv,YG,Taeyang,TAEYANG | 1683284485 | K-Pop / SF9 | 1161961912 | K-Pop / BIGBANG | 318754656 | K-Pop,TAEYANG | 1683284485 | K-Pop / SF9 | 1161961912 | K-Pop / BIGBANG | 318754656 | K-Pop
+artist_master.csv,YG,G-Dragon,G-DRAGON | 320373708 | K-Pop / BIGBANG | 318754656 | K-Pop / GD&TOP | 494233845 | K-Pop,G-DRAGON | 320373708 | K-Pop / GD X TAEYANG | 943802791 | 힙합/랩 / BIGBANG | 318754656 | K-Pop
+artist_master.csv,YG,BIGBANG,BIGBANG | 318754656 | K-Pop / G-DRAGON | 320373708 | K-Pop / TAEYANG | 1683284485 | K-Pop,BIGBANG | 318754656 | K-Pop / G-DRAGON | 320373708 | K-Pop / TAEYANG | 1683284485 | K-Pop
+artist_master.csv,YG,iKON,iKON | 1044506362 | K-Pop / BOBBY | 1148163234 | K-Pop / B.I | 1148166294 | K-Pop,iKON | 1044506362 | K-Pop / B.I | 1148166294 | K-Pop / BOBBY | 1148163234 | K-Pop
+artist_master.csv,YG,Lee Hi,LEEHI | 1484046668 | K-Pop / HI SUHYUN | 939509918 | R&B／ソウル / RM | 1439549457 | K-Pop,LEEHI | 1484046668 | K-Pop / BOM & HI | 1336026815 | K-Pop / HI SUHYUN | 939509918 | R&B/소울
+artist_master.csv,YG,MEOVV,MEOVV | 1765256889 | K-Pop / Meovv | 1507879098 | ポップ / BABYMONSTER | 1715981813 | K-Pop,MEOVV | 1765256889 | K-Pop / Meovv | 1507879098 | 팝 / Alice from Meovv | 1660778553 | 포크
+artist_master.csv,SM,NCT DREAM,NCT DREAM | 1208839599 | K-Pop / MARK | 1256529606 | K-Pop / NCT | 1533299115 | K-Pop,NCT DREAM | 1208839599 | K-Pop / NCT | 1533299115 | K-Pop / MARK | 1256529606 | K-Pop
+artist_master.csv,SM,NCT 127,NCT 127 | 1235849306 | K-Pop / TAEYONG | 929035184 | K-Pop / NCT | 1533299115 | K-Pop,NCT 127 | 1235849306 | K-Pop / NCT | 1533299115 | K-Pop / DOYOUNG | 1132510526 | K-Pop
+artist_master.csv,SM,RIIZE,RIIZE | 1702435257 | K-Pop / Giga | 1419361847 | J-Pop / RIZE | 563865084 | ロック,RIIZE | 1702435257 | K-Pop / RIZE | 563865084 | 록 / 9riize da General | 1817744021 | 힙합/랩
+artist_master.csv,SM,Red Velvet,Red Velvet | 906961899 | K-Pop / JOY | 1368713719 | K-Pop / Red Velvet - IRENE & SEULGI | 1521791555 | K-Pop,Red Velvet | 906961899 | K-Pop / JOY | 1368713719 | K-Pop / Red Velvet - IRENE & SEULGI | 1521791555 | K-Pop
+artist_master.csv,SM,EXO,EXO | 657630070 | K-Pop / EXO-CBX | 1170408504 | K-Pop / D.O. | 1364148883 | K-Pop,EXO | 657630070 | K-Pop / D.O. | 1364148883 | K-Pop / BAEKHYUN | 987357639 | K-Pop
+artist_master.csv,SM,SHINee,SHINee | 433371033 | K-Pop / JONGHYUN | 642677724 | K-Pop / TAEMIN | 971826499 | K-Pop,SHINee | 433371033 | K-Pop / JONGHYUN | 642677724 | K-Pop / TAEMIN | 971826499 | K-Pop
+artist_master.csv,SM,TVXQ,TVXQ! | 540125745 | ポップ / U-KNOW | 453430689 | J-Pop / Kim Jae Joong | 291573698 | K-Pop,TVXQ! | 540125745 | 팝 / Kim Jae Joong | 291573698 | K-Pop / MAX CHANGMIN | 1505820374 | J-Pop
+artist_master.csv,SM,Girls' Generation,Girls' Generation | 357463500 | K-Pop / HYO | 1373256180 | K-Pop / TAEYEON | 435966642 | K-Pop,Girls' Generation | 357463500 | K-Pop / TAEYEON | 435966642 | K-Pop / HYO | 1373256180 | K-Pop
+artist_master.csv,SM,WayV,WayV | 1449462311 | マンドポップ / TEN | 1515958292 | K-Pop / NCT | 1533299115 | K-Pop,WayV | 1449462311 | 만다린 팝 / NCT | 1533299115 | K-Pop / TEN | 1515958292 | K-Pop
+artist_master.csv,SM,SUPER JUNIOR,SUPER JUNIOR | 284066214 | K-Pop / KYUHYUN | 579176112 | K-Pop / YESUNG | 1162144261 | K-Pop,SUPER JUNIOR | 284066214 | K-Pop / RYEOWOOK | 458032823 | K-Pop / KYUHYUN | 579176112 | K-Pop
+artist_master.csv,SM,NCT U,NCT U | 1614202131 | K-Pop / NCT | 1533299115 | K-Pop / JAEHYUN | 1316867454 | K-Pop,NCT U | 1614202131 | K-Pop / NCT | 1533299115 | K-Pop / DOYOUNG | 1132510526 | K-Pop
+artist_master.csv,SM,NCT WISH,NCT WISH | 1710322244 | K-Pop / NCT DREAM | 1208839599 | K-Pop / NCT 127 | 1235849306 | K-Pop,NCT WISH | 1710322244 | K-Pop / NCT DREAM | 1208839599 | K-Pop / NCT 127 | 1235849306 | K-Pop
+artist_master.csv,SM,f(x),f(x) | 425076892 | ポップ / LUNA | 994088675 | K-Pop / Amber Liu | 965780781 | ポップ,f(x) | 425076892 | 팝 / LUNA | 994088675 | K-Pop / Amber Liu | 965780781 | 팝
+other_agency_master.csv,OTHER,IVE,IVE | 1594159996 | K-Pop / I've | 1556821004 | アニメ / ive | 1496720356 | J-Pop,IVE | 1594159996 | K-Pop / I've | 1556821004 | 일본 만화 영화 / ive | 1496720356 | J-Pop
+other_agency_master.csv,OTHER,KiiiKiii,KiiiKiii | 1795471746 | K-Pop / JENNIE | 913944 | K-Pop,KiiiKiii | 1795471746 | K-Pop
+other_agency_master.csv,OTHER,ATEEZ,ATEEZ | 1439301205 | K-Pop / ATEEZ | 1621733078 | ヒップホップ／ラップ / At Eez | 590792367 | ヒップホップ／ラップ,ATEEZ | 1439301205 | K-Pop / ATEEZ | 1621733078 | 힙합/랩 / At Eez | 590792367 | 힙합/랩
+other_agency_master.csv,OTHER,STAYC,STAYC | 1538881438 | K-Pop / Stay-C | 1565146621 | ダンス / Stay-c | 263098192 | ポップ,STAYC | 1538881438 | K-Pop / STAYC | 1808565872 | K-Pop / Stay-c | 263098192 | 팝
+other_agency_master.csv,OTHER,Kep1er,Kep1er | 1594156263 | K-Pop / Zot On the Wave | 616564474 | ヒップホップ／ラップ / XG | 1609409493 | ポップ,Kep1er | 1594156263 | K-Pop
+other_agency_master.csv,OTHER,MAMAMOO,MAMAMOO | 818951094 | K-Pop / HWASA | 915548460 | K-Pop / Moon Byul | 1048880642 | K-Pop,MAMAMOO | 818951094 | K-Pop / HWASA | 915548460 | K-Pop / Whee In | 879965664 | K-Pop
+other_agency_master.csv,OTHER,ZEROBASEONE,ZEROBASEONE | 1693315406 | K-Pop / Omoinotake | 1185371943 | J-Pop / tuki. | 1706278800 | J-Pop,ZEROBASEONE | 1693315406 | K-Pop
+other_agency_master.csv,OTHER,P1Harmony,P1Harmony | 1536862708 | K-Pop / EJAE | 1118367711 | TV サウンドトラック / Marcy | 944099763 | J-Pop,P1Harmony | 1536862708 | K-Pop / Little Mix | 477515548 | 팝 / Jin | 1191850724 | K-Pop
+other_agency_master.csv,OTHER,xikers,xikers | 1678885244 | K-Pop / Erykah Badu | 54556 | R&B／ソウル / Julie Andrews | 254431 | ヴォーカル,xikers | 1678885244 | K-Pop
+other_agency_master.csv,OTHER,tripleS,tripleS | 1651595986 | K-Pop / Triples | 573397088 | ヒップホップ／ラップ / Triple S | 425862723 | ヒップホップ／ラップ,tripleS | 1651595986 | K-Pop / Triple S. | 64816255 | 댄스 / Triples | 573397088 | 힙합/랩
+other_agency_master.csv,OTHER,CIX,CIX | 1473471758 | K-Pop / CIX | 1472270620 | オルタナティブ / Cix | 251266037 | ヒップホップ／ラップ,CIX | 1473471758 | K-Pop / Cix | 251266037 | 힙합/랩 / Cix | 1550789569 | 힙합/랩
+other_agency_master.csv,OTHER,ONEUS,ONEUS | 1437510375 | K-Pop / LEE DO (ONEUS) | 1716884423 | K-Pop / SEO HO (ONEUS) | 1803795306 | K-Pop,ONEUS | 1437510375 | K-Pop / 1us | 1565167894 | 힙합/랩
