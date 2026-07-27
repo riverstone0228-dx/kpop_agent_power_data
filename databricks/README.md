@@ -7,12 +7,13 @@
 ```text
 GitHub Actions (毎日 JST 6:00)
   → data/*.csv を収集・commit・push
-  → Databricks Job をトリガー
-      → Git folder 経由で data/ と scripts/ を直接読む
+  → Databricks Git folder を Pull（最新 main）
+  → Databricks Job を起動
+      → Git folder 内の data/ と scripts/ を読む
       → Delta tables に MERGE
 ```
 
-Volume は使いません。Git folder がリポジトリのファイルを直接見ます。
+Volume は使いません。正本は GitHub、Databricks は Git folder 経由で同期します。
 
 ## セットアップ手順
 
@@ -27,31 +28,64 @@ Databricks → **SQL Editor** で [`01_ddl.sql`](01_ddl.sql) を実行。
 
 ### 2. Git folder を接続
 
-1. Databricks → **Workspace** → 好きな場所で **Add → Git folder**
-2. リポジトリURL: `https://github.com/riverstone0228-dx/kpop_agent_power_data`
+1. Databricks → **Workspace** → **Create → Git folder**
+2. URL: `https://github.com/riverstone0228-dx/kpop_agent_power_data`
 3. Branch: `main`
-4. 接続完了すると `databricks/02_load.py` が Notebook として見える
+4. `databricks/02_load.py` が見えることを確認
 
-### 3. Job を作成
+Git folder のフルパスをメモ（例）:
+
+```text
+/Workspace/Users/riverstone0228@gmail.com/kpop_agent_power_data
+```
+
+パスは Git folder を右クリック → **Copy path** / ブラウザURLから確認できます。
+
+### 3. Job を作成（Workspace ソース）
 
 1. **Workflows → Jobs → Create Job**
-2. Task: Notebook → Git folder 内の `databricks/02_load.py` を指定
-3. Compute: Serverless
-4. Save → Job ID をメモ
+2. Task type: **Notebook**
+3. Source: **Workspace**（Git provider ではない）
+4. Path: Browse で Git folder 内の `databricks/02_load.py` を選択
+5. Compute: **Serverless**
+6. Save → **Job ID** をメモ（URL の `/jobs/数字`）
 
-### 4. GitHub Secrets を登録
+### 4. Databricks PAT を発行
 
-リポジトリの Settings → Secrets → Actions に以下を追加:
+1. 左下ユーザーアイコン → **Settings**
+2. **Developer** → **Access tokens** → **Generate new token**
+3. トークンをコピー（再表示不可）
 
-| Secret名 | 値 |
-|-----------|------|
-| `DATABRICKS_HOST` | `https://dbc-xxxx.cloud.databricks.com`（あなたのワークスペースURL） |
-| `DATABRICKS_TOKEN` | Databricks PAT（User Settings → Developer → Access tokens） |
-| `DATABRICKS_JOB_ID` | 手順3でメモした Job ID |
+### 5. GitHub Secrets を登録
 
-これで毎日の GitHub Actions 完了後に自動で Databricks Job が起動します。
+GitHub リポジトリ → **Settings → Secrets and variables → Actions → New repository secret**
 
-### 5. Gold VIEW
+| Secret名 | 値の例 / 取り方 |
+|-----------|----------------|
+| `DATABRICKS_HOST` | `https://dbc-xxxx.cloud.databricks.com`（末尾スラッシュなし） |
+| `DATABRICKS_TOKEN` | 手順4の PAT |
+| `DATABRICKS_JOB_ID` | 手順3の Job ID（数字のみ） |
+| `DATABRICKS_REPO_PATH` | 手順2の Git folder フルパス |
+
+既存の `YOUTUBE_API_KEY` / `SLACK_WEBHOOK_URL` はそのまま残します。
+
+### 6. 疎通テスト
+
+1. GitHub → **Actions** → **Daily K-pop Data Collection** → **Run workflow**
+2. ログで確認:
+   - `Pull Databricks Git folder` 成功
+   - `Trigger Databricks bronze load job` 成功
+3. Databricks Job Runs に新しい実行があること
+4. SQL で件数確認:
+
+```sql
+SELECT date, COUNT(*) AS n
+FROM workspace.kpop_bronze.fact_artist_daily
+GROUP BY date
+ORDER BY date DESC;
+```
+
+### 7. Gold VIEW
 
 [`03_gold_views.sql`](03_gold_views.sql) を SQL Editor で実行。
 
@@ -75,7 +109,7 @@ SELECT * FROM workspace.kpop_gold.v_artist_metrics_7d WHERE date = current_date(
 
 ## 手動実行
 
-Databricks で Git folder を開き `02_load.py` → **Run All** でも OK。  
+Databricks で Git folder を **Pull** してから `02_load.py` → **Run All** でも OK。  
 `MERGE` なので同じ日付は上書きされ、二重化しません。
 
 ## 次のステップ

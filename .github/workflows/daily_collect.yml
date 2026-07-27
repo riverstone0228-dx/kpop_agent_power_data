@@ -46,11 +46,23 @@ jobs:
           git push origin HEAD:main
 
       - name: Setup Databricks CLI
-        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' }}
+        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' && secrets.DATABRICKS_REPO_PATH != '' }}
         uses: databricks/setup-cli@main
 
+      # Workspace Git folder は自動更新されないため、Job実行前に Pull する
+      - name: Pull Databricks Git folder
+        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' && secrets.DATABRICKS_REPO_PATH != '' }}
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_REPO_PATH: ${{ secrets.DATABRICKS_REPO_PATH }}
+        run: |
+          set -euo pipefail
+          echo "Pulling Git folder: ${DATABRICKS_REPO_PATH}"
+          databricks repos update "${DATABRICKS_REPO_PATH}" --branch main --output json
+
       - name: Trigger Databricks bronze load job
-        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' }}
+        if: ${{ success() && secrets.DATABRICKS_HOST != '' && secrets.DATABRICKS_TOKEN != '' && secrets.DATABRICKS_JOB_ID != '' && secrets.DATABRICKS_REPO_PATH != '' }}
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
