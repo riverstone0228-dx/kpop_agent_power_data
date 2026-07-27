@@ -304,7 +304,7 @@ for prefix, rank_type in [("top_", "top"), ("hot_", "hot")]:
         continue
     d = read_csv(files)
     d = (
-        d.withColumn("_file", F.input_file_name())
+        d.withColumn("_file", F.col("_metadata.file_path"))
         .withColumn(
             "date",
             F.to_date(
