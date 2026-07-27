@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIVERSTONE — K-POP POWER REPORT</title>
+  <meta name="description" content="K-pop agency power, artist, song and YouTube rankings — Riverstone analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #06050a;
+      --bg-elev: #100e18;
+      --bg-line: rgba(255,255,255,0.08);
+      --ink: #f8f4fb;
+      --muted: #a398b0;
+      --hot: #ff2d6b;
+      --ice: #2ef5d0;
+      --gold: #f0c14a;
+      --violet: #b44cff;
+      --display: "Syne", system-ui, sans-serif;
+      --body: "Outfit", system-ui, sans-serif;
+      --radius: 2px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--body);
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(255,45,107,0.22), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(46,245,208,0.12), transparent 50%),
+        radial-gradient(800px 500px at 50% 100%, rgba(180,76,255,0.12), transparent 45%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    a { color: var(--ice); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 4.5rem 0 2.5rem;
+      overflow: hidden;
+      border-bottom: 1px solid var(--bg-line);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% -20%;
+      height: 70%;
+      background: linear-gradient(90deg, transparent, rgba(255,45,107,0.15), rgba(46,245,208,0.1), transparent);
+      filter: blur(40px);
+      animation: pulse 8s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    @keyframes pulse {
+      from { opacity: 0.5; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(-10px); }
+    }
+    .brand {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      letter-spacing: -0.03em;
+      line-height: 0.92;
+      margin: 0;
+      background: linear-gradient(105deg, #fff 10%, var(--hot) 45%, var(--ice) 90%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-sub {
+      margin: 1rem 0 0;
+      max-width: 36rem;
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .meta-row strong { color: var(--ink); font-weight: 700; }
+
+    /* FILTER */
+    .filter-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(6,5,10,0.82);
+      border-bottom: 1px solid var(--bg-line);
+      padding: 0.85rem 0;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .filters label {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-right: 0.5rem;
+    }
+    .chip {
+      appearance: none;
+      border: 1px solid var(--bg-line);
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.55rem 0.9rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, color 0.2s, transform 0.15s;
+    }
+    .chip:hover { border-color: rgba(255,45,107,0.5); transform: translateY(-1px); }
+    .chip.is-active {
+      background: linear-gradient(90deg, var(--hot), #ff5a8a);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 0 0 1px rgba(255,45,107,0.3);
+    }
+
+    /* SECTIONS */
+    section.block {
+      padding: 3rem 0 1rem;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 0.7s ease forwards;
+    }
+    section.block:nth-of-type(1) { animation-delay: 0.05s; }
+    section.block:nth-of-type(2) { animation-delay: 0.12s; }
+    section.block:nth-of-type(3) { animation-delay: 0.18s; }
+    section.block:nth-of-type(4) { animation-delay: 0.24s; }
+    section.block:nth-of-type(5) { animation-delay: 0.3s; }
+    @keyframes rise {
+      to { opacity: 1; transform: none; }
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--bg-line);
+      padding-bottom: 0.75rem;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      letter-spacing: -0.02em;
+    }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: right;
+    }
+    .accent { color: var(--hot); }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid var(--bg-line);
+      border-radius: var(--radius);
+      padding: 1rem 1rem 0.5rem;
+    }
+    .chart-box { position: relative; height: 280px; }
+
+    .grid-2 {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1.2fr 1fr;
+    }
+    @media (max-width: 860px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .section-head p { text-align: left; }
+    }
+
+    /* RANK LIST */
+    .rank-list { list-style: none; margin: 0; padding: 0; }
+    .rank-item {
+      display: grid;
+      grid-template-columns: 2.4rem 3.2rem 1fr auto;
+      gap: 0.85rem;
+      align-items: center;
+      padding: 0.7rem 0.2rem;
+      border-bottom: 1px solid var(--bg-line);
+      transition: background 0.2s;
+    }
+    .rank-item:hover { background: rgba(255,45,107,0.06); }
+    .rank-num {
+      font-family: var(--display);
+      font-size: 1.25rem;
+      color: var(--hot);
+      text-align: right;
+    }
+    .thumb {
+      width: 3.2rem;
+      height: 3.2rem;
+      object-fit: cover;
+      border-radius: var(--radius);
+      background: #1a1624;
+      border: 1px solid var(--bg-line);
+    }
+    .thumb.wide {
+      width: 5.2rem;
+      height: 3rem;
+    }
+    .rank-item.has-wide {
+      grid-template-columns: 2.4rem 5.2rem 1fr auto;
+    }
+    .rank-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.25;
+    }
+    .rank-sub {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 0.15rem;
+    }
+    .rank-metric {
+      font-family: var(--display);
+      font-size: 0.95rem;
+      color: var(--ice);
+      white-space: nowrap;
+    }
+    .agency-tag {
+      display: inline-block;
+      margin-left: 0.35rem;
+      padding: 0.1rem 0.35rem;
+      border: 1px solid rgba(46,245,208,0.35);
+      color: var(--ice);
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
+    .empty {
+      padding: 2rem 1rem;
+      color: var(--muted);
+      text-align: center;
+      border: 1px dashed var(--bg-line);
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 2rem 0 3rem;
+      border-top: 1px solid var(--bg-line);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    footer .brand-mini {
+      font-family: var(--display);
+      color: var(--ink);
+      letter-spacing: 0.12em;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="meta-row" style="margin-top:0;margin-bottom:1rem;">
+        <span>ANALYTICS × ENTERTAINMENT</span>
+      </p>
+      <h1 class="brand">RIVERSTONE</h1>
+      <p class="hero-sub">
+        K-POP POWER REPORT — 事務所・アーティスト・楽曲・YouTubeを一つのステージで。
+        フィルターで事務所を絞ると、各チャートが連動して切り替わります。
+      </p>
+      <div class="meta-row">
+        <span>Data as of <strong id="report-date">—</strong></span>
+        <span>Generated <strong id="generated-at">—</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar">
+    <div class="wrap filters" id="filters" aria-label="Agency filter"></div>
+  </div>
+
+  <main class="wrap">
+    <section class="block" id="sec-agency">
+      <div class="section-head">
+        <h2>01 <span class="accent">Agency</span> Power</h2>
+        <p>YouTube登録者合計でみる事務所パワー</p>
+      </div>
+      <div class="panel"><div class="chart-box"><canvas id="chart-agency"></canvas></div></div>
+    </section>
+
+    <section class="block" id="sec-artists">
+      <div class="section-head">
+        <h2>02 Artist <span class="accent">TOP 10</span></h2>
+        <p>登録者数ランキング</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel"><div class="chart-box"><canvas id="chart-artists"></canvas></div></div>
+        <ul class="rank-list" id="list-artists"></ul>
+      </div>
+    </section>
+
+    <section class="block" id="sec-top-songs">
+      <div class="section-head">
+        <h2>03 Song <span class="accent">TOP 10</span></h2>
+        <p>チャート定着スコア</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel"><div class="chart-box"><canvas id="chart-top-songs"></canvas></div></div>
+        <ul class="rank-list" id="list-top-songs"></ul>
+      </div>
+    </section>
+
+    <section class="block" id="sec-hot-songs">
+      <div class="section-head">
+        <h2>04 Song <span class="accent">HOT 10</span></h2>
+        <p>勢い（チャート・デルタ）</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel"><div class="chart-box"><canvas id="chart-hot-songs"></canvas></div></div>
+        <ul class="rank-list" id="list-hot-songs"></ul>
+      </div>
+    </section>
+
+    <section class="block" id="sec-youtube">
+      <div class="section-head">
+        <h2>05 YouTube <span class="accent">TOP 10</span></h2>
+        <p>公式ch動画の累積再生</p>
+      </div>
+      <div class="grid-2">
+        <div class="panel"><div class="chart-box"><canvas id="chart-youtube"></canvas></div></div>
+        <ul class="rank-list" id="list-youtube"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand-mini">RIVERSTONE</div>
+      <p style="margin:0.5rem 0 0;">Sources: YouTube Data API · Apple Music · LINE MUSIC · Space Shower · Wikipedia Pageviews</p>
+      <p style="margin:0.25rem 0 0;">Built for GitHub Pages · Filter state is client-side only</p>
+    </div>
+  </footer>
+
+  <script>
+    const STATE = { data: null, agency: "ALL", charts: {} };
+
+    const COLORS = {
+      hot: "#ff2d6b",
+      ice: "#2ef5d0",
+      gold: "#f0c14a",
+      violet: "#b44cff",
+      soft: "rgba(255,255,255,0.12)",
+    };
+
+    const AGENCY_COLORS = {
+      HYBE: "#ff2d6b",
+      JYP: "#2ef5d0",
+      YG: "#f0c14a",
+      SM: "#b44cff",
+      OTHER: "#8a8196",
+    };
+
+    function fmt(n) {
+      n = Number(n) || 0;
+      if (n >= 1e9) return (n / 1e9).toFixed(1) + "B";
+      if (n >= 1e6) return (n / 1e6).toFixed(1) + "M";
+      if (n >= 1e3) return (n / 1e3).toFixed(1) + "K";
+      return String(n);
+    }
+
+    function truncate(s, n = 28) {
+      s = s || "";
+      return s.length > n ? s.slice(0, n - 1) + "…" : s;
+    }
+
+    function byAgency(rows, key = "agency") {
+      if (STATE.agency === "ALL") return rows;
+      return rows.filter((r) => (r[key] || "OTHER") === STATE.agency);
+    }
+
+    function destroyChart(id) {
+      if (STATE.charts[id]) {
+        STATE.charts[id].destroy();
+        delete STATE.charts[id];
+      }
+    }
+
+    function barOpts(horizontal = true) {
+      return {
+        indexAxis: horizontal ? "y" : "x",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "#120f1a",
+            titleColor: "#fff",
+            bodyColor: "#cfc6d8",
+            borderColor: "rgba(255,45,107,0.4)",
+            borderWidth: 1,
+          },
+        },
+        scales: {
+          x: {
+            grid: { color: "rgba(255,255,255,0.06)" },
+            ticks: { color: "#a398b0", callback: (v) => (horizontal ? fmt(v) : v) },
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: "#f8f4fb", font: { family: "Outfit", size: 11 } },
+          },
+        },
+      };
+    }
+
+    function renderFilters() {
+      const el = document.getElementById("filters");
+      const agencies = ["ALL", ...(STATE.data.meta.agencies || [])];
+      el.innerHTML =
+        `<label>Filter</label>` +
+        agencies
+          .map(
+            (a) =>
+              `<button type="button" class="chip ${a === STATE.agency ? "is-active" : ""}" data-agency="${a}">${a}</button>`
+          )
+          .join("");
+      el.querySelectorAll(".chip").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          STATE.agency = btn.dataset.agency;
+          renderAll();
+        });
+      });
+    }
+
+    function placeholder(src) {
+      return src || "data:image/svg+xml," + encodeURIComponent(
+        `<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><rect fill='%231a1624' width='100%' height='100%'/><text x='50%' y='52%' fill='%23666' font-size='10' text-anchor='middle' font-family='sans-serif'>N/A</text></svg>`
+      );
+    }
+
+    function renderList(elId, items, mapFn) {
+      const el = document.getElementById(elId);
+      if (!items.length) {
+        el.innerHTML = `<li class="empty">この事務所では表示できるデータがありません</li>`;
+        return;
+      }
+      el.innerHTML = items.map(mapFn).join("");
+    }
+
+    function renderAgencyChart() {
+      destroyChart("agency");
+      let rows = STATE.data.agencies;
+      // フィルタ時も全体比較を見せつつ選択を強調
+      const labels = rows.map((r) => r.agency);
+      const values = rows.map((r) => r.subscribers);
+      const colors = rows.map((r) => {
+        const base = AGENCY_COLORS[r.agency] || COLORS.soft;
+        if (STATE.agency === "ALL" || STATE.agency === r.agency) return base;
+        return "rgba(255,255,255,0.12)";
+      });
+      STATE.charts.agency = new Chart(document.getElementById("chart-agency"), {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [
+            {
+              data: values,
+              backgroundColor: colors,
+              borderSkipped: false,
+              borderRadius: 2,
+            },
+          ],
+        },
+        options: {
+          ...barOpts(false),
+          scales: {
+            x: { ticks: { color: "#f8f4fb" }, grid: { display: false } },
+            y: {
+              ticks: { color: "#a398b0", callback: (v) => fmt(v) },
+              grid: { color: "rgba(255,255,255,0.06)" },
+            },
+          },
+        },
+      });
+    }
+
+    function renderArtists() {
+      destroyChart("artists");
+      const top = byAgency(STATE.data.artists).slice(0, 10);
+      STATE.charts.artists = new Chart(document.getElementById("chart-artists"), {
+        type: "bar",
+        data: {
+          labels: top.map((a) => truncate(a.name, 16)),
+          datasets: [
+            {
+              data: top.map((a) => a.youtube_subscribers),
+              backgroundColor: top.map((a) => AGENCY_COLORS[a.agency] || COLORS.hot),
+              borderRadius: 2,
+            },
+          ],
+        },
+        options: barOpts(true),
+      });
+      renderList("list-artists", top, (a, i) => `
+        <li class="rank-item">
+          <div class="rank-num">${String(i + 1).padStart(2, "0")}</div>
+          <img class="thumb" src="${placeholder(a.image_url)}" alt="" loading="lazy" />
+          <div>
+            <div class="rank-title">${a.name}<span class="agency-tag">${a.agency}</span></div>
+            <div class="rank-sub">${a.sub_agency || "—"} · Wiki JA ${fmt(a.wikipedia_pv_ja)}</div>
+          </div>
+          <div class="rank-metric">${fmt(a.youtube_subscribers)}</div>
+        </li>`);
+    }
+
+    function renderSongs(kind) {
+      const chartId = kind === "top" ? "topSongs" : "hotSongs";
+      const canvas = kind === "top" ? "chart-top-songs" : "chart-hot-songs";
+      const listId = kind === "top" ? "list-top-songs" : "list-hot-songs";
+      const source = kind === "top" ? STATE.data.top_songs : STATE.data.hot_songs;
+      destroyChart(chartId);
+      const top = byAgency(source).slice(0, 10);
+      const metric = (s) => (kind === "top" ? s.score : s.chart_points);
+      STATE.charts[chartId] = new Chart(document.getElementById(canvas), {
+        type: "bar",
+        data: {
+          labels: top.map((s) => truncate(s.track, 18)),
+          datasets: [
+            {
+              data: top.map(metric),
+              backgroundColor: kind === "top" ? COLORS.ice : COLORS.hot,
+              borderRadius: 2,
+            },
+          ],
+        },
+        options: barOpts(true),
+      });
+      renderList(listId, top, (s, i) => `
+        <li class="rank-item">
+          <div class="rank-num">${String(i + 1).padStart(2, "0")}</div>
+          <img class="thumb" src="${placeholder(s.artwork_url || s.artist_image_url)}" alt="" loading="lazy" />
+          <div>
+            <div class="rank-title">${s.track}</div>
+            <div class="rank-sub">${s.artist}<span class="agency-tag">${s.agency}</span></div>
+          </div>
+          <div class="rank-metric">${kind === "top" ? s.score.toFixed(2) : fmt(s.chart_points)}</div>
+        </li>`);
+    }
+
+    function renderYoutube() {
+      destroyChart("youtube");
+      const top = byAgency(STATE.data.youtube_videos).slice(0, 10);
+      STATE.charts.youtube = new Chart(document.getElementById("chart-youtube"), {
+        type: "bar",
+        data: {
+          labels: top.map((v) => truncate(v.title, 22)),
+          datasets: [
+            {
+              data: top.map((v) => v.view_count),
+              backgroundColor: COLORS.violet,
+              borderRadius: 2,
+            },
+          ],
+        },
+        options: barOpts(true),
+      });
+      renderList("list-youtube", top, (v, i) => `
+        <li class="rank-item has-wide">
+          <div class="rank-num">${String(i + 1).padStart(2, "0")}</div>
+          <a href="${v.url}" target="_blank" rel="noopener">
+            <img class="thumb wide" src="${placeholder(v.thumbnail_url)}" alt="" loading="lazy" />
+          </a>
+          <div>
+            <div class="rank-title"><a href="${v.url}" target="_blank" rel="noopener">${truncate(v.title, 42)}</a></div>
+            <div class="rank-sub">${v.artist}<span class="agency-tag">${v.agency}</span> · ♥ ${fmt(v.like_count)}</div>
+          </div>
+          <div class="rank-metric">${fmt(v.view_count)}</div>
+        </li>`);
+    }
+
+    function renderAll() {
+      renderFilters();
+      renderAgencyChart();
+      renderArtists();
+      renderSongs("top");
+      renderSongs("hot");
+      renderYoutube();
+    }
+
+    async function boot() {
+      const res = await fetch("./data/report.json?ts=" + Date.now());
+      if (!res.ok) throw new Error("report.json load failed");
+      STATE.data = await res.json();
+      document.getElementById("report-date").textContent = STATE.data.meta.report_date || "—";
+      document.getElementById("generated-at").textContent = (STATE.data.meta.generated_at || "").replace("T", " ").replace("Z", " UTC");
+      Chart.defaults.font.family = "Outfit";
+      renderAll();
+    }
+
+    boot().catch((err) => {
+      document.querySelector("main").innerHTML =
+        `<div class="empty" style="margin:3rem 0">レポートデータの読み込みに失敗しました。<br/>${err.message}</div>`;
+      console.error(err);
+    });
+  </script>
+</body>
+</html>

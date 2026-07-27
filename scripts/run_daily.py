@@ -173,6 +173,11 @@ def collect_charts():
 
     safe_call("song rankings", rank_songs_main)
 
+    print("\n=== GitHub Pages report ===")
+    from build_report import main as build_report_main
+
+    safe_call("build_report", build_report_main)
+
     print("\n=== OTHER TOP15 rebalance ===")
     from rank_other_agency_top15 import main as rank_other_main
 
