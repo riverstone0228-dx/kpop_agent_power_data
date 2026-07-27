@@ -41,6 +41,14 @@ HEADERS = {
 }
 
 
+def apple_artwork_larger(url: str) -> str:
+    """レポート用に 100px → 300px。"""
+    url = (url or "").strip()
+    if not url:
+        return ""
+    return url.replace("100x100bb", "300x300bb").replace("/100x100", "/300x300")
+
+
 def fetch_chart(country, limit):
     """1カ国分のチャートを取得。戻り値: (updated, results)"""
     url = RSS_URL.format(country=country, limit=limit)
@@ -102,6 +110,7 @@ def main():
                     "apple_artist_id": apple_artist_id,
                     "apple_track_id": entry.get("id", ""),
                     "release_date": entry.get("releaseDate", ""),
+                    "artwork_url": apple_artwork_larger(entry.get("artworkUrl100", "")),
                     "is_kpop_genre": "1" if is_kpop(entry) else "0",
                     # マスタに載っているアーティストなら事務所情報を付与
                     "agency": master["agency"] if master else "",

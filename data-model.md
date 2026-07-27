@@ -88,10 +88,14 @@ HYBE内のマッピング例: BTS/TXT/CORTIS→BIGHIT MUSIC、SEVENTEEN→PLEDIS
 初期構築: [scripts/mine_chart_ids.py](scripts/mine_chart_ids.py) → [scripts/build_track_master.py](scripts/build_track_master.py)  
 日次ランキング: [scripts/rank_songs.py](scripts/rank_songs.py) → `data/song_rankings/top_*.csv` / `hot_*.csv`
 
-| ランキング | 意味 | 主指標 |
-|---|---|---|
-| TOP SONG 20 | 定着・総合力 | 直近7日チャート加点 + YouTube累積再生 |
-| HOT SONG 20 | 勢い | 直近3日−前3日のチャートデルタ + 新規/上昇ボーナス + YTエンゲージメント |
+| メディア | 優先ソース |
+|---|---|
+| 事務所ロゴ | `agency_logos.csv` (Wikimedia) |
+| アーティスト画像 | LINE `artists[].imageUrl` → なければ YouTube channel thumbnail |
+| 楽曲ジャケット | Apple `artworkUrl` (300px) → なければ LINE album image |
+| YouTube動画サムネ | `videos.list` の `thumbnails.default` |
+
+日次で [scripts/enrich_media_assets.py](scripts/enrich_media_assets.py) がマスタへ反映し、TOP/HOT CSV にも同梱する。
 
 ### 「他事務所TOP15」インデックスの設計
 

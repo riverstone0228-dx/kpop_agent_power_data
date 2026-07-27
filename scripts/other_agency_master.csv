@@ -1,18 +1,18 @@
-agency,sub_agency,artist_name_en,artist_name_ja,youtube_channel_id,apple_artist_id,wikipedia_title_ja,wikipedia_title_en,status,notes
-OTHER,Starship Entertainment,IVE,アイヴ,UC-Fnix71vRP64WXeo0ikd0Q,1594159996,IVE,Ive (group),CANDIDATE,ユーザー指定
-OTHER,Starship Entertainment,KiiiKiii,キーキー,UCaHwGJXFb28TekZMf7iFg5Q,1795471746,KiiiKiii,KiiiKiii,CANDIDATE,ユーザー指定。2025-03-24デビュー
-OTHER,THE MUZE Entertainment,RESCENE,リセンヌ,UCtKtCiaWRz-d3EZn2xd1mdA,1732658659,RESCENE,Rescene,CANDIDATE,ユーザー指定。2024-03-26デビュー
-OTHER,Cube Entertainment,i-dle,アイドゥル,UCritGVo7pLJLUS8wEu32vow,1378887586,(G)I-DLE,(G)I-dle,CANDIDATE,旧名(G)I-DLE。Apple登録名はi-dle。候補(要popularityで最終順位確定)
-OTHER,KQ Entertainment,ATEEZ,エイティーズ,UC2e4Ukj5Pfr7cb3KpJAFBdQ,1439301205,ATEEZ,Ateez,CANDIDATE,候補
-OTHER,High Up Entertainment,STAYC,ステイシー,UCod5V2dpnpJLklGvVOv5FcQ,1538881438,STAYC,Stayc,CANDIDATE,候補
-OTHER,WakeOne,Kep1er,ケプラー,UC8whlOg70m2Yr3qSMjUhh0g,1594156263,Kep1er,Kep1er,CANDIDATE,候補
-OTHER,RBW,MAMAMOO,ママム,UCuhAUMLzJxlP1W7mEk0_6lA,818951094,MAMAMOO,Mamamoo,CANDIDATE,候補
-OTHER,WakeOne,ZEROBASEONE,ゼロベースワン,UCSAp0Yl9S0Zq5uDqE6im_XQ,1693315406,ZEROBASEONE,Zerobaseone,CANDIDATE,候補
-OTHER,FNC Entertainment,P1Harmony,ピーワンハーモニー,UCe-XzQhLaq4zS_mPXzuc_2Q,1536862708,P1Harmony,P1Harmony,CANDIDATE,候補
-OTHER,KQ Entertainment,xikers,サイカーズ,UCPtC0MXSW40Qq7RkhsCXjUQ,1678885244,xikers,Xikers,CANDIDATE,候補
-OTHER,Modhaus,tripleS,トリプルエス,UCJnL-TBcsYrF2SLs7tmiC8Q,1651595986,tripleS,Triples (group),CANDIDATE,候補
-OTHER,C9 Entertainment,CIX,シーアイエックス,UCuaslC77K-NmCy8Xwk7x0hA,1473471758,CIX,Cix,CANDIDATE,候補
-OTHER,RBW,ONEUS,ワナス,UCWTYf4xModfNsyq2NUYjF5g,1437510375,ONEUS,Oneus,CANDIDATE,候補
-OTHER,WakeOne,izna,イズナ,UCfbYNlxgLuKJXQZEhkMmaCQ,1779409310,izna,Izna,CANDIDATE,チャート初出(SSTV)。I-LAND 2出身。2024-11-25デビュー
-OTHER,VLAST,PLAVE,プレイブ,UCPZIPuQPrfrUG9Xe_okEmQA,1676593844,PLAVE,Plave,CANDIDATE,チャート初出(SSTV)。バーチャルアイドルグループ
-OTHER,Yuehua Entertainment,YENA,イェナ,UCkrDEGNM3mqZXHk2MfnOjMw,1605086668,チェ・イェナ,Choi Ye-na,CANDIDATE,チャート初出(LINE)。元IZ*ONE。ソロ
+agency,sub_agency,artist_name_en,artist_name_ja,youtube_channel_id,apple_artist_id,wikipedia_title_ja,wikipedia_title_en,status,notes,image_url
+OTHER,Starship Entertainment,IVE,アイヴ,UC-Fnix71vRP64WXeo0ikd0Q,1594159996,IVE,Ive (group),CANDIDATE,ユーザー指定,https://resource-jp-linemusic.line-scdn.net/r/musicjp/c/cj0tMWU4anVvYmlyNWdkbCZzPWpwNiZ0PW0mdT0xanF0b2g0aWs0ZGcwJmk9MA/m470x470
+OTHER,Starship Entertainment,KiiiKiii,キーキー,UCaHwGJXFb28TekZMf7iFg5Q,1795471746,KiiiKiii,KiiiKiii,CANDIDATE,ユーザー指定。2025-03-24デビュー,
+OTHER,THE MUZE Entertainment,RESCENE,リセンヌ,UCtKtCiaWRz-d3EZn2xd1mdA,1732658659,RESCENE,Rescene,CANDIDATE,ユーザー指定。2024-03-26デビュー,
+OTHER,Cube Entertainment,i-dle,アイドゥル,UCritGVo7pLJLUS8wEu32vow,1378887586,(G)I-DLE,(G)I-dle,CANDIDATE,旧名(G)I-DLE。Apple登録名はi-dle。候補(要popularityで最終順位確定),
+OTHER,KQ Entertainment,ATEEZ,エイティーズ,UC2e4Ukj5Pfr7cb3KpJAFBdQ,1439301205,ATEEZ,Ateez,CANDIDATE,候補,https://resource-jp-linemusic.line-scdn.net/r/musicjp/c/cj0tNWtiMmVqamt2cHJrdiZzPWpwNiZ0PW0mdT0xbDZtZ2p2YXM0azAwJmk9MA/m470x470
+OTHER,High Up Entertainment,STAYC,ステイシー,UCod5V2dpnpJLklGvVOv5FcQ,1538881438,STAYC,Stayc,CANDIDATE,候補,
+OTHER,WakeOne,Kep1er,ケプラー,UC8whlOg70m2Yr3qSMjUhh0g,1594156263,Kep1er,Kep1er,CANDIDATE,候補,
+OTHER,RBW,MAMAMOO,ママム,UCuhAUMLzJxlP1W7mEk0_6lA,818951094,MAMAMOO,Mamamoo,CANDIDATE,候補,
+OTHER,WakeOne,ZEROBASEONE,ゼロベースワン,UCSAp0Yl9S0Zq5uDqE6im_XQ,1693315406,ZEROBASEONE,Zerobaseone,CANDIDATE,候補,
+OTHER,FNC Entertainment,P1Harmony,ピーワンハーモニー,UCe-XzQhLaq4zS_mPXzuc_2Q,1536862708,P1Harmony,P1Harmony,CANDIDATE,候補,
+OTHER,KQ Entertainment,xikers,サイカーズ,UCPtC0MXSW40Qq7RkhsCXjUQ,1678885244,xikers,Xikers,CANDIDATE,候補,
+OTHER,Modhaus,tripleS,トリプルエス,UCJnL-TBcsYrF2SLs7tmiC8Q,1651595986,tripleS,Triples (group),CANDIDATE,候補,
+OTHER,C9 Entertainment,CIX,シーアイエックス,UCuaslC77K-NmCy8Xwk7x0hA,1473471758,CIX,Cix,CANDIDATE,候補,
+OTHER,RBW,ONEUS,ワナス,UCWTYf4xModfNsyq2NUYjF5g,1437510375,ONEUS,Oneus,CANDIDATE,候補,
+OTHER,WakeOne,izna,イズナ,UCfbYNlxgLuKJXQZEhkMmaCQ,1779409310,izna,Izna,CANDIDATE,チャート初出(SSTV)。I-LAND 2出身。2024-11-25デビュー,
+OTHER,VLAST,PLAVE,プレイブ,UCPZIPuQPrfrUG9Xe_okEmQA,1676593844,PLAVE,Plave,CANDIDATE,チャート初出(SSTV)。バーチャルアイドルグループ,
+OTHER,Yuehua Entertainment,YENA,イェナ,UCkrDEGNM3mqZXHk2MfnOjMw,1605086668,チェ・イェナ,Choi Ye-na,CANDIDATE,チャート初出(LINE)。元IZ*ONE。ソロ,https://resource-jp-linemusic.line-scdn.net/r/musicjp/c/cj0tMjBlZGZ1N3BpN3I0biZzPWpwNiZ0PW0mdT0xazRiM3E0ZTAzZGcwJmk9MA/m470x470

@@ -88,6 +88,7 @@ def main():
 
     rows = []
     for track in tracks:
+        artists = track.get("artists") or []
         line_artist_id, artist_name_local = primary_artist(track)
         ext = artist_lookup.get(line_artist_id)
         name_master = (ext or {}).get("artist_name_en", "")
@@ -107,6 +108,8 @@ def main():
                 "score": rank_info.get("score", ""),
                 "listened_count": track.get("listenedCount", ""),
                 "like_count": track.get("likeCount", ""),
+                "artist_image_url": (artists[0].get("imageUrl", "") if artists else ""),
+                "album_image_url": ((track.get("album") or {}).get("imageUrl", "")),
                 "agency": (master or {}).get("agency", ""),
                 "sub_agency": (master or {}).get("sub_agency", ""),
                 "artist_name_master": name_master,

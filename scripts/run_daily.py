@@ -102,6 +102,7 @@ def collect_artist_snapshots():
                 "youtube_subscribers": yt.get("youtube_subscribers", ""),
                 "youtube_total_views": yt.get("youtube_total_views", ""),
                 "youtube_video_count": yt.get("youtube_video_count", ""),
+                "youtube_channel_thumbnail": yt.get("youtube_channel_thumbnail", ""),
                 "wikipedia_pv_ja": pv_ja if pv_ja is not None else "",
                 "wikipedia_pv_en": pv_en if pv_en is not None else "",
             }
@@ -161,6 +162,11 @@ def collect_charts():
     from build_track_master import main as build_track_main
 
     safe_call("build_track_master", build_track_main)
+
+    print("\n=== Enrich media URLs (logos / thumbs / artwork) ===")
+    from enrich_media_assets import main as enrich_media_main
+
+    safe_call("enrich_media_assets", enrich_media_main)
 
     print("\n=== TOP / HOT SONG 20 ===")
     from rank_songs import main as rank_songs_main

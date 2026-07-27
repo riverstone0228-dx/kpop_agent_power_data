@@ -41,12 +41,16 @@ sys.path.insert(0, os.path.dirname(__file__))
 from external_ids import norm_name
 from build_track_master import make_track_id, TRACK_MASTER_CSV
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+SCRIPTS_DIR = os.path.dirname(__file__)
+DATA_DIR = os.path.join(SCRIPTS_DIR, "..", "data")
 LINE_DIR = os.path.join(DATA_DIR, "line_charts")
 APPLE_DIR = os.path.join(DATA_DIR, "apple_charts")
 SSTV_DIR = os.path.join(DATA_DIR, "spaceshower_charts")
 YT_DIR = os.path.join(DATA_DIR, "youtube_videos")
 OUT_DIR = os.path.join(DATA_DIR, "song_rankings")
+AGENCY_LOGOS_CSV = os.path.join(SCRIPTS_DIR, "agency_logos.csv")
+ARTIST_MASTER = os.path.join(SCRIPTS_DIR, "artist_master.csv")
+OTHER_MASTER = os.path.join(SCRIPTS_DIR, "other_agency_master.csv")
 
 TOP_N = 20
 LINE_LOOKBACK = 7
@@ -56,6 +60,31 @@ HOT_RECENT_DAYS = 3
 HOT_PREV_DAYS = 3
 CHART_WEIGHT = 0.70
 YT_WEIGHT = 0.30
+
+
+def load_agency_logos():
+    if not os.path.exists(AGENCY_LOGOS_CSV):
+        return {}
+    with open(AGENCY_LOGOS_CSV, newline="", encoding="utf-8") as f:
+        return {
+            r["agency"]: (r.get("logo_url") or "").strip()
+            for r in csv.DictReader(f)
+            if r.get("agency")
+        }
+
+
+def load_artist_images():
+    out = {}
+    for path in (ARTIST_MASTER, OTHER_MASTER):
+        if not os.path.exists(path):
+            continue
+        with open(path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                name = (r.get("artist_name_en") or "").strip()
+                img = (r.get("image_url") or "").strip()
+                if name and img:
+                    out[name] = img
+    return out
 
 
 def load_track_master():
@@ -236,7 +265,13 @@ def load_youtube_by_track(master_by_id):
             views = likes = comments = 0
         cur = out.get(tid)
         if not cur or views > cur["views"]:
-            out[tid] = {"views": views, "likes": likes, "comments": comments, "video_id": vid}
+            out[tid] = {
+                "views": views,
+                "likes": likes,
+                "comments": comments,
+                "video_id": vid,
+                "thumbnail_url": (r.get("thumbnail_url") or "").strip(),
+            }
     return out
 
 
@@ -249,18 +284,31 @@ def normalize(values):
     return {k: (v - lo) / (hi - lo) for k, v in values.items()}
 
 
-def ensure_meta(tid, master_by_id):
+def ensure_meta(tid, master_by_id, agency_logos=None, artist_images=None, yt_by_track=None):
+    agency_logos = agency_logos or {}
+    artist_images = artist_images or {}
+    yt_by_track = yt_by_track or {}
     if tid in master_by_id:
         r = master_by_id[tid]
+        artist = r.get("artist_name_en", "")
+        agency = r.get("agency", "")
+        vid = r.get("youtube_video_id", "")
+        yt = yt_by_track.get(tid, {})
+        thumb = yt.get("thumbnail_url", "")
+        if not thumb and vid:
+            thumb = f"https://i.ytimg.com/vi/{vid}/default.jpg"
         return {
             "track_id": tid,
-            "artist_name_en": r.get("artist_name_en", ""),
+            "artist_name_en": artist,
             "track_name": r.get("track_name", ""),
-            "agency": r.get("agency", ""),
+            "agency": agency,
             "sub_agency": r.get("sub_agency", ""),
-            "youtube_video_id": r.get("youtube_video_id", ""),
+            "youtube_video_id": vid,
+            "agency_logo_url": agency_logos.get(agency, ""),
+            "artist_image_url": artist_images.get(artist, ""),
+            "artwork_url": r.get("artwork_url", ""),
+            "youtube_thumbnail_url": thumb,
         }
-    # ephemeral
     return {
         "track_id": tid,
         "artist_name_en": "",
@@ -268,10 +316,16 @@ def ensure_meta(tid, master_by_id):
         "agency": "",
         "sub_agency": "",
         "youtube_video_id": "",
+        "agency_logo_url": "",
+        "artist_image_url": "",
+        "artwork_url": "",
+        "youtube_thumbnail_url": "",
     }
 
 
-def rank_top(as_of: datetime.date, tracks):
+def rank_top(as_of: datetime.date, tracks, agency_logos=None, artist_images=None):
+    agency_logos = agency_logos or {}
+    artist_images = artist_images or {}
     master_index, master_by_id = build_indexes(tracks)
     chart, platforms, _ = accumulate_charts(as_of, LINE_LOOKBACK, master_index)
     yt = load_youtube_by_track(master_by_id)
@@ -285,7 +339,7 @@ def rank_top(as_of: datetime.date, tracks):
 
     rows = []
     for tid in candidates:
-        meta = ensure_meta(tid, master_by_id)
+        meta = ensure_meta(tid, master_by_id, agency_logos, artist_images, yt)
         if not meta["artist_name_en"] and tid.startswith("trk_"):
             # ephemeral without names — skip empty shells
             if chart.get(tid, 0) <= 0:
@@ -312,7 +366,9 @@ def rank_top(as_of: datetime.date, tracks):
     return rows[:TOP_N], has_yt
 
 
-def rank_hot(as_of: datetime.date, tracks):
+def rank_hot(as_of: datetime.date, tracks, agency_logos=None, artist_images=None):
+    agency_logos = agency_logos or {}
+    artist_images = artist_images or {}
     master_index, master_by_id = build_indexes(tracks)
 
     recent_scores, recent_plat, extras = accumulate_charts(
@@ -346,7 +402,7 @@ def rank_hot(as_of: datetime.date, tracks):
 
     rows = []
     for tid in candidates:
-        meta = ensure_meta(tid, master_by_id)
+        meta = ensure_meta(tid, master_by_id, agency_logos, artist_images, yt)
         r = raw_n.get(tid, 0.0)
         y = yt_n.get(tid, 0.0) if has_yt else 0.0
         score = CHART_WEIGHT * r + YT_WEIGHT * y if has_yt else r
@@ -389,9 +445,17 @@ def main():
         print("track_master.csv が空です。先に mine_chart_ids.py → build_track_master.py を実行してください。")
         return
 
-    top_rows, top_yt = rank_top(as_of, tracks)
-    hot_rows, hot_yt = rank_hot(as_of, tracks)
+    agency_logos = load_agency_logos()
+    artist_images = load_artist_images()
+    top_rows, top_yt = rank_top(as_of, tracks, agency_logos, artist_images)
+    hot_rows, hot_yt = rank_hot(as_of, tracks, agency_logos, artist_images)
 
+    media_fields = [
+        "agency_logo_url",
+        "artist_image_url",
+        "artwork_url",
+        "youtube_thumbnail_url",
+    ]
     top_fields = [
         "rank",
         "track_id",
@@ -407,6 +471,7 @@ def main():
         "platforms_hit",
         "platforms",
         "youtube_video_id",
+        *media_fields,
     ]
     hot_fields = [
         "rank",
@@ -426,6 +491,7 @@ def main():
         "platforms_hit",
         "platforms",
         "youtube_video_id",
+        *media_fields,
     ]
 
     top_path = os.path.join(OUT_DIR, f"top_{date_str}.csv")

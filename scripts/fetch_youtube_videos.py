@@ -142,6 +142,7 @@ def get_video_stats(video_ids: list[str]) -> dict[str, dict]:
                 "view_count": st.get("viewCount", ""),
                 "like_count": st.get("likeCount", ""),  # 非公開なら欠落
                 "comment_count": st.get("commentCount", ""),
+                "thumbnail_url": (sn.get("thumbnails") or {}).get("default", {}).get("url", ""),
             }
         time.sleep(0.05)
     return out
@@ -234,6 +235,7 @@ def fetch_all(recent_n: int = 10, top_n: int = 10) -> list[dict]:
                 "view_count": st.get("view_count", ""),
                 "like_count": st.get("like_count", ""),
                 "comment_count": st.get("comment_count", ""),
+                "thumbnail_url": st.get("thumbnail_url", ""),
             }
         )
     return rows
@@ -263,6 +265,7 @@ def main():
         "view_count",
         "like_count",
         "comment_count",
+        "thumbnail_url",
     ]
     with open(out_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)

@@ -36,6 +36,10 @@ def get_channel_stats(channel_ids):
             "subscriber_count": stats.get("subscriberCount"),
             "view_count": stats.get("viewCount"),
             "video_count": stats.get("videoCount"),
+            # レポート用: 小さいサムネで十分
+            "thumbnail_url": (item["snippet"].get("thumbnails") or {})
+            .get("default", {})
+            .get("url", ""),
         }
     return out
 
@@ -66,6 +70,7 @@ def fetch_all():
                 "youtube_subscribers": stat.get("subscriber_count", ""),
                 "youtube_total_views": stat.get("view_count", ""),
                 "youtube_video_count": stat.get("video_count", ""),
+                "youtube_channel_thumbnail": stat.get("thumbnail_url", ""),
             }
         )
 
