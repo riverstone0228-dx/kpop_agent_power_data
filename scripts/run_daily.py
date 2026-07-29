@@ -1,7 +1,7 @@
 """
 日次収集オーケストレータ。
 
-1. YouTube / Wikipedia → data/raw/YYYY-MM-DD.csv
+1. YouTube（日次）/ Wikipedia 7日合計（週次・月曜） → data/raw/YYYY-MM-DD.csv
 2. YouTube 動画 (直近10 + 再生TOP10) → data/youtube_videos/
 3. 4大事務所株価 (HYBE/JYP/YG/SM) → data/stock_prices/
 4. Apple Music チャート (jp/kr/us)
@@ -13,7 +13,7 @@
 GitHub Actionsの日次cronから呼び出される想定。
 1ソースが失敗しても他は継続する。
 
-データソース方針: YouTube / Wikipedia / Apple / LINE / Space Shower / 株価。
+データソース方針: YouTube / Wikipedia(週次) / Apple / LINE / Space Shower / 株価。
 Spotifyは2026年2月のAPI変更により不使用 (spotify-api-change-2026.md)。
 """
 
@@ -29,7 +29,7 @@ from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 from fetch_youtube import fetch_all as fetch_youtube_all
-from fetch_wikipedia import get_pageviews
+from fetch_wikipedia import fetch_all_weekly, should_run_weekly
 from master_data import load_all_artists
 from notify_slack import CollectionReport, notify_collection
 
@@ -58,8 +58,8 @@ def safe_call(label, func, *args, report_step: bool = True, **kwargs):
 def collect_artist_snapshots():
     rows = load_all_artists()
     today = datetime.date.today()
-    # Pageviews API は直近1〜2日分が未公開のことが多いため一昨日を取る
-    yesterday = today - datetime.timedelta(days=2)
+    # Pageviews API は直近1〜2日分が未公開のことが多いため一昨日を終端にする
+    wiki_end = today - datetime.timedelta(days=2)
 
     if not os.environ.get("YOUTUBE_API_KEY", "").strip():
         REPORT.warn("YOUTUBE_API_KEY 未設定 — YouTube列は空になります")
@@ -67,32 +67,32 @@ def collect_artist_snapshots():
     yt_results = safe_call("YouTube", fetch_youtube_all) or []
     yt_by_key = {(r["agency"], r["artist_name"]): r for r in yt_results}
 
-    wiki_errors = 0
-    wiki_missing = 0
+    # Wikipedia はレート制限対策で週1回（月曜）だけ 7日合計を取得
+    wiki_by_key = {}
+    if should_run_weekly(today, force=False):
+        print("\n=== Wikipedia 7日合計（週次） ===")
+
+        def _wiki():
+            results, not_found, start, end = fetch_all_weekly(wiki_end, days=7)
+            if not_found:
+                REPORT.warn(f"Wikipedia 記事なし/PV無し: {len(not_found)}件")
+                for item in not_found[:20]:
+                    REPORT.warn(f"Wikipedia missing: {item}")
+            print(f"Wikipedia period: {start} .. {end}")
+            return {(r["agency"], r["artist_name"]): r for r in results}
+
+        wiki_by_key = safe_call("Wikipedia", _wiki) or {}
+    else:
+        print(
+            f"\n=== Wikipedia スキップ（週次・月曜のみ / today weekday={today.weekday()}） ==="
+        )
+        REPORT.mark_ok("Wikipedia (skipped; weekly)")
+
     merged = []
     for row in rows:
         key = (row["agency"], row["artist_name_en"])
         yt = yt_by_key.get(key, {})
-
-        pv_ja = None
-        pv_en = None
-        title_ja = row.get("wikipedia_title_ja", "")
-        title_en = row.get("wikipedia_title_en", "")
-        try:
-            pv_ja = get_pageviews(title_ja, "ja", yesterday)
-            if title_ja and pv_ja is None:
-                wiki_missing += 1
-        except Exception as e:
-            wiki_errors += 1
-            REPORT.warn(f"Wikipedia(ja) {row['artist_name_en']}: {e}")
-
-        try:
-            pv_en = get_pageviews(title_en, "en", yesterday)
-            if title_en and pv_en is None:
-                wiki_missing += 1
-        except Exception as e:
-            wiki_errors += 1
-            REPORT.warn(f"Wikipedia(en) {row['artist_name_en']}: {e}")
+        wiki = wiki_by_key.get(key, {})
 
         merged.append(
             {
@@ -104,17 +104,11 @@ def collect_artist_snapshots():
                 "youtube_total_views": yt.get("youtube_total_views", ""),
                 "youtube_video_count": yt.get("youtube_video_count", ""),
                 "youtube_channel_thumbnail": yt.get("youtube_channel_thumbnail", ""),
-                "wikipedia_pv_ja": pv_ja if pv_ja is not None else "",
-                "wikipedia_pv_en": pv_en if pv_en is not None else "",
+                # 週次実行日のみ 7日合計。それ以外の日は空（日次レート制限回避）
+                "wikipedia_pv_ja": wiki.get("wikipedia_pv_ja", ""),
+                "wikipedia_pv_en": wiki.get("wikipedia_pv_en", ""),
             }
         )
-
-    if wiki_missing:
-        REPORT.warn(f"Wikipedia 記事なし/PV無し: {wiki_missing}件")
-    if wiki_errors:
-        REPORT.mark_fail("Wikipedia", f"API例外 {wiki_errors}件")
-    else:
-        REPORT.mark_ok("Wikipedia")
 
     if not merged:
         raise RuntimeError("アーティストマスタが空のため snapshot を書けません")

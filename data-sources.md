@@ -7,7 +7,7 @@ K-popアーティスト/事務所パワー計測に使うデータソース。
 | ソース | 用途 | 認証 |
 |---|---|---|
 | **YouTube Data API v3** | 登録者・総再生・動画数 (日次) | APIキー |
-| **Wikipedia Pageviews API** | 日英記事PV (日次) | 不要 |
+| **Wikipedia Pageviews API** | 日英記事PVの **直近7日合計**（週次・月曜） | 不要 |
 | **Apple Music RSS** | jp/kr/us チャート (日次) | 不要 |
 | **LINE MUSIC** | K-Pop Top 50 (日次) | 不要 |
 | **スペースシャワーTV** | KOREAN HITS (週次) | 不要 |
@@ -19,6 +19,9 @@ K-popアーティスト/事務所パワー計測に使うデータソース。
 
 ### Wikipedia Pageviews API
 - 認証不要。日本語版・英語版を分けて国内外の注目度比較
+- **レート制限対策**: 日次ではなく週1回（月曜）。1記事あたり日付レンジ指定で7日分を1リクエスト取得し合計
+- `data/raw` の `wikipedia_pv_ja` / `wikipedia_pv_en` は週次実行日のみ埋まる（7日合計）。他の日は空
+- タイトル不一致は `artist_master.csv` / `other_agency_master.csv` の `wikipedia_title_*` を修正
 
 ### Apple / LINE / スペースシャワー
 - いずれも認証不要のJSON。詳細は [chart-sources-review.md](chart-sources-review.md) / [data-model.md](data-model.md)
