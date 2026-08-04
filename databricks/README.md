@@ -65,7 +65,8 @@ GitHub リポジトリ → **Settings → Secrets and variables → Actions → 
 | `DATABRICKS_HOST` | `https://dbc-xxxx.cloud.databricks.com`（末尾スラッシュなし） |
 | `DATABRICKS_TOKEN` | 手順4の PAT |
 | `DATABRICKS_JOB_ID` | 手順3の Job ID（数字のみ） |
-| `DATABRICKS_REPO_PATH` | 手順2の Git folder フルパス |
+| `DATABRICKS_REPO_PATH` | Git folder のフルパス。API 実例:<br>`/Users/riverstone0228@gmail.com/kpop_agent_data/kpop_agent_power_data` |
+| `DATABRICKS_REPO_ID` | （任意）Git folder の数値 ID。例: `2867776658240661`。分かっていればパスより確実 |
 
 既存の `YOUTUBE_API_KEY` / `SLACK_WEBHOOK_URL` はそのまま残します。
 
