@@ -1,0 +1,144 @@
+name: Databricks Sync Only
+
+# 日次収集を回さず、Git folder Pull → bronze load Job だけ再実行する
+on:
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check Databricks secrets
+        id: databricks
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_JOB_ID: ${{ secrets.DATABRICKS_JOB_ID }}
+          DATABRICKS_REPO_PATH: ${{ secrets.DATABRICKS_REPO_PATH }}
+        run: |
+          if [ -n "${DATABRICKS_HOST}" ] && [ -n "${DATABRICKS_TOKEN}" ] && [ -n "${DATABRICKS_JOB_ID}" ] && [ -n "${DATABRICKS_REPO_PATH}" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Databricks secrets incomplete"
+            exit 1
+          fi
+
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@main
+
+      - name: Pull Databricks Git folder
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_REPO_PATH: ${{ secrets.DATABRICKS_REPO_PATH }}
+          DATABRICKS_HTTP_TIMEOUT_SECONDS: "300"
+        run: |
+          set -euo pipefail
+          echo "Pulling Git folder: ${DATABRICKS_REPO_PATH}"
+          attempt=1
+          max=4
+          while [ "${attempt}" -le "${max}" ]; do
+            echo "=== Git folder pull attempt ${attempt}/${max} ==="
+            set +e
+            out=$(databricks repos update "${DATABRICKS_REPO_PATH}" --branch main --output json 2>&1)
+            rc=$?
+            set -e
+            echo "${out}"
+            if [ "${rc}" -eq 0 ]; then
+              echo "Git folder pull succeeded"
+              exit 0
+            fi
+            echo "CLI failed (rc=${rc}); trying REST API with 5m timeout..."
+            set +e
+            rest_out=$(python - <<'PY'
+import json, os, sys, urllib.error, urllib.request
+
+host = os.environ["DATABRICKS_HOST"].rstrip("/")
+token = os.environ["DATABRICKS_TOKEN"]
+path = os.environ["DATABRICKS_REPO_PATH"].rstrip("/")
+
+def req(method, url, body=None, timeout=300):
+    data = None if body is None else json.dumps(body).encode("utf-8")
+    r = urllib.request.Request(
+        url,
+        data=data,
+        method=method,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        },
+    )
+    with urllib.request.urlopen(r, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+repos = req("GET", f"{host}/api/2.0/repos?path_prefix={path}", timeout=60)
+repo_id = None
+for r in repos.get("repos") or []:
+    if (r.get("path") or "").rstrip("/") == path:
+        repo_id = r.get("id")
+        break
+if repo_id is None:
+    for r in repos.get("repos") or []:
+        if path in (r.get("path") or ""):
+            repo_id = r.get("id")
+            break
+if repo_id is None:
+    print("ERROR: repo not found for path", path, file=sys.stderr)
+    print(json.dumps(repos, ensure_ascii=False)[:2000], file=sys.stderr)
+    sys.exit(2)
+
+print(f"Resolved repo_id={repo_id}")
+try:
+    updated = req(
+        "PATCH",
+        f"{host}/api/2.0/repos/{repo_id}",
+        body={"branch": "main"},
+        timeout=300,
+    )
+except urllib.error.HTTPError as e:
+    body = e.read().decode("utf-8", errors="replace")
+    print(f"HTTP {e.code}: {body}", file=sys.stderr)
+    sys.exit(1)
+except Exception as e:
+    print(f"REST pull failed: {e}", file=sys.stderr)
+    sys.exit(1)
+
+print(json.dumps(updated, ensure_ascii=False))
+print("REST Git folder pull succeeded")
+PY
+)
+            rest_rc=$?
+            set -e
+            echo "${rest_out}"
+            if [ "${rest_rc}" -eq 0 ]; then
+              exit 0
+            fi
+            if [ "${attempt}" -eq "${max}" ]; then
+              echo "Git folder pull failed after ${max} attempts"
+              exit 1
+            fi
+            sleep_s=$((attempt * 45))
+            echo "Retrying in ${sleep_s}s..."
+            sleep "${sleep_s}"
+            attempt=$((attempt + 1))
+          done
+
+      - name: Trigger Databricks bronze load job
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_JOB_ID: ${{ secrets.DATABRICKS_JOB_ID }}
+        run: |
+          set -euo pipefail
+          RUN_NOW_RESP=$(databricks jobs run-now "${DATABRICKS_JOB_ID}" --output json)
+          echo "${RUN_NOW_RESP}"
+          RUN_ID=$(python -c 'import json,sys; print(json.loads(sys.stdin.read())["run_id"])' <<< "${RUN_NOW_RESP}")
+          echo "Triggered Databricks run_id=${RUN_ID}"
+          databricks jobs get-run "${RUN_ID}" --output json
