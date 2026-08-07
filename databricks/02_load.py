@@ -278,6 +278,12 @@ else:
             "thumbnail_url",
             F.concat(F.lit("https://i.ytimg.com/vi/"), F.col("video_id"), F.lit("/mqdefault.jpg")),
         )
+    if "duration_sec" not in yt.columns:
+        yt = yt.withColumn("duration_sec", F.lit(None).cast("int"))
+    else:
+        yt = yt.withColumn("duration_sec", to_int("duration_sec"))
+    if "category_id" not in yt.columns:
+        yt = yt.withColumn("category_id", F.lit(None).cast("string"))
     yt.createOrReplaceTempView("stg_yt")
     spark.sql("""
         MERGE INTO workspace.kpop_bronze.fact_youtube_video_daily t

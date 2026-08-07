@@ -120,7 +120,7 @@ SELECT * FROM workspace.kpop_gold.v_artist_metrics_7d WHERE date = current_date(
 | `fact_artist_daily` | `data/raw/*.csv` |
 | `fact_line_chart_daily` | `data/line_charts/*.csv` |
 | `fact_apple_chart_daily` | `data/apple_charts/*.csv` |
-| `fact_youtube_video_daily` | `data/youtube_videos/*.csv` |
+| `fact_youtube_video_daily` | `data/youtube_videos/*.csv`（selection: recent / top_views / **hot_mv**） |
 | `fact_song_rank_daily` | `data/song_rankings/top_*.csv` + `hot_*.csv` |
 | `fact_stock_price_daily` | `data/stock_prices/*.csv` |
 | `dim_artist` / `dim_track` | `scripts/*master*.csv` |

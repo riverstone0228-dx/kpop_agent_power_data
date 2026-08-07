@@ -73,11 +73,12 @@ def latest_youtube_videos():
 
 
 def suggest_youtube_id(artist_name: str, track_name: str, yt_rows: list[dict]) -> str:
-    """タイトルに曲名が含まれる公式ch動画を優先 (top_views > recent)。"""
+    """タイトルに曲名が含まれる公式ch動画を優先 (hot_mv > top_views > recent)。"""
     tkey = norm_name(track_name)
     if not tkey or len(tkey) < 3:
         return ""
     candidates = []
+    sel_bonus = {"hot_mv": 0, "top_views": 10**6, "recent": 2 * 10**6}
     for r in yt_rows:
         if (r.get("artist_name") or "").strip() != artist_name:
             continue
@@ -95,7 +96,8 @@ def suggest_youtube_id(artist_name: str, track_name: str, yt_rows: list[dict]) -
         if "M/V" in title or "MV" in title or "Official" in title:
             bonus = 10**12
         rank = int(r.get("rank") or 99)
-        score = bonus + views - (0 if sel == "top_views" else 10**6) - rank
+        # スコア大ほど優先: 大きいボーナス − 弱い selection ペナルティ + views − rank
+        score = bonus + views - sel_bonus.get(sel, 3 * 10**6) - rank
         candidates.append((score, r.get("video_id", "")))
     if not candidates:
         return ""

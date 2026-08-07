@@ -172,7 +172,9 @@ def main():
             )
         return out
 
-    # YouTube videos: dedupe by video_id, keep max views, prefer top_views selection
+    # YouTube videos: dedupe by video_id, keep max views,
+    # prefer hot_mv > top_views > recent for same view-ish ties
+    sel_bonus = {"hot_mv": 2 * 10**12, "top_views": 10**12, "recent": 0}
     best = {}
     for r in yt_rows:
         vid = (r.get("video_id") or "").strip()
@@ -180,10 +182,11 @@ def main():
             continue
         views = safe_int(r.get("view_count"))
         cur = best.get(vid)
-        score = views + (10**12 if r.get("selection") == "top_views" else 0)
+        sel = r.get("selection", "")
+        score = views + sel_bonus.get(sel, 0)
         cur_score = 0
         if cur:
-            cur_score = cur["view_count"] + (10**12 if cur.get("selection") == "top_views" else 0)
+            cur_score = cur["view_count"] + sel_bonus.get(cur.get("selection", ""), 0)
         if not cur or score > cur_score:
             best[vid] = {
                 "video_id": vid,

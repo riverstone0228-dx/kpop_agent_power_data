@@ -2,7 +2,7 @@
 日次収集オーケストレータ。
 
 1. YouTube（日次）/ Wikipedia 7日合計（週次・月曜） → data/raw/YYYY-MM-DD.csv
-2. YouTube 動画 (直近10 + 再生TOP10) → data/youtube_videos/
+2. YouTube 動画 (recent10 + top_views10 + hot_mv10) → data/youtube_videos/
 3. 4大事務所株価 (HYBE/JYP/YG/SM) → data/stock_prices/
 4. Apple Music チャート (jp/kr/us)
 5. LINE MUSIC K-Pop Top 50 (日次)
@@ -127,7 +127,7 @@ def collect_artist_snapshots():
 def collect_youtube_videos():
     from fetch_youtube_videos import main as fetch_yt_videos_main
 
-    print("\n=== YouTube videos (recent10 + top10 views) ===")
+    print("\n=== YouTube videos (recent10 + top10 views + hot_mv10) ===")
     safe_call("YouTube videos", fetch_yt_videos_main)
 
 

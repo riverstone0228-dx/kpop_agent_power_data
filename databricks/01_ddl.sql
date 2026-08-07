@@ -121,7 +121,7 @@ CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_youtube_video_daily (
   sub_agency STRING,
   artist_name STRING,
   youtube_channel_id STRING,
-  selection STRING,
+  selection STRING,  -- recent | top_views | hot_mv
   rank INT,
   video_id STRING,
   title STRING,
@@ -131,10 +131,16 @@ CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_youtube_video_daily (
   like_count BIGINT,
   comment_count BIGINT,
   thumbnail_url STRING,
+  duration_sec INT,
+  category_id STRING,
   loaded_at TIMESTAMP
 )
 USING DELTA
 PARTITIONED BY (date);
+
+-- 既存テーブルに hot_mv メタ列が無い場合 (一度だけ):
+-- ALTER TABLE workspace.kpop_bronze.fact_youtube_video_daily
+--   ADD COLUMNS (duration_sec INT, category_id STRING);
 
 CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_song_rank_daily (
   date DATE,
