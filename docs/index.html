@@ -350,8 +350,8 @@
 
     <section class="block" id="sec-youtube">
       <div class="section-head">
-        <h2>05 YouTube <span class="accent">TOP 10</span></h2>
-        <p>公式ch動画の累積再生</p>
+        <h2>05 YouTube <span class="accent">HOT 10</span></h2>
+        <p>急上昇・人気 MV（勢いスコア = 再生÷(日齢+7)、再生数も表示）</p>
       </div>
       <div class="grid-2">
         <div class="panel"><div class="chart-box"><canvas id="chart-youtube"></canvas></div></div>
@@ -576,13 +576,28 @@
 
     function renderYoutube() {
       destroyChart("youtube");
-      const top = byAgency(STATE.data.youtube_videos).slice(0, 10);
+      // youtube_hot 優先（勢い）。無ければ旧 youtube_videos を勢い再計算でフォールバック
+      const src =
+        (STATE.data.youtube_hot && STATE.data.youtube_hot.length
+          ? STATE.data.youtube_hot
+          : STATE.data.youtube_videos) || [];
+      const scored = byAgency(src)
+        .map((v) => {
+          if (v.hot_score != null && v.hot_score !== "") return v;
+          const views = Number(v.view_count) || 0;
+          const age = Number(v.age_days);
+          const ageSafe = Number.isFinite(age) && age >= 0 ? age : 14;
+          return { ...v, hot_score: views / (ageSafe + 7), age_days: ageSafe };
+        })
+        .sort((a, b) => (b.hot_score || 0) - (a.hot_score || 0));
+      const top = scored.slice(0, 10);
       STATE.charts.youtube = new Chart(document.getElementById("chart-youtube"), {
         type: "bar",
         data: {
           labels: top.map((v) => truncate(v.title, 22)),
           datasets: [
             {
+              label: "Views",
               data: top.map((v) => v.view_count),
               backgroundColor: COLORS.violet,
               borderRadius: 2,
@@ -599,7 +614,9 @@
           </a>
           <div>
             <div class="rank-title"><a href="${v.url}" target="_blank" rel="noopener">${truncate(v.title, 42)}</a></div>
-            <div class="rank-sub">${v.artist}<span class="agency-tag">${v.agency}</span> · ♥ ${fmt(v.like_count)}</div>
+            <div class="rank-sub">${v.artist}<span class="agency-tag">${v.agency}</span> · ♥ ${fmt(v.like_count)}${
+              v.age_days != null ? ` · ${v.age_days}日前` : ""
+            }</div>
           </div>
           <div class="rank-metric">${fmt(v.view_count)}</div>
         </li>`);
