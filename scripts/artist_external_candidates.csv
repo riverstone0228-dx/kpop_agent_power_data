@@ -35,7 +35,7 @@ apple,1414840245,WOODZ,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,1419227,Beyoncé,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,1436413980,Zach Bryan,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,1439301205,에이티즈,ATEEZ,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-07,apple_artist_id
-apple,1456620250,Pooh Shiesty,,,,unmatched,2026-07-26,2026-07-31,no_master_match
+apple,1456620250,Pooh Shiesty,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,1459227743,Nerd Connection,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,1468829603,임현정,,,,unmatched,2026-07-26,2026-08-07,empty_name
 apple,1470573326,권오선,,,,unmatched,2026-07-26,2026-08-03,empty_name
@@ -94,6 +94,7 @@ apple,271256,Drake,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,276066585,She & Him,,,,unmatched,2026-08-05,2026-08-07,no_master_match
 apple,282264074,Whiskey Myers,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,290242959,Tame Impala,,,,unmatched,2026-08-05,2026-08-07,no_master_match
+apple,290814601,KAROL G & Drake,,,,unmatched,2026-08-07,2026-08-07,no_master_match
 apple,302361237,back number,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,313865761,Meek Mill,,,,unmatched,2026-08-01,2026-08-07,no_master_match
 apple,320569549,Justin Bieber,,,,unmatched,2026-07-26,2026-08-07,no_master_match
@@ -143,38 +144,38 @@ apple,979458609,Olivia Rodrigo,,,,unmatched,2026-07-26,2026-08-07,no_master_matc
 apple,990402287,Summer Walker,,,,unmatched,2026-07-26,2026-08-07,no_master_match
 apple,991187319,Moneybagg Yo,,,,unmatched,2026-07-26,2026-08-01,no_master_match
 apple,991663287,アイナ・ジ・エンド,,,,unmatched,2026-07-26,2026-08-07,empty_name
-line,mi00000000006df3a8,BIGBANG,BIGBANG,artist_master.csv,YG,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000000ba3ad96,TWICE,TWICE,artist_master.csv,JYP,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000000d88926b,BLACKPINK,BLACKPINK,artist_master.csv,YG,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000000dcc9b82,BTS,BTS,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000000f16e3fd,Red Velvet,Red Velvet,artist_master.csv,SM,confirmed,2026-08-04,2026-08-06,exact_name
-line,mi000000000f1d2791,BLACKPINK,BLACKPINK,artist_master.csv,YG,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi00000000100b2799,TWICE,TWICE,artist_master.csv,JYP,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi00000000104d78a7,TOMORROW X TOGETHER,TOMORROW X TOGETHER,artist_master.csv,HYBE,confirmed,2026-08-04,2026-08-06,exact_name
+line,mi00000000006df3a8,BIGBANG,BIGBANG,artist_master.csv,YG,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000000ba3ad96,TWICE,TWICE,artist_master.csv,JYP,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000000d88926b,BLACKPINK,BLACKPINK,artist_master.csv,YG,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000000dcc9b82,BTS,BTS,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000000f16e3fd,Red Velvet,Red Velvet,artist_master.csv,SM,confirmed,2026-08-04,2026-08-07,exact_name
+line,mi000000000f1d2791,BLACKPINK,BLACKPINK,artist_master.csv,YG,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi00000000100b2799,TWICE,TWICE,artist_master.csv,JYP,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi00000000104d78a7,TOMORROW X TOGETHER,TOMORROW X TOGETHER,artist_master.csv,HYBE,confirmed,2026-08-04,2026-08-07,exact_name
 line,mi0000000010de3a50,U-KNOW,,,,unmatched,2026-07-26,2026-07-27,no_master_match
-line,mi000000001171d196,Stray Kids,Stray Kids,artist_master.csv,JYP,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi0000000019287cae,LE SSERAFIM,LE SSERAFIM,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000001a221995,NewJeans,NewJeans,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000001ab0536c,IVE,IVE,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000001d2ef052,aespa,aespa,artist_master.csv,SM,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000001e043448,ATEEZ,ATEEZ,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000001f923535,NCT WISH,NCT WISH,artist_master.csv,SM,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000001f9c7e6b,aespa,aespa,artist_master.csv,SM,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000001fd81217,"Jung Kook, Latto",,,,unmatched,2026-07-26,2026-08-06,no_master_match
-line,mi00000000205b8484,BABYMONSTER,BABYMONSTER,artist_master.csv,YG,confirmed,2026-07-28,2026-08-06,exact_name
-line,mi0000000020df8490,TWS,TWS,artist_master.csv,HYBE,confirmed,2026-08-04,2026-08-06,exact_name
+line,mi000000001171d196,Stray Kids,Stray Kids,artist_master.csv,JYP,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi0000000019287cae,LE SSERAFIM,LE SSERAFIM,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000001a221995,NewJeans,NewJeans,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000001ab0536c,IVE,IVE,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000001d2ef052,aespa,aespa,artist_master.csv,SM,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000001e043448,ATEEZ,ATEEZ,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000001f923535,NCT WISH,NCT WISH,artist_master.csv,SM,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000001f9c7e6b,aespa,aespa,artist_master.csv,SM,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000001fd81217,"Jung Kook, Latto",,,,unmatched,2026-07-26,2026-08-07,no_master_match
+line,mi00000000205b8484,BABYMONSTER,BABYMONSTER,artist_master.csv,YG,confirmed,2026-07-28,2026-08-07,exact_name
+line,mi0000000020df8490,TWS,TWS,artist_master.csv,HYBE,confirmed,2026-08-04,2026-08-07,exact_name
 line,mi0000000020f6c423,RIIZE,RIIZE,artist_master.csv,SM,confirmed,2026-07-27,2026-08-06,exact_name
-line,mi000000002122399d,YENA,YENA,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-06,chart+user
-line,mi00000000220540fc,ILLIT,ILLIT,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi00000000230ddd62,BABYMONSTER,BABYMONSTER,artist_master.csv,YG,confirmed,2026-07-26,2026-08-06,exact_name
+line,mi000000002122399d,YENA,YENA,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-07,chart+user
+line,mi00000000220540fc,ILLIT,ILLIT,artist_master.csv,HYBE,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi00000000230ddd62,BABYMONSTER,BABYMONSTER,artist_master.csv,YG,confirmed,2026-07-26,2026-08-07,exact_name
 line,mi0000000023ecb3e7,YEONJUN,,,,unmatched,2026-07-26,2026-07-29,no_master_match
 line,mi000000002438e74d,JENNIE,,,,unmatched,2026-07-29,2026-08-04,no_master_match
-line,mi00000000247459ef,ROSÉ & Bruno Mars,,,,unmatched,2026-07-26,2026-08-06,no_master_match
-line,mi00000000258f25d2,Hearts2Hearts,Hearts2Hearts,artist_master.csv,SM,confirmed,2026-07-26,2026-08-06,exact_name
-line,mi000000002742e075,"HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",,,,unmatched,2026-07-26,2026-08-06,no_master_match
-line,mi000000002839051d,Hearts2Hearts,Hearts2Hearts,artist_master.csv,SM,confirmed,2026-07-26,2026-08-06,exact_name
+line,mi00000000247459ef,ROSÉ & Bruno Mars,,,,unmatched,2026-07-26,2026-08-07,no_master_match
+line,mi00000000258f25d2,Hearts2Hearts,Hearts2Hearts,artist_master.csv,SM,confirmed,2026-07-26,2026-08-07,exact_name
+line,mi000000002742e075,"HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",,,,unmatched,2026-07-26,2026-08-07,no_master_match
+line,mi000000002839051d,Hearts2Hearts,Hearts2Hearts,artist_master.csv,SM,confirmed,2026-07-26,2026-08-07,exact_name
 line,mi000000002b3a35d0,"LE SSERAFIM, ILLIT, KATSEYE",,,,unmatched,2026-07-28,2026-07-30,no_master_match
-line,mi000000002bfd2958,"ILLIT, HANA",,,,unmatched,2026-07-27,2026-08-06,no_master_match
+line,mi000000002bfd2958,"ILLIT, HANA",,,,unmatched,2026-07-27,2026-08-07,no_master_match
 spaceshower,020394,BTS,BTS,artist_master.csv,HYBE,confirmed,2026-07-17,2026-08-07,exact_name
 spaceshower,021927,SEVENTEEN,SEVENTEEN,artist_master.csv,HYBE,confirmed,2026-07-17,2026-08-07,exact_name
 spaceshower,023125,TOMORROW X TOGETHER,TOMORROW X TOGETHER,artist_master.csv,HYBE,confirmed,2026-07-17,2026-07-31,exact_name
