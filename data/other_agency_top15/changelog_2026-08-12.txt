@@ -1,0 +1,5 @@
+OTHER TOP15 rebalance 2026-08-12
+pool_size=17 has_youtube=True
+weights: chart=0.7 youtube=0.3
+hysteresis: enter<=14 drop>=17
+no membership changes
