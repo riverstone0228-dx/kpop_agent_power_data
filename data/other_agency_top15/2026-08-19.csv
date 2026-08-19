@@ -1,0 +1,16 @@
+rank,artist_name,sub_agency,score,chart_momentum_raw,chart_momentum_norm,youtube_subs_norm,platforms_hit,youtube_subscribers
+1,KiiiKiii,Starship Entertainment,0.7,3858.0,1.0,0.0,2,571000
+2,RESCENE,THE MUZE Entertainment,0.605257,3004.0,0.7786,0.2007,2,1010000
+3,ATEEZ,KQ Entertainment,0.504257,1473.0,0.3818,0.79,4,5390000
+4,i-dle,Cube Entertainment,0.3,0.0,0.0,1.0,0,9790000
+5,IVE,Starship Entertainment,0.270946,208.0,0.0539,0.7774,2,5200000
+6,MAMAMOO,RBW,0.262146,0.0,0.0,0.8738,0,6840000
+7,ZEROBASEONE,WakeOne,0.202714,354.0,0.0918,0.4616,2,2120000
+8,Kep1er,WakeOne,0.157566,0.0,0.0,0.5252,0,2540000
+9,izna,WakeOne,0.138052,20.0,0.0052,0.4481,1,2040000
+10,STAYC,High Up Entertainment,0.124672,0.0,0.0,0.4156,0,1860000
+11,YENA,Yuehua Entertainment,0.119772,195.0,0.0505,0.2813,1,1270000
+12,P1Harmony,FNC Entertainment,0.118236,0.0,0.0,0.3941,0,1750000
+13,ONEUS,RBW,0.116823,48.0,0.0124,0.3604,1,1590000
+14,PLAVE,VLAST,0.078949,3.0,0.0008,0.2614,1,1200000
+15,CIX,C9 Entertainment,0.059158,0.0,0.0,0.1972,0,1000000
