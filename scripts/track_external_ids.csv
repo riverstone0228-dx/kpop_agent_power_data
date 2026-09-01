@@ -1,31 +1,31 @@
 platform,external_track_id,artist_name_en,track_name,source_file,match_status,observed_artist_name,observed_track_name,first_seen,last_seen,notes
-apple,1017055092,,Stick Talk,,unmatched,Future,Stick Talk,2026-07-26,2026-08-30,
+apple,1017055092,,Stick Talk,,unmatched,Future,Stick Talk,2026-07-26,2026-09-01,
 apple,1031354882,,Don't,,unmatched,Bryson Tiller,Don't,2026-08-24,2026-08-24,
 apple,1039793121,YENA,新宝島,other_agency_master.csv,confirmed,サカナクション,新宝島,2026-07-26,2026-08-23,
 apple,1056384020,,No Flockin,,unmatched,Kodak Black,No Flockin,2026-07-26,2026-08-23,
-apple,1062400330,,Jolene,,unmatched,Dolly Parton,Jolene,2026-08-27,2026-08-30,
+apple,1062400330,,Jolene,,unmatched,Dolly Parton,Jolene,2026-08-27,2026-09-01,
 apple,1062400635,,I Will Always Love You,,unmatched,Dolly Parton,I Will Always Love You,2026-08-27,2026-08-30,
 apple,1062401017,,Here You Come Again,,unmatched,Dolly Parton,Here You Come Again,2026-08-27,2026-08-29,
 apple,1062401023,,Two Doors Down,,unmatched,Dolly Parton,Two Doors Down,2026-08-27,2026-08-27,
 apple,1083422439,YENA,波乗りジョニー,other_agency_master.csv,confirmed,桑田佳祐,波乗りジョニー,2026-07-26,2026-08-30,
 apple,1109978628,,花火,,unmatched,aiko,花火,2026-07-26,2026-08-30,
-apple,1125891115,Red Velvet,Bye Bye My Blue,artist_master.csv,confirmed,백예린,Bye Bye My Blue,2026-08-20,2026-08-30,
-apple,1137966332,,Cinderella (feat. Ty Dolla $ign),,unmatched,Mac Miller,Cinderella (feat. Ty Dolla $ign),2026-07-26,2026-08-30,
+apple,1125891115,Red Velvet,Bye Bye My Blue,artist_master.csv,confirmed,백예린,Bye Bye My Blue,2026-08-20,2026-09-01,
+apple,1137966332,,Cinderella (feat. Ty Dolla $ign),,unmatched,Mac Miller,Cinderella (feat. Ty Dolla $ign),2026-07-26,2026-09-01,
 apple,1140702767,,My Tennessee Mountain Home,,unmatched,Dolly Parton,My Tennessee Mountain Home,2026-08-27,2026-08-27,
 apple,1151001410,Red Velvet,러시안 룰렛,,confirmed,레드벨벳,러시안 룰렛,2026-08-08,2026-08-08,chart_artist_name_master
-apple,1239976610,,Broken Clocks,,unmatched,SZA,Broken Clocks,2026-07-26,2026-08-28,
-apple,1242155573,YENA,한시 오분 (1:05),other_agency_master.csv,confirmed,검정치마,한시 오분 (1:05),2026-07-26,2026-08-30,
-apple,1242155576,YENA,EVERYTHING,other_agency_master.csv,confirmed,검정치마,EVERYTHING,2026-07-26,2026-08-30,
+apple,1239976610,,Broken Clocks,,unmatched,SZA,Broken Clocks,2026-07-26,2026-09-01,
+apple,1242155573,YENA,한시 오분 (1:05),other_agency_master.csv,confirmed,검정치마,한시 오분 (1:05),2026-07-26,2026-09-01,
+apple,1242155576,YENA,EVERYTHING,other_agency_master.csv,confirmed,검정치마,EVERYTHING,2026-07-26,2026-09-01,
 apple,1251249891,BLACKPINK,마지막처럼,,confirmed,BLACKPINK,마지막처럼,2026-08-10,2026-08-29,chart_artist_name_master
 apple,1256504651,Red Velvet,빨간 맛,,confirmed,레드벨벳,빨간 맛,2026-08-08,2026-08-08,chart_artist_name_master
 apple,1273709797,YENA,君はロックを聴かない,other_agency_master.csv,confirmed,あいみょん,君はロックを聴かない,2026-07-26,2026-08-30,
 apple,1273710101,Red Velvet,愛を伝えたいだとか,artist_master.csv,confirmed,あいみょん,愛を伝えたいだとか,2026-08-27,2026-08-30,
-apple,1313176078,BIGBANG,LAST DANCE,,confirmed,BIGBANG,LAST DANCE,2026-08-22,2026-08-30,chart_artist_name_master
-apple,1313176085,BIGBANG,IF YOU,,confirmed,BIGBANG,IF YOU,2026-08-22,2026-08-30,chart_artist_name_master
-apple,1316404636,YENA,Antifreeze,other_agency_master.csv,confirmed,검정치마,Antifreeze,2026-07-26,2026-08-30,
-apple,1333468525,BIGBANG,붉은 노을,,confirmed,BIGBANG,붉은 노을,2026-08-21,2026-08-30,chart_artist_name_master
+apple,1313176078,BIGBANG,LAST DANCE,,confirmed,BIGBANG,LAST DANCE,2026-08-22,2026-09-01,chart_artist_name_master
+apple,1313176085,BIGBANG,IF YOU,,confirmed,BIGBANG,IF YOU,2026-08-22,2026-09-01,chart_artist_name_master
+apple,1316404636,YENA,Antifreeze,other_agency_master.csv,confirmed,검정치마,Antifreeze,2026-07-26,2026-09-01,
+apple,1333468525,BIGBANG,붉은 노을,,confirmed,BIGBANG,붉은 노을,2026-08-21,2026-09-01,chart_artist_name_master
 apple,1337456890,BIGBANG,Blue,,confirmed,BIGBANG,Blue,2026-08-21,2026-08-30,chart_artist_name_master
-apple,1346470976,BIGBANG,하루하루,,confirmed,BIGBANG,하루하루,2026-08-20,2026-08-30,chart_artist_name_master
+apple,1346470976,BIGBANG,하루하루,,confirmed,BIGBANG,하루하루,2026-08-20,2026-09-01,chart_artist_name_master
 apple,1364826169,,ノーダウト,,unmatched,Official髭男dism,ノーダウト,2026-08-27,2026-08-30,
 apple,1375007474,,HANABI,,unmatched,Mr.Children,HANABI,2026-07-26,2026-08-30,
 apple,1376707066,,Beautiful Crazy,,unmatched,Luke Combs,Beautiful Crazy,2026-07-26,2026-08-28,
@@ -33,206 +33,206 @@ apple,1376707081,,She Got the Best of Me,,unmatched,Luke Combs,She Got the Best 
 apple,1394013614,,115万キロのフィルム,,unmatched,Official髭男dism,115万キロのフィルム,2026-07-26,2026-08-30,
 apple,1408505264,,青と夏,,unmatched,Mrs. GREEN APPLE,青と夏,2026-07-26,2026-08-30,
 apple,1408505419,,点描の唄 (feat. 井上苑子),,unmatched,Mrs. GREEN APPLE,点描の唄 (feat. 井上苑子),2026-07-26,2026-08-30,
-apple,1418213269,,God's Plan,,unmatched,Drake,God's Plan,2026-07-26,2026-08-30,
+apple,1418213269,,God's Plan,,unmatched,Drake,God's Plan,2026-07-26,2026-09-01,
 apple,1438144188,YENA,今夜このまま,other_agency_master.csv,confirmed,あいみょん,今夜このまま,2026-07-26,2026-08-30,
-apple,1438765134,,Girls Need Love,,unmatched,Summer Walker,Girls Need Love,2026-07-26,2026-08-30,
-apple,1440642743,,Marvins Room,,unmatched,Drake,Marvins Room,2026-07-26,2026-08-30,
-apple,1440650961,,Beauty and a Beat (feat. Nicki Minaj),,unmatched,Justin Bieber,Beauty and a Beat (feat. Nicki Minaj),2026-07-26,2026-08-30,
+apple,1438765134,,Girls Need Love,,unmatched,Summer Walker,Girls Need Love,2026-07-26,2026-09-01,
+apple,1440642743,,Marvins Room,,unmatched,Drake,Marvins Room,2026-07-26,2026-09-01,
+apple,1440650961,,Beauty and a Beat (feat. Nicki Minaj),,unmatched,Justin Bieber,Beauty and a Beat (feat. Nicki Minaj),2026-07-26,2026-09-01,
 apple,1440745441,,StaRt,,unmatched,Mrs. GREEN APPLE,StaRt,2026-07-26,2026-08-30,
 apple,1440747285,YENA,チェリー,other_agency_master.csv,confirmed,スピッツ,チェリー,2026-07-26,2026-08-30,
 apple,1440763351,YENA,Automatic (Remastered 2014),other_agency_master.csv,confirmed,宇多田ヒカル,Automatic (Remastered 2014),2026-07-26,2026-08-30,
 apple,1440763358,BTS,First Love (Remastered 2014),artist_master.csv,confirmed,宇多田ヒカル,First Love (Remastered 2014),2026-08-16,2026-08-18,
-apple,1440827492,,Tennessee Whiskey,,unmatched,Chris Stapleton,Tennessee Whiskey,2026-07-26,2026-08-30,
+apple,1440827492,,Tennessee Whiskey,,unmatched,Chris Stapleton,Tennessee Whiskey,2026-07-26,2026-09-01,
 apple,1440841382,,Controlla,,unmatched,Drake,Controlla,2026-07-26,2026-08-27,
 apple,1440891494,,Passionfruit,,unmatched,Drake,Passionfruit,2026-07-26,2026-08-28,
-apple,1440929293,,Freestyle,,unmatched,Lil Baby,Freestyle,2026-07-26,2026-08-30,
+apple,1440929293,,Freestyle,,unmatched,Lil Baby,Freestyle,2026-07-26,2026-09-01,
 apple,1443008970,,Baby (feat. Ludacris),,unmatched,Justin Bieber,Baby (feat. Ludacris),2026-08-09,2026-08-09,
 apple,1445145789,,僕のこと,,unmatched,Mrs. GREEN APPLE,僕のこと,2026-07-26,2026-08-30,
-apple,1445949267,,Sunflower (Spider-Man: Into the Spider-Verse),,unmatched,Post Malone & Swae Lee,Sunflower (Spider-Man: Into the Spider-Verse),2026-07-26,2026-08-30,
+apple,1445949267,,Sunflower (Spider-Man: Into the Spider-Verse),,unmatched,Post Malone & Swae Lee,Sunflower (Spider-Man: Into the Spider-Verse),2026-07-26,2026-09-01,
 apple,1446781787,YENA,マリーゴールド,other_agency_master.csv,confirmed,あいみょん,マリーゴールド,2026-07-26,2026-08-30,
 apple,1451566361,,ヒロイン,,unmatched,back number,ヒロイン,2026-07-26,2026-08-30,
 apple,1451567084,,わたがし,,unmatched,back number,わたがし,2026-07-26,2026-08-30,
 apple,1451567751,,ハッピーエンド,,unmatched,back number,ハッピーエンド,2026-07-26,2026-08-30,
 apple,1451567963,,高嶺の花子さん,,unmatched,back number,高嶺の花子さん,2026-07-26,2026-08-30,
 apple,1451570480,,花束,,unmatched,back number,花束,2026-07-26,2026-08-30,
-apple,1452017954,,Best I Ever Had,,unmatched,Drake,Best I Ever Had,2026-07-26,2026-08-30,
-apple,1453379466,YENA,Rose (feat. Skinny Brown & Homeboy),other_agency_master.csv,confirmed,양홍원,Rose (feat. Skinny Brown & Homeboy),2026-07-26,2026-08-30,
+apple,1452017954,,Best I Ever Had,,unmatched,Drake,Best I Ever Had,2026-07-26,2026-09-01,
+apple,1453379466,YENA,Rose (feat. Skinny Brown & Homeboy),other_agency_master.csv,confirmed,양홍원,Rose (feat. Skinny Brown & Homeboy),2026-07-26,2026-09-01,
 apple,1454643219,,ロマンチシズム,,unmatched,Mrs. GREEN APPLE,ロマンチシズム,2026-07-26,2026-08-30,
 apple,1456063581,,HAPPY BIRTHDAY,,unmatched,back number,HAPPY BIRTHDAY,2026-07-26,2026-08-30,
-apple,1456103133,YENA,주저하는 연인들을 위해,other_agency_master.csv,confirmed,잔나비,주저하는 연인들을 위해,2026-07-26,2026-08-30,
-apple,1459216694,,Pretender,,unmatched,OFFICIAL HIGE DANDISM,Pretender,2026-07-26,2026-08-30,
+apple,1456103133,YENA,주저하는 연인들을 위해,other_agency_master.csv,confirmed,잔나비,주저하는 연인들을 위해,2026-07-26,2026-09-01,
+apple,1459216694,,Pretender,,unmatched,OFFICIAL HIGE DANDISM,Pretender,2026-07-26,2026-09-01,
 apple,1468137287,YENA,Never Grow Up,other_agency_master.csv,confirmed,ちゃんみな,Never Grow Up,2026-07-26,2026-08-30,
 apple,1468137516,YENA,SAD SONG,other_agency_master.csv,confirmed,ちゃんみな,SAD SONG,2026-07-26,2026-08-30,
-apple,1468618077,,Money In The Grave (feat. Rick Ross),,unmatched,Drake,Money In The Grave (feat. Rick Ross),2026-07-26,2026-08-30,
+apple,1468618077,,Money In The Grave (feat. Rick Ross),,unmatched,Drake,Money In The Grave (feat. Rick Ross),2026-07-26,2026-09-01,
 apple,1470899806,,宿命,,unmatched,Official髭男dism,宿命,2026-08-09,2026-08-30,
 apple,1471264095,,"Bitch, Don’t Kill My Vibe",,unmatched,Kendrick Lamar,"Bitch, Don’t Kill My Vibe",2026-07-31,2026-07-31,
 apple,1471459432,,インフェルノ,,unmatched,Mrs. GREEN APPLE,インフェルノ,2026-07-26,2026-08-30,
 apple,1479397583,,イエスタデイ,,unmatched,Official髭男dism,イエスタデイ,2026-07-26,2026-08-30,
-apple,1480802550,AKMU,"어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",,confirmed,악뮤,"어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",2026-07-26,2026-08-30,chart_artist_name_master
+apple,1480802550,AKMU,"어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",,confirmed,악뮤,"어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",2026-07-26,2026-09-01,chart_artist_name_master
 apple,1485847849,YENA,Happiness,other_agency_master.csv,confirmed,嵐,Happiness,2026-07-26,2026-07-29,
 apple,1485857408,YENA,Love so sweet,other_agency_master.csv,confirmed,嵐,Love so sweet,2026-07-26,2026-08-30,
 apple,1490256995,,夜に駆ける,,unmatched,YOASOBI,夜に駆ける,2026-07-26,2026-08-30,
 apple,1496731154,Red Velvet,恋人ごっこ,artist_master.csv,confirmed,マカロニえんぴつ,恋人ごっこ,2026-08-30,2026-08-30,
-apple,1506297772,,March Madness,,unmatched,Future,March Madness,2026-07-26,2026-08-30,
+apple,1506297772,,March Madness,,unmatched,Future,March Madness,2026-07-26,2026-09-01,
 apple,1508133095,Red Velvet,裸の心,artist_master.csv,confirmed,あいみょん,裸の心,2026-08-23,2026-08-25,
 apple,1525933490,,Wonderwall (Remastered),,unmatched,Oasis,Wonderwall (Remastered),2026-07-26,2026-08-07,
-apple,1526194192,,Mr. Brightside,,unmatched,The Killers,Mr. Brightside,2026-07-26,2026-08-30,
+apple,1526194192,,Mr. Brightside,,unmatched,The Killers,Mr. Brightside,2026-07-26,2026-09-01,
 apple,1528119630,,群青,,unmatched,YOASOBI,群青,2026-07-26,2026-08-30,
-apple,1529510489,,Power Trip (feat. Miguel),,unmatched,J. Cole,Power Trip (feat. Miguel),2026-07-26,2026-08-30,
-apple,1530123009,,Kacey Talk,,unmatched,YoungBoy Never Broke Again,Kacey Talk,2026-07-26,2026-08-30,
+apple,1529510489,,Power Trip (feat. Miguel),,unmatched,J. Cole,Power Trip (feat. Miguel),2026-07-26,2026-09-01,
+apple,1530123009,,Kacey Talk,,unmatched,YoungBoy Never Broke Again,Kacey Talk,2026-07-26,2026-09-01,
 apple,1534620183,YENA,ドライフラワー,other_agency_master.csv,confirmed,優里,ドライフラワー,2026-07-26,2026-08-30,
-apple,1534816484,,Sum 2 Prove,,unmatched,Lil Baby,Sum 2 Prove,2026-07-26,2026-08-30,
-apple,1534816500,,Low Down,,unmatched,Lil Baby,Low Down,2026-07-26,2026-08-30,
+apple,1534816484,,Sum 2 Prove,,unmatched,Lil Baby,Sum 2 Prove,2026-07-26,2026-09-01,
+apple,1534816500,,Low Down,,unmatched,Lil Baby,Low Down,2026-07-26,2026-09-01,
 apple,1537418577,,イケナイ太陽,,unmatched,ORANGE RANGE,イケナイ太陽,2026-07-26,2026-08-23,
 apple,1537446020,,SUMMER SONG,,unmatched,YUI,SUMMER SONG,2026-07-26,2026-08-16,
 apple,1538265741,YENA,Lemon,other_agency_master.csv,confirmed,米津玄師,Lemon,2026-07-26,2026-08-30,
-apple,1543850904,Red Velvet,거리에서,artist_master.csv,confirmed,성시경,거리에서,2026-08-09,2026-08-30,
-apple,1556670532,,Wants and Needs (feat. Lil Baby),,unmatched,Drake,Wants and Needs (feat. Lil Baby),2026-07-26,2026-08-30,
+apple,1543850904,Red Velvet,거리에서,artist_master.csv,confirmed,성시경,거리에서,2026-08-09,2026-09-01,
+apple,1556670532,,Wants and Needs (feat. Lil Baby),,unmatched,Drake,Wants and Needs (feat. Lil Baby),2026-07-26,2026-09-01,
 apple,1564752145,YENA,きらり,other_agency_master.csv,confirmed,藤井 風,きらり,2026-07-26,2026-08-30,
 apple,1566811795,,怪盗,,unmatched,back number,怪盗,2026-07-26,2026-08-30,
-apple,1567326688,aespa,Next Level,,confirmed,aespa,Next Level,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1567879852,Red Velvet,행복하지 말아요,artist_master.csv,confirmed,엠씨 더 맥스,행복하지 말아요,2026-08-06,2026-08-30,
-apple,1569712108,,How It Feels,,unmatched,Lil Baby & Lil Durk,How It Feels,2026-07-31,2026-08-30,
+apple,1567326688,aespa,Next Level,,confirmed,aespa,Next Level,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1567879852,Red Velvet,행복하지 말아요,artist_master.csv,confirmed,엠씨 더 맥스,행복하지 말아요,2026-08-06,2026-09-01,
+apple,1569712108,,How It Feels,,unmatched,Lil Baby & Lil Durk,How It Feels,2026-07-31,2026-09-01,
 apple,1569744573,YENA,시차 (feat. 로꼬 & 그레이),other_agency_master.csv,confirmed,우원재,시차 (feat. 로꼬 & 그레이),2026-07-26,2026-08-19,
-apple,1569920439,YENA,And July (feat. DEAN & dj friz),other_agency_master.csv,confirmed,헤이즈,And July (feat. DEAN & dj friz),2026-07-26,2026-08-30,
-apple,1570323056,,Yonaguni,,unmatched,Bad Bunny,Yonaguni,2026-07-26,2026-08-30,
-apple,1573192803,YENA,사계,other_agency_master.csv,confirmed,양홍원,사계,2026-07-26,2026-08-30,
-apple,1577892512,YENA,Flying High With U,other_agency_master.csv,confirmed,빈첸,Flying High With U,2026-07-26,2026-08-30,
+apple,1569920439,YENA,And July (feat. DEAN & dj friz),other_agency_master.csv,confirmed,헤이즈,And July (feat. DEAN & dj friz),2026-07-26,2026-09-01,
+apple,1570323056,,Yonaguni,,unmatched,Bad Bunny,Yonaguni,2026-07-26,2026-09-01,
+apple,1573192803,YENA,사계,other_agency_master.csv,confirmed,양홍원,사계,2026-07-26,2026-09-01,
+apple,1577892512,YENA,Flying High With U,other_agency_master.csv,confirmed,빈첸,Flying High With U,2026-07-26,2026-09-01,
 apple,1579439168,,水平線,,unmatched,back number,水平線,2026-07-26,2026-08-30,
-apple,1584281787,,Knife Talk (feat. 21 Savage & Project Pat),,unmatched,Drake,Knife Talk (feat. 21 Savage & Project Pat),2026-07-26,2026-08-30,
+apple,1584281787,,Knife Talk (feat. 21 Savage & Project Pat),,unmatched,Drake,Knife Talk (feat. 21 Savage & Project Pat),2026-07-26,2026-09-01,
 apple,1585848051,YENA,ハレンチ,other_agency_master.csv,confirmed,ちゃんみな,ハレンチ,2026-07-26,2026-08-30,
 apple,1599172208,BTS,작은 것들을 위한 시 (Boy With Luv) [feat. Halsey],,confirmed,방탄소년단,작은 것들을 위한 시 (Boy With Luv) [feat. Halsey],2026-08-16,2026-08-16,chart_artist_name_master
-apple,1608880079,YENA,Trip (feat. Hannah),other_agency_master.csv,confirmed,릴러말즈,Trip (feat. Hannah),2026-07-26,2026-08-30,
-apple,1610108181,YENA,Love Love Love (feat. 융진),other_agency_master.csv,confirmed,에픽하이,Love Love Love (feat. 융진),2026-07-26,2026-08-30,
-apple,1613687889,YENA,입춘,other_agency_master.csv,confirmed,한로로,입춘,2026-07-26,2026-08-30,
-apple,1616762366,BIGBANG,봄여름가을겨울 (Still Life),,confirmed,BIGBANG,봄여름가을겨울 (Still Life),2026-08-20,2026-08-30,chart_artist_name_master
+apple,1608880079,YENA,Trip (feat. Hannah),other_agency_master.csv,confirmed,릴러말즈,Trip (feat. Hannah),2026-07-26,2026-09-01,
+apple,1610108181,YENA,Love Love Love (feat. 융진),other_agency_master.csv,confirmed,에픽하이,Love Love Love (feat. 융진),2026-07-26,2026-09-01,
+apple,1613687889,YENA,입춘,other_agency_master.csv,confirmed,한로로,입춘,2026-07-26,2026-09-01,
+apple,1616762366,BIGBANG,봄여름가을겨울 (Still Life),,confirmed,BIGBANG,봄여름가을겨울 (Still Life),2026-08-20,2026-09-01,chart_artist_name_master
 apple,1617171238,,Vette Motors,,unmatched,YoungBoy Never Broke Again,Vette Motors,2026-07-29,2026-08-28,
-apple,1618153473,,Right On,,unmatched,Lil Baby,Right On,2026-07-26,2026-08-30,
-apple,1620419734,,Something in the Orange,,unmatched,Zach Bryan,Something in the Orange,2026-07-26,2026-08-28,
-apple,1621119426,,I'M DAT N***A,,unmatched,Future,I'M DAT N***A,2026-07-26,2026-08-30,
-apple,1621119447,,WAIT FOR U (feat. Drake & Tems),,unmatched,Future,WAIT FOR U (feat. Drake & Tems),2026-07-26,2026-08-30,
-apple,1621207921,,Frozen,,unmatched,Lil Baby,Frozen,2026-07-26,2026-08-30,
+apple,1618153473,,Right On,,unmatched,Lil Baby,Right On,2026-07-26,2026-09-01,
+apple,1620419734,,Something in the Orange,,unmatched,Zach Bryan,Something in the Orange,2026-07-26,2026-09-01,
+apple,1621119426,,I'M DAT N***A,,unmatched,Future,I'M DAT N***A,2026-07-26,2026-09-01,
+apple,1621119447,,WAIT FOR U (feat. Drake & Tems),,unmatched,Future,WAIT FOR U (feat. Drake & Tems),2026-07-26,2026-09-01,
+apple,1621207921,,Frozen,,unmatched,Lil Baby,Frozen,2026-07-26,2026-09-01,
 apple,1621803883,,712PM,,unmatched,Future,712PM,2026-07-31,2026-08-23,
-apple,1621803969,,LIKE ME (feat. 42 Dugg & Lil Baby),,unmatched,Future,LIKE ME (feat. 42 Dugg & Lil Baby),2026-07-26,2026-08-30,
+apple,1621803969,,LIKE ME (feat. 42 Dugg & Lil Baby),,unmatched,Future,LIKE ME (feat. 42 Dugg & Lil Baby),2026-07-26,2026-09-01,
 apple,1623304209,,ダンスホール,,unmatched,Mrs. GREEN APPLE,ダンスホール,2026-07-26,2026-08-30,
 apple,1627629624,,ブルーアンビエンス (feat. asmi),,unmatched,Mrs. GREEN APPLE,ブルーアンビエンス (feat. asmi),2026-07-26,2026-08-30,
-apple,1635469694,NewJeans,Attention,,confirmed,뉴진스,Attention,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1635469851,NewJeans,Hype Boy,,confirmed,뉴진스,Hype Boy,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1635469694,NewJeans,Attention,,confirmed,뉴진스,Attention,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1635469851,NewJeans,Hype Boy,,confirmed,뉴진스,Hype Boy,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1635469854,NewJeans,Cookie,,confirmed,뉴진스,Cookie,2026-07-26,2026-08-18,chart_artist_name_master
 apple,1635470002,NewJeans,Hurt,,confirmed,뉴진스,Hurt,2026-07-26,2026-08-03,chart_artist_name_master
 apple,1639449127,,ベルベットの詩,,unmatched,back number,ベルベットの詩,2026-07-26,2026-07-27,
 apple,1642889031,YENA,U,other_agency_master.csv,confirmed,권오선,U,2026-07-26,2026-08-03,
-apple,1644821665,YENA,Ling Ling,other_agency_master.csv,confirmed,검정치마,Ling Ling,2026-07-26,2026-08-30,
+apple,1644821665,YENA,Ling Ling,other_agency_master.csv,confirmed,검정치마,Ling Ling,2026-07-26,2026-09-01,
 apple,1648108988,,Subtitle,,unmatched,Official髭男dism,Subtitle,2026-07-26,2026-08-30,
 apple,1648411352,,アイラブユー,,unmatched,back number,アイラブユー,2026-07-26,2026-08-30,
-apple,1648587330,,In A Minute,,unmatched,Lil Baby,In A Minute,2026-07-26,2026-08-30,
+apple,1648587330,,In A Minute,,unmatched,Lil Baby,In A Minute,2026-07-26,2026-09-01,
 apple,1648865575,,Soranji,,unmatched,Mrs. GREEN APPLE,Soranji,2026-07-26,2026-08-30,
 apple,1648915222,YENA,기억을 걷는 시간,other_agency_master.csv,confirmed,넬,기억을 걷는 시간,2026-07-26,2026-08-18,
-apple,1657869492,,Snooze,,unmatched,SZA,Snooze,2026-07-26,2026-08-30,
+apple,1657869492,,Snooze,,unmatched,SZA,Snooze,2026-07-26,2026-09-01,
 apple,1659513445,NewJeans,OMG,,confirmed,뉴진스,OMG,2026-07-26,2026-08-21,chart_artist_name_master
-apple,1661608702,YENA,그대 작은 나의 세상이 되어,other_agency_master.csv,confirmed,카더가든,그대 작은 나의 세상이 되어,2026-07-26,2026-08-30,
+apple,1661608702,YENA,그대 작은 나의 세상이 되어,other_agency_master.csv,confirmed,카더가든,그대 작은 나의 세상이 되어,2026-07-26,2026-09-01,
 apple,1662168786,,MIA (feat. Drake),,unmatched,Bad Bunny,MIA (feat. Drake),2026-07-28,2026-08-28,
-apple,1666738581,,Where the Wild Things Are,,unmatched,Luke Combs,Where the Wild Things Are,2026-07-26,2026-08-30,
+apple,1666738581,,Where the Wild Things Are,,unmatched,Luke Combs,Where the Wild Things Are,2026-07-26,2026-09-01,
 apple,1666738585,,Fast Car,,unmatched,Luke Combs,Fast Car,2026-07-26,2026-08-28,
 apple,1681600508,,ケセラセラ,,unmatched,Mrs. GREEN APPLE,ケセラセラ,2026-07-26,2026-08-30,
-apple,1683448656,,Drowning,,unmatched,WOODZ,Drowning,2026-07-26,2026-08-30,
+apple,1683448656,,Drowning,,unmatched,WOODZ,Drowning,2026-07-26,2026-09-01,
 apple,1691229801,,Magic,,unmatched,Mrs. GREEN APPLE,Magic,2026-07-26,2026-08-30,
 apple,1692686265,NewJeans,New Jeans,,confirmed,뉴진스,New Jeans,2026-07-26,2026-08-03,chart_artist_name_master
-apple,1692738275,YENA,It's You (feat. NO:EL),other_agency_master.csv,confirmed,한요한,It's You (feat. NO:EL),2026-07-26,2026-08-30,
+apple,1692738275,YENA,It's You (feat. NO:EL),other_agency_master.csv,confirmed,한요한,It's You (feat. NO:EL),2026-07-26,2026-09-01,
 apple,169595968,,Why'd You Come In Here Lookin' Like That,,unmatched,Dolly Parton,Why'd You Come In Here Lookin' Like That,2026-08-27,2026-08-29,
-apple,1702792482,,그대만 있다면 (영화 '여름날 우리'),,unmatched,Nerd Connection,그대만 있다면 (영화 '여름날 우리'),2026-07-26,2026-08-30,
-apple,1703196825,YENA,사랑하게 될 거야,other_agency_master.csv,confirmed,한로로,사랑하게 될 거야,2026-07-26,2026-08-30,
+apple,1702792482,,그대만 있다면 (영화 '여름날 우리'),,unmatched,Nerd Connection,그대만 있다면 (영화 '여름날 우리'),2026-07-26,2026-09-01,
+apple,1703196825,YENA,사랑하게 될 거야,other_agency_master.csv,confirmed,한로로,사랑하게 될 거야,2026-07-26,2026-09-01,
 apple,1705678978,,晩餐歌 - Bansanka,,unmatched,tuki.,晩餐歌 - Bansanka,2026-07-26,2026-08-24,
 apple,1706832137,,怪獣の花唄,,unmatched,Vaundy,怪獣の花唄,2026-07-26,2026-08-30,
-apple,1713814120,,Now Who,,unmatched,YoungBoy Never Broke Again,Now Who,2026-07-26,2026-08-30,
+apple,1713814120,,Now Who,,unmatched,YoungBoy Never Broke Again,Now Who,2026-07-26,2026-09-01,
 apple,1714908987,,Wicked Games,,unmatched,The Weeknd,Wicked Games,2026-08-05,2026-08-25,
-apple,1717383449,YENA,생각을 멈추다 보면,other_agency_master.csv,confirmed,최유리,생각을 멈추다 보면,2026-07-26,2026-08-29,
+apple,1717383449,YENA,생각을 멈추다 보면,other_agency_master.csv,confirmed,최유리,생각을 멈추다 보면,2026-07-26,2026-09-01,
 apple,1727612051,,Spin You Around (1/24),,unmatched,Morgan Wallen,Spin You Around (1/24),2026-07-26,2026-07-27,
 apple,1733130377,YENA,満ちてゆく,other_agency_master.csv,confirmed,藤井 風,満ちてゆく,2026-07-26,2026-08-30,
-apple,1733432325,YENA,영원은 그렇듯,other_agency_master.csv,confirmed,리도어,영원은 그렇듯,2026-07-26,2026-08-30,
-apple,1734500896,ILLIT,Magnetic,,confirmed,아일릿,Magnetic,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1734501146,ILLIT,Lucky Girl Syndrome,,confirmed,아일릿,Lucky Girl Syndrome,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1733432325,YENA,영원은 그렇듯,other_agency_master.csv,confirmed,리도어,영원은 그렇듯,2026-07-26,2026-09-01,
+apple,1734500896,ILLIT,Magnetic,,confirmed,아일릿,Magnetic,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1734501146,ILLIT,Lucky Girl Syndrome,,confirmed,아일릿,Lucky Girl Syndrome,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1735702871,,君が眩しいから僕は星が見えない,,unmatched,SIX LOUNGE,君が眩しいから僕は星が見えない,2026-07-26,2026-08-09,
 apple,1737085899,,A Bar Song (Tipsy),,unmatched,Shaboozey,A Bar Song (Tipsy),2026-07-26,2026-07-28,
-apple,1737150439,,Like That,,unmatched,"Future, Metro Boomin & Kendrick Lamar",Like That,2026-07-26,2026-08-30,
+apple,1737150439,,Like That,,unmatched,"Future, Metro Boomin & Kendrick Lamar",Like That,2026-07-26,2026-09-01,
 apple,1738257931,,Earrings,,unmatched,Malcolm Todd,Earrings,2026-07-26,2026-08-28,
 apple,1738364006,,TYRANT,,unmatched,Beyoncé & Dolly Parton,TYRANT,2026-08-27,2026-08-27,
 apple,1738889871,,좋은 밤 좋은 꿈,,unmatched,Nerd Connection,좋은 밤 좋은 꿈,2026-07-26,2026-08-09,
 apple,1739088799,,ライラック,,unmatched,Mrs. GREEN APPLE,ライラック,2026-07-26,2026-08-30,
-apple,1744439049,,I Had Some Help (feat. Morgan Wallen),,unmatched,Post Malone,I Had Some Help (feat. Morgan Wallen),2026-07-26,2026-08-30,
-apple,1744448416,NewJeans,How Sweet,,confirmed,뉴진스,How Sweet,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1744448549,NewJeans,Bubble Gum,,confirmed,뉴진스,Bubble Gum,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1744776167,,Not Like Us,,unmatched,Kendrick Lamar,Not Like Us,2026-07-26,2026-08-30,
-apple,1745285228,aespa,Armageddon,,confirmed,aespa,Armageddon,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1747314948,YENA,Antifreeze,other_agency_master.csv,confirmed,백예린,Antifreeze,2026-07-26,2026-08-30,
+apple,1744439049,,I Had Some Help (feat. Morgan Wallen),,unmatched,Post Malone,I Had Some Help (feat. Morgan Wallen),2026-07-26,2026-09-01,
+apple,1744448416,NewJeans,How Sweet,,confirmed,뉴진스,How Sweet,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1744448549,NewJeans,Bubble Gum,,confirmed,뉴진스,Bubble Gum,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1744776167,,Not Like Us,,unmatched,Kendrick Lamar,Not Like Us,2026-07-26,2026-09-01,
+apple,1745285228,aespa,Armageddon,,confirmed,aespa,Armageddon,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1747314948,YENA,Antifreeze,other_agency_master.csv,confirmed,백예린,Antifreeze,2026-07-26,2026-09-01,
 apple,1749121123,,you look like you love me,,unmatched,Ella Langley & Riley Green,you look like you love me,2026-07-26,2026-07-30,
 apple,1750576834,NewJeans,Supernatural,,confirmed,뉴진스,Supernatural,2026-07-26,2026-08-10,chart_artist_name_master
 apple,1751409888,,絶対アイドル辞めないで,,unmatched,=LOVE,絶対アイドル辞めないで,2026-08-18,2026-08-30,
-apple,1764485170,RESCENE,LOVE ATTACK,,confirmed,리센느,LOVE ATTACK,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1764485172,RESCENE,Pinball,,confirmed,리센느,Pinball,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1770160814,,weren't for the wind,,unmatched,Ella Langley,weren't for the wind,2026-07-26,2026-08-30,
-apple,1770274550,,사랑으로,,unmatched,wave to earth,사랑으로,2026-07-26,2026-08-30,
+apple,1764485170,RESCENE,LOVE ATTACK,,confirmed,리센느,LOVE ATTACK,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1764485172,RESCENE,Pinball,,confirmed,리센느,Pinball,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1770160814,,weren't for the wind,,unmatched,Ella Langley,weren't for the wind,2026-07-26,2026-09-01,
+apple,1770274550,,사랑으로,,unmatched,wave to earth,사랑으로,2026-07-26,2026-09-01,
 apple,1771366342,,風神,,unmatched,Vaundy,風神,2026-08-21,2026-08-30,
-apple,1772644601,aespa,Whiplash,,confirmed,aespa,Whiplash,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1772644601,aespa,Whiplash,,confirmed,aespa,Whiplash,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1773342229,,Love Somebody,,unmatched,Morgan Wallen,Love Somebody,2026-07-26,2026-07-27,
-apple,1780254692,YENA,Skrr (feat. 지젤),other_agency_master.csv,confirmed,김하온,Skrr (feat. 지젤),2026-07-26,2026-08-30,
-apple,1783280225,YENA,toxic till the end,other_agency_master.csv,confirmed,로제,toxic till the end,2026-07-26,2026-08-30,
-apple,1786643047,,30 For 30 (with Kendrick Lamar),,unmatched,SZA,30 For 30 (with Kendrick Lamar),2026-07-26,2026-08-30,
+apple,1780254692,YENA,Skrr (feat. 지젤),other_agency_master.csv,confirmed,김하온,Skrr (feat. 지젤),2026-07-26,2026-09-01,
+apple,1783280225,YENA,toxic till the end,other_agency_master.csv,confirmed,로제,toxic till the end,2026-07-26,2026-09-01,
+apple,1786643047,,30 For 30 (with Kendrick Lamar),,unmatched,SZA,30 For 30 (with Kendrick Lamar),2026-07-26,2026-09-01,
 apple,1790599512,,ダーリン,,unmatched,Mrs. GREEN APPLE,ダーリン,2026-07-26,2026-08-30,
 apple,1792161326,,Love Hangover,,unmatched,제니 & Dominic Fike,Love Hangover,2026-07-26,2026-08-03,
 apple,1793663645,,Ordinary,,unmatched,Alex Warren,Ordinary,2026-07-26,2026-08-28,
 apple,1794066813,,とくべチュ、して,,unmatched,=LOVE,とくべチュ、して,2026-07-26,2026-08-30,
 apple,1794499543,,イイじゃん,,unmatched,M!LK,イイじゃん,2026-07-26,2026-08-30,
 apple,1795905600,YENA,怪獣,other_agency_master.csv,confirmed,サカナクション,怪獣,2026-07-26,2026-08-30,
-apple,1796402200,Hearts2Hearts,The Chase,,confirmed,Hearts2Hearts,The Chase,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1802103970,,I'm The Problem,,unmatched,Morgan Wallen,I'm The Problem,2026-07-26,2026-08-30,
+apple,1796402200,Hearts2Hearts,The Chase,,confirmed,Hearts2Hearts,The Chase,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1802103970,,I'm The Problem,,unmatched,Morgan Wallen,I'm The Problem,2026-07-26,2026-09-01,
 apple,1802103972,,I Got Better,,unmatched,Morgan Wallen,I Got Better,2026-07-26,2026-08-29,
-apple,1802103975,,What I Want,,unmatched,Morgan Wallen & Tate McRae,What I Want,2026-07-26,2026-08-30,
-apple,1802103977,,Just In Case,,unmatched,Morgan Wallen,Just In Case,2026-07-26,2026-08-30,
+apple,1802103975,,What I Want,,unmatched,Morgan Wallen & Tate McRae,What I Want,2026-07-26,2026-09-01,
+apple,1802103977,,Just In Case,,unmatched,Morgan Wallen,Just In Case,2026-07-26,2026-09-01,
 apple,1802104202,,20 Cigarettes,,unmatched,Morgan Wallen,20 Cigarettes,2026-07-26,2026-08-28,
-apple,1802104400,,Don't We,,unmatched,Morgan Wallen,Don't We,2026-07-26,2026-08-30,
-apple,1802528268,YENA,LOV3 (feat. Bryan Chase & Okasian),other_agency_master.csv,confirmed,식케이 & 릴 모쉬핏,LOV3 (feat. Bryan Chase & Okasian),2026-07-26,2026-08-30,
+apple,1802104400,,Don't We,,unmatched,Morgan Wallen,Don't We,2026-07-26,2026-09-01,
+apple,1802528268,YENA,LOV3 (feat. Bryan Chase & Okasian),other_agency_master.csv,confirmed,식케이 & 릴 모쉬핏,LOV3 (feat. Bryan Chase & Okasian),2026-07-26,2026-09-01,
 apple,1803063210,,ROSE,,unmatched,HANA,ROSE,2026-07-26,2026-08-30,
 apple,1804230388,,クスシキ,,unmatched,Mrs. GREEN APPLE,クスシキ,2026-07-26,2026-08-30,
-apple,1806264606,YENA,yours,other_agency_master.csv,confirmed,데이먼스 이어,yours,2026-07-26,2026-08-30,
+apple,1806264606,YENA,yours,other_agency_master.csv,confirmed,데이먼스 이어,yours,2026-07-26,2026-09-01,
 apple,1807959956,,夢中,,unmatched,BE:FIRST,夢中,2026-07-26,2026-08-30,
 apple,1808822211,,Tiger,,unmatched,HANA,Tiger,2026-07-26,2026-08-30,
 apple,1808852932,,ブルーアンバー,,unmatched,back number,ブルーアンバー,2026-07-26,2026-08-30,
-apple,1813021660,,Broken Window Serenade,,unmatched,Whiskey Myers,Broken Window Serenade,2026-07-26,2026-08-30,
+apple,1813021660,,Broken Window Serenade,,unmatched,Whiskey Myers,Broken Window Serenade,2026-07-26,2026-09-01,
 apple,1816111098,,Burning Flower,,unmatched,HANA,Burning Flower,2026-07-26,2026-07-30,
-apple,1817427565,ILLIT,빌려온 고양이 (Do the Dance),,confirmed,아일릿,빌려온 고양이 (Do the Dance),2026-07-26,2026-08-30,chart_artist_name_master
+apple,1817427565,ILLIT,빌려온 고양이 (Do the Dance),,confirmed,아일릿,빌려온 고양이 (Do the Dance),2026-07-26,2026-09-01,chart_artist_name_master
 apple,1817609507,,So Easy (To Fall In Love),,unmatched,Olivia Dean,So Easy (To Fall In Love),2026-08-05,2026-08-27,
-apple,1817609509,,Man I Need,,unmatched,Olivia Dean,Man I Need,2026-07-26,2026-08-30,
-apple,1817609514,,A Couple Minutes,,unmatched,Olivia Dean,A Couple Minutes,2026-08-17,2026-08-28,
+apple,1817609509,,Man I Need,,unmatched,Olivia Dean,Man I Need,2026-07-26,2026-09-01,
+apple,1817609514,,A Couple Minutes,,unmatched,Olivia Dean,A Couple Minutes,2026-08-17,2026-09-01,
 apple,1818322339,aespa,Dirty Work,,confirmed,aespa,Dirty Work,2026-08-02,2026-08-21,chart_artist_name_master
-apple,1818407111,,You Proof,,unmatched,Morgan Wallen,You Proof,2026-07-26,2026-08-30,
-apple,1818424212,,Last Night,,unmatched,Morgan Wallen,Last Night,2026-07-26,2026-08-30,
-apple,1818425528,,Thinkin’ Bout Me,,unmatched,Morgan Wallen,Thinkin’ Bout Me,2026-07-26,2026-08-30,
-apple,1818426110,,Cowgirls (feat. ERNEST),,unmatched,Morgan Wallen,Cowgirls (feat. ERNEST),2026-07-26,2026-08-30,
+apple,1818407111,,You Proof,,unmatched,Morgan Wallen,You Proof,2026-07-26,2026-09-01,
+apple,1818424212,,Last Night,,unmatched,Morgan Wallen,Last Night,2026-07-26,2026-09-01,
+apple,1818425528,,Thinkin’ Bout Me,,unmatched,Morgan Wallen,Thinkin’ Bout Me,2026-07-26,2026-09-01,
+apple,1818426110,,Cowgirls (feat. ERNEST),,unmatched,Morgan Wallen,Cowgirls (feat. ERNEST),2026-07-26,2026-09-01,
 apple,1818469447,,7 Summers,,unmatched,Morgan Wallen,7 Summers,2026-07-26,2026-07-30,
-apple,1818469738,,Wasted On You,,unmatched,Morgan Wallen,Wasted On You,2026-07-26,2026-08-30,
-apple,1819694546,Hearts2Hearts,STYLE,,confirmed,Hearts2Hearts,STYLE,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1818469738,,Wasted On You,,unmatched,Morgan Wallen,Wasted On You,2026-07-26,2026-09-01,
+apple,1819694546,Hearts2Hearts,STYLE,,confirmed,Hearts2Hearts,STYLE,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1819829902,,28,,unmatched,Zach Bryan,28,2026-07-28,2026-08-25,
 apple,1820264150,,Golden,,unmatched,"HUNTR/X, EJAE, オードリー・ヌナ, REI AMI & KPop Demon Hunters Cast",Golden,2026-07-26,2026-08-30,
 apple,1821087731,YENA,革命道中 - On The Way,other_agency_master.csv,confirmed,アイナ・ジ・エンド,革命道中 - On The Way,2026-07-26,2026-08-30,
 apple,1821849522,,Blue Jeans,,unmatched,HANA,Blue Jeans,2026-07-26,2026-08-30,
-apple,1822439986,RESCENE,Deja Vu,,confirmed,리센느,Deja Vu,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1822439986,RESCENE,Deja Vu,,confirmed,리센느,Deja Vu,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1825994649,,DAISIES,,unmatched,Justin Bieber,DAISIES,2026-07-26,2026-08-19,
-apple,1828393595,YENA,0+0,other_agency_master.csv,confirmed,한로로,0+0,2026-07-26,2026-08-30,
+apple,1828393595,YENA,0+0,other_agency_master.csv,confirmed,한로로,0+0,2026-07-26,2026-09-01,
 apple,1831154095,KiiiKiii,DANCING ALONE,,confirmed,키키,DANCING ALONE,2026-08-18,2026-08-21,chart_artist_name_master
 apple,1831676531,,カリスマックス,,unmatched,Snow Man,カリスマックス,2026-07-26,2026-08-18,
 apple,1832031336,CORTIS,GO!,,confirmed,코르티스,GO!,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1832031345,CORTIS,FaSHioN,,confirmed,코르티스,FaSHioN,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1832031345,CORTIS,FaSHioN,,confirmed,코르티스,FaSHioN,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1832031349,CORTIS,JoyRide,,confirmed,코르티스,JoyRide,2026-07-26,2026-08-24,chart_artist_name_master
 apple,1832509922,CORTIS,What You Want,,confirmed,코르티스,What You Want,2026-07-26,2026-08-14,chart_artist_name_master
-apple,1836226731,,Loser,,unmatched,Tame Impala,Loser,2026-08-05,2026-08-30,
+apple,1836226731,,Loser,,unmatched,Tame Impala,Loser,2026-08-05,2026-09-01,
 apple,1837658529,YENA,IRIS OUT,other_agency_master.csv,confirmed,米津玄師,IRIS OUT,2026-07-26,2026-08-30,
 apple,1838917139,,Wherever you are,,unmatched,ONE OK ROCK,Wherever you are,2026-07-26,2026-08-30,
-apple,1839131590,,I Thought I Saw Your Face Today,,unmatched,She & Him,I Thought I Saw Your Face Today,2026-08-05,2026-08-30,
+apple,1839131590,,I Thought I Saw Your Face Today,,unmatched,She & Him,I Thought I Saw Your Face Today,2026-08-05,2026-09-01,
 apple,1839433876,,シンデレラボーイ,,unmatched,Saucy Dog,シンデレラボーイ,2026-08-29,2026-08-29,
 apple,1840081736,YENA,JANE DOE,other_agency_master.csv,confirmed,米津玄師 & 宇多田ヒカル,JANE DOE,2026-07-26,2026-08-30,
-apple,1841828520,Hearts2Hearts,FOCUS,,confirmed,Hearts2Hearts,FOCUS,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1844932150,,Choosin' Texas,,unmatched,Ella Langley,Choosin' Texas,2026-07-26,2026-08-30,
+apple,1841828520,Hearts2Hearts,FOCUS,,confirmed,Hearts2Hearts,FOCUS,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1844932150,,Choosin' Texas,,unmatched,Ella Langley,Choosin' Texas,2026-07-26,2026-09-01,
 apple,1846753946,,好きすぎて滅!,,unmatched,M!LK,好きすぎて滅!,2026-07-26,2026-08-30,
 apple,1853635937,,What You Need,,unmatched,Tems,What You Need,2026-07-26,2026-08-16,
 apple,1854334753,,NON STOP,,unmatched,HANA,NON STOP,2026-07-26,2026-08-30,
@@ -243,45 +243,45 @@ apple,1860538548,,AIZO,,unmatched,King Gnu,AIZO,2026-07-26,2026-08-30,
 apple,1862634805,,Be By You,,unmatched,Luke Combs,Be By You,2026-07-26,2026-08-30,
 apple,1867354081,,lulu.,,unmatched,Mrs. GREEN APPLE,lulu.,2026-07-26,2026-08-30,
 apple,1867687787,,Cold Night,,unmatched,HANA,Cold Night,2026-07-26,2026-08-30,
-apple,1868617347,KiiiKiii,404 (New Era),,confirmed,키키,404 (New Era),2026-07-26,2026-08-30,chart_artist_name_master
+apple,1868617347,KiiiKiii,404 (New Era),,confirmed,키키,404 (New Era),2026-07-26,2026-09-01,chart_artist_name_master
 apple,1869436838,,Dandelion,,unmatched,Ella Langley,Dandelion,2026-07-26,2026-07-30,
-apple,1869436845,,Be Her,,unmatched,Ella Langley,Be Her,2026-07-26,2026-08-30,
+apple,1869436845,,Be Her,,unmatched,Ella Langley,Be Her,2026-07-26,2026-09-01,
 apple,1869436848,,Bottom Of Your Boots,,unmatched,Ella Langley,Bottom Of Your Boots,2026-07-26,2026-08-01,
 apple,1869537742,,爆裂愛してる,,unmatched,M!LK,爆裂愛してる,2026-07-26,2026-08-30,
-apple,1871258330,,E85,,unmatched,Don Toliver,E85,2026-07-26,2026-08-30,
+apple,1871258330,,E85,,unmatched,Don Toliver,E85,2026-07-26,2026-09-01,
 apple,1872239879,,Doors,,unmatched,Noah Kahan,Doors,2026-07-26,2026-08-20,
 apple,1874221480,,劇薬中毒,,unmatched,=LOVE,劇薬中毒,2026-07-26,2026-08-30,
 apple,1874511679,,Bloom,,unmatched,HANA,Bloom,2026-08-29,2026-08-29,
 apple,1874808353,,オドロウゼ!,,unmatched,Snow Man,オドロウゼ!,2026-08-25,2026-08-25,
-apple,1875146815,Hearts2Hearts,RUDE!,,confirmed,Hearts2Hearts,RUDE!,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1875146815,Hearts2Hearts,RUDE!,,confirmed,Hearts2Hearts,RUDE!,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1879525016,YENA,Five,other_agency_master.csv,confirmed,嵐,Five,2026-07-26,2026-08-30,
 apple,1882581639,YENA,캐치 캐치,other_agency_master.csv,confirmed,최예나,캐치 캐치,2026-07-26,2026-08-24,
 apple,1884257489,,Bad Girl,,unmatched,HANA,Bad Girl,2026-07-26,2026-08-30,
-apple,1884403093,,Boston,,unmatched,STELLA LEFTY,Boston,2026-07-26,2026-08-30,
-apple,1886030615,,KISS KISS KISS (Prod. by Hukky Shibaseki) [feat. SUNWOO],,unmatched,나우아임영 & Royal 44,KISS KISS KISS (Prod. by Hukky Shibaseki) [feat. SUNWOO],2026-07-26,2026-08-30,
+apple,1884403093,,Boston,,unmatched,STELLA LEFTY,Boston,2026-07-26,2026-09-01,
+apple,1886030615,,KISS KISS KISS (Prod. by Hukky Shibaseki) [feat. SUNWOO],,unmatched,나우아임영 & Royal 44,KISS KISS KISS (Prod. by Hukky Shibaseki) [feat. SUNWOO],2026-07-26,2026-09-01,
 apple,1886067575,,お姫様の作り方,,unmatched,=LOVE,お姫様の作り方,2026-07-26,2026-08-07,
-apple,1887194026,ILLIT,It's Me,,confirmed,아일릿,It's Me,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1887194026,ILLIT,It's Me,,confirmed,아일릿,It's Me,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1887671066,CORTIS,TNT,,confirmed,코르티스,TNT,2026-07-26,2026-08-25,chart_artist_name_master
-apple,1887671067,CORTIS,REDRED,,confirmed,코르티스,REDRED,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1887671068,CORTIS,ACAI,,confirmed,코르티스,ACAI,2026-07-26,2026-08-30,chart_artist_name_master
-apple,1887671072,CORTIS,YOUNGCREATORCREW,,confirmed,코르티스,YOUNGCREATORCREW,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1887671067,CORTIS,REDRED,,confirmed,코르티스,REDRED,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1887671068,CORTIS,ACAI,,confirmed,코르티스,ACAI,2026-07-26,2026-09-01,chart_artist_name_master
+apple,1887671072,CORTIS,YOUNGCREATORCREW,,confirmed,코르티스,YOUNGCREATORCREW,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1887773335,AKMU,소문의 낙원,,confirmed,악뮤,소문의 낙원,2026-07-26,2026-08-17,chart_artist_name_master
-apple,1889474652,RESCENE,Runaway,,confirmed,리센느,Runaway,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1889474652,RESCENE,Runaway,,confirmed,리센느,Runaway,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1889992113,,drop dead,,unmatched,Olivia Rodrigo,drop dead,2026-07-26,2026-08-21,
-apple,1889992115,,stupid song,,unmatched,Olivia Rodrigo,stupid song,2026-07-26,2026-08-30,
+apple,1889992115,,stupid song,,unmatched,Olivia Rodrigo,stupid song,2026-07-26,2026-09-01,
 apple,1889992116,,honeybee,,unmatched,Olivia Rodrigo,honeybee,2026-07-28,2026-07-31,
-apple,1889992123,,the cure,,unmatched,Olivia Rodrigo,the cure,2026-07-26,2026-08-30,
+apple,1889992123,,the cure,,unmatched,Olivia Rodrigo,the cure,2026-07-26,2026-09-01,
 apple,1890060756,,飛ぶ時,,unmatched,Vaundy,飛ぶ時,2026-07-26,2026-08-30,
 apple,1890393511,aespa,Spicy,,confirmed,aespa,Spicy,2026-07-26,2026-07-27,chart_artist_name_master
 apple,1891779776,KATSEYE,Animal,,confirmed,KATSEYE,Animal,2026-07-28,2026-08-17,chart_artist_name_master
 apple,1891779777,KATSEYE,Hootie Frutti,,confirmed,KATSEYE,Hootie Frutti,2026-08-15,2026-08-19,chart_artist_name_master
 apple,1891943326,,風と町,,unmatched,Mrs. GREEN APPLE,風と町,2026-07-26,2026-08-30,
-apple,1892189612,,Spend Dat,,unmatched,Yung Miami,Spend Dat,2026-07-26,2026-08-30,
-apple,1892466278,,Take Me Back (Leave Me There),,unmatched,Cody Johnson,Take Me Back (Leave Me There),2026-08-15,2026-08-30,
+apple,1892189612,,Spend Dat,,unmatched,Yung Miami,Spend Dat,2026-07-26,2026-09-01,
+apple,1892466278,,Take Me Back (Leave Me There),,unmatched,Cody Johnson,Take Me Back (Leave Me There),2026-08-15,2026-09-01,
 apple,1892738152,,BPM (feat. KREVA),,unmatched,Kvi Baba,BPM (feat. KREVA),2026-07-26,2026-08-30,
-apple,1892954841,NMIXX,Heavy Serenade,,confirmed,NMIXX,Heavy Serenade,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1892954841,NMIXX,Heavy Serenade,,confirmed,NMIXX,Heavy Serenade,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1893599772,aespa,WDA (Whole Different Animal) [feat. G-DRAGON],,confirmed,aespa,WDA (Whole Different Animal) [feat. G-DRAGON],2026-07-26,2026-08-20,chart_artist_name_master
-apple,1893599773,aespa,LEMONADE,,confirmed,aespa,LEMONADE,2026-07-26,2026-08-30,chart_artist_name_master
+apple,1893599773,aespa,LEMONADE,,confirmed,aespa,LEMONADE,2026-07-26,2026-09-01,chart_artist_name_master
 apple,1893868120,aespa,LEMONADE,,confirmed,aespa,LEMONADE,2026-07-26,2026-08-22,chart_artist_name_master
 apple,1894802726,LE SSERAFIM,BOOMPALA,,confirmed,르세라핌,BOOMPALA,2026-07-26,2026-08-07,chart_artist_name_master
 apple,1894837345,ILLIT,It's Me,,confirmed,ILLIT,It's Me,2026-07-26,2026-08-30,chart_artist_name_master
@@ -290,15 +290,15 @@ apple,258643362,,Neon Moon,,unmatched,Brooks & Dunn,Neon Moon,2026-07-26,2026-08
 apple,269573364,,Billie Jean,,unmatched,Michael Jackson,Billie Jean,2026-07-26,2026-08-30,
 apple,273169347,,小さな恋のうた,,unmatched,MONGOL800,小さな恋のうた,2026-08-03,2026-08-30,
 apple,279691859,,愛をこめて花束を,,unmatched,Superfly,愛をこめて花束を,2026-07-26,2026-08-30,
-apple,282883590,,9 to 5,,unmatched,Dolly Parton,9 to 5,2026-08-27,2026-08-30,
-apple,282883594,,Islands In the Stream,,unmatched,Dolly Parton & Kenny Rogers,Islands In the Stream,2026-08-27,2026-08-30,
+apple,282883590,,9 to 5,,unmatched,Dolly Parton,9 to 5,2026-08-27,2026-09-01,
+apple,282883594,,Islands In the Stream,,unmatched,Dolly Parton & Kenny Rogers,Islands In the Stream,2026-08-27,2026-09-01,
 apple,315611375,,Last Night On Earth,,unmatched,Green Day,Last Night On Earth,2026-08-05,2026-08-20,
 apple,316684060,,Body & Soul,,unmatched,SPEED,Body & Soul,2026-08-19,2026-08-30,
-apple,345400888,YENA,사랑은 봄비처럼...이별은 겨울비처럼,other_agency_master.csv,confirmed,임현정,사랑은 봄비처럼...이별은 겨울비처럼,2026-07-26,2026-08-30,
+apple,345400888,YENA,사랑은 봄비처럼...이별은 겨울비처럼,other_agency_master.csv,confirmed,임현정,사랑은 봄비처럼...이별은 겨울비처럼,2026-07-26,2026-09-01,
 apple,604748203,YENA,夜の踊り子,other_agency_master.csv,confirmed,サカナクション,夜の踊り子,2026-07-26,2026-08-30,
 apple,6762737233,,アイドルパワー,,unmatched,M!LK,アイドルパワー,2026-07-26,2026-08-30,
-apple,6762757958,,Orbiter,,unmatched,Noah Kahan,Orbiter,2026-07-26,2026-08-30,
-apple,6763091996,,I Can't Love You Anymore,,unmatched,Ella Langley & Morgan Wallen,I Can't Love You Anymore,2026-07-26,2026-08-30,
+apple,6762757958,,Orbiter,,unmatched,Noah Kahan,Orbiter,2026-07-26,2026-09-01,
+apple,6763091996,,I Can't Love You Anymore,,unmatched,Ella Langley & Morgan Wallen,I Can't Love You Anymore,2026-07-26,2026-09-01,
 apple,6763656723,,kiss me,,unmatched,Ariana Grande,kiss me,2026-08-01,2026-08-06,
 apple,6763656726,,petal,,unmatched,Ariana Grande,petal,2026-08-01,2026-08-06,
 apple,6763656728,,stay,,unmatched,Ariana Grande,stay,2026-08-01,2026-08-07,
@@ -310,7 +310,7 @@ apple,6763656826,,never get over me,,unmatched,Ariana Grande,never get over me,2
 apple,6763656828,,bad thing (bunny hop),,unmatched,Ariana Grande,bad thing (bunny hop),2026-08-01,2026-08-07,
 apple,6763656830,,"nowhere, nobody",,unmatched,Ariana Grande,"nowhere, nobody",2026-08-01,2026-08-06,
 apple,6763656871,,kiss me,,unmatched,Ariana Grande,kiss me,2026-08-07,2026-08-08,
-apple,6763656876,,hate that i made you love me,,unmatched,Ariana Grande,hate that i made you love me,2026-07-26,2026-08-30,
+apple,6763656876,,hate that i made you love me,,unmatched,Ariana Grande,hate that i made you love me,2026-07-26,2026-09-01,
 apple,6763656878,,petal,,unmatched,Ariana Grande,petal,2026-08-07,2026-08-28,
 apple,6763656880,,stay,,unmatched,Ariana Grande,stay,2026-08-07,2026-08-12,
 apple,6763657122,,oh well,,unmatched,Ariana Grande,oh well,2026-08-07,2026-08-12,
@@ -319,21 +319,21 @@ apple,6763657128,,like i do,,unmatched,Ariana Grande,like i do,2026-08-01,2026-0
 apple,6763657133,,"nowhere, nobody",,unmatched,Ariana Grande,"nowhere, nobody",2026-08-07,2026-08-07,
 apple,6766256692,BOYNEXTDOOR,VIRAL,,confirmed,보이넥스트도어,VIRAL,2026-07-26,2026-08-07,chart_artist_name_master
 apple,6768469976,,Dai Dai,,unmatched,Shakira & Burna Boy,Dai Dai,2026-07-26,2026-08-07,
-apple,6769328214,YENA,갑자기,other_agency_master.csv,confirmed,아이오아이,갑자기,2026-07-26,2026-08-30,
-apple,6769551476,,I’m Spent,,unmatched,Drake & Loe Shimmy,I’m Spent,2026-07-26,2026-08-30,
-apple,6769552411,,Great Expectation,,unmatched,SIENNA SPIRO,Great Expectation,2026-07-29,2026-08-30,
+apple,6769328214,YENA,갑자기,other_agency_master.csv,confirmed,아이오아이,갑자기,2026-07-26,2026-09-01,
+apple,6769551476,,I’m Spent,,unmatched,Drake & Loe Shimmy,I’m Spent,2026-07-26,2026-09-01,
+apple,6769552411,,Great Expectation,,unmatched,SIENNA SPIRO,Great Expectation,2026-07-29,2026-09-01,
 apple,6769568595,,Whisper My Name,,unmatched,Drake,Whisper My Name,2026-07-26,2026-08-28,
-apple,6769568596,,Janice STFU,,unmatched,Drake,Janice STFU,2026-07-26,2026-08-30,
-apple,6769568597,,Ran To Atlanta,,unmatched,"Drake, Future & Molly Santana",Ran To Atlanta,2026-07-26,2026-08-30,
-apple,6769568598,,Shabang,,unmatched,Drake,Shabang,2026-07-26,2026-08-30,
+apple,6769568596,,Janice STFU,,unmatched,Drake,Janice STFU,2026-07-26,2026-09-01,
+apple,6769568597,,Ran To Atlanta,,unmatched,"Drake, Future & Molly Santana",Ran To Atlanta,2026-07-26,2026-09-01,
+apple,6769568598,,Shabang,,unmatched,Drake,Shabang,2026-07-26,2026-09-01,
 apple,6769568603,,National Treasures,,unmatched,Drake,National Treasures,2026-07-26,2026-08-28,
 apple,6769568604,,B’s On The Table,,unmatched,Drake & 21 Savage,B’s On The Table,2026-07-26,2026-08-02,
 apple,6769568609,,Plot Twist,,unmatched,Drake,Plot Twist,2026-07-29,2026-07-31,
 apple,6769568610,,2 Hard 4 The Radio,,unmatched,Drake,2 Hard 4 The Radio,2026-07-26,2026-07-31,
-apple,6770401926,ATEEZ,BAD,,confirmed,에이티즈,BAD,2026-07-26,2026-08-30,chart_artist_name_master
+apple,6770401926,ATEEZ,BAD,,confirmed,에이티즈,BAD,2026-07-26,2026-09-01,chart_artist_name_master
 apple,6773028284,,GG EZ,,unmatched,M.Sasuke,Gg Ez,2026-07-26,2026-07-29,
 apple,6773164946,MEOVV,DDI RO RI,,confirmed,MEOVV,DDI RO RI,2026-07-26,2026-08-24,chart_artist_name_master
-apple,6773775282,,oh yeah?,,unmatched,Steve Lacy,oh yeah?,2026-08-05,2026-08-30,
+apple,6773775282,,oh yeah?,,unmatched,Steve Lacy,oh yeah?,2026-08-05,2026-09-01,
 apple,6773775295,,the feeling,,unmatched,Steve Lacy,the feeling,2026-08-12,2026-08-19,
 apple,6774039202,YENA,烏 - Raven,other_agency_master.csv,confirmed,米津玄師,烏 - Raven,2026-07-26,2026-08-30,
 apple,6774372285,,Okayyy (feat. Doja Cat),,unmatched,Latto,Okayyy (feat. Doja Cat),2026-07-26,2026-08-03,
@@ -345,38 +345,38 @@ apple,6776325365,,Ghetto Love Story,,unmatched,BabyChiefDoit,Ghetto Love Story,2
 apple,6777027010,,Missing,,unmatched,BE:FIRST,Missing,2026-07-26,2026-08-23,
 apple,6777173613,,500 Horses,,unmatched,Nipsey Hussle & Bino Rideaux,500 Horses,2026-08-15,2026-08-17,
 apple,6778272103,ATEEZ,BAD,,confirmed,ATEEZ,BAD,2026-07-29,2026-08-30,chart_artist_name_master
-apple,6779378648,,WTF GOIN,,unmatched,Belly Gang Kushington & 21 Savage,WTF GOIN,2026-08-19,2026-08-30,
-apple,6779521286,Hearts2Hearts,Lemon Tang,,confirmed,Hearts2Hearts,Lemon Tang,2026-07-26,2026-08-30,chart_artist_name_master
+apple,6779378648,,WTF GOIN,,unmatched,Belly Gang Kushington & 21 Savage,WTF GOIN,2026-08-19,2026-09-01,
+apple,6779521286,Hearts2Hearts,Lemon Tang,,confirmed,Hearts2Hearts,Lemon Tang,2026-07-26,2026-09-01,chart_artist_name_master
 apple,6779544731,NCT WISH,BOY MEETS GIRL,,confirmed,NCT WISH,BOY MEETS GIRL,2026-07-26,2026-08-21,chart_artist_name_master
 apple,6780548050,ENHYPEN,Two Fools,,confirmed,엔하이픈,Two Fools,2026-08-21,2026-08-21,chart_artist_name_master
 apple,6780548386,ENHYPEN,Bad For You,,confirmed,엔하이픈,Bad For You,2026-08-21,2026-08-22,chart_artist_name_master
 apple,6780548391,ENHYPEN,Bloody Paradise,,confirmed,엔하이픈,Bloody Paradise,2026-08-21,2026-08-21,chart_artist_name_master
-apple,6781873061,,Summer Joy Intro (feat. Summer Joy),,unmatched,Rod Wave,Summer Joy Intro (feat. Summer Joy),2026-08-29,2026-08-30,
-apple,6781873063,,I Am,,unmatched,Rod Wave,I Am,2026-08-29,2026-08-30,
-apple,6781873065,,Piece Of Your Love,,unmatched,Rod Wave,Piece Of Your Love,2026-08-28,2026-08-30,
-apple,6781873307,,Hustle,,unmatched,Rod Wave,Hustle,2026-08-01,2026-08-30,
-apple,6781873308,,Look At Me Momma,,unmatched,Rod Wave,Look At Me Momma,2026-08-29,2026-08-30,
-apple,6781873309,,Feed The Streets,,unmatched,Rod Wave,Feed The Streets,2026-08-29,2026-08-30,
-apple,6781873310,,Mainstay (feat. Luv Von),,unmatched,Rod Wave,Mainstay (feat. Luv Von),2026-08-29,2026-08-30,
-apple,6781873312,,War Wounds,,unmatched,Rod Wave,War Wounds,2026-08-29,2026-08-30,
-apple,6781873314,,Venusian (feat. Hazlett),,unmatched,Rod Wave,Venusian (feat. Hazlett),2026-08-29,2026-08-30,
-apple,6781873315,,TP,,unmatched,Rod Wave,TP,2026-08-29,2026-08-30,
-apple,6781873317,,Keep Dancing (feat. Hazlett),,unmatched,Rod Wave,Keep Dancing (feat. Hazlett),2026-08-29,2026-08-30,
-apple,6781873320,,LaCosa Nostra,,unmatched,Rod Wave,LaCosa Nostra,2026-08-29,2026-08-30,
-apple,6781873323,,One More Time,,unmatched,Rod Wave,One More Time,2026-08-29,2026-08-30,
-apple,6781873325,,Not New To It,,unmatched,Rod Wave,Not New To It,2026-08-29,2026-08-30,
-apple,6781873328,,The Inspo,,unmatched,Rod Wave,The Inspo,2026-08-29,2026-08-30,
-apple,6781873331,,Overrated,,unmatched,Rod Wave,Overrated,2026-08-29,2026-08-30,
-apple,6781873396,,2017 (Streamer U) [feat. Aimee Carty],,unmatched,Rod Wave,2017 (Streamer U) [feat. Aimee Carty],2026-08-29,2026-08-30,
-apple,6781873397,,Lost and Insecure,,unmatched,Rod Wave,Lost and Insecure,2026-08-29,2026-08-30,
-apple,6781873398,,Florida Boy,,unmatched,Rod Wave,Florida Boy,2026-08-29,2026-08-30,
-apple,6781873401,,Kiss Me Interlude,,unmatched,Rod Wave,Kiss Me Interlude,2026-08-29,2026-08-30,
-apple,6781873406,,Dope Girl,,unmatched,Rod Wave,Dope Girl,2026-08-29,2026-08-30,
-apple,6781873408,,Take Care,,unmatched,Rod Wave,Take Care,2026-08-29,2026-08-30,
-apple,6781873409,,All I Ever Had,,unmatched,Rod Wave,All I Ever Had,2026-08-29,2026-08-30,
-apple,6781873410,,Toast,,unmatched,Rod Wave,Toast,2026-08-29,2026-08-30,
+apple,6781873061,,Summer Joy Intro (feat. Summer Joy),,unmatched,Rod Wave,Summer Joy Intro (feat. Summer Joy),2026-08-29,2026-09-01,
+apple,6781873063,,I Am,,unmatched,Rod Wave,I Am,2026-08-29,2026-09-01,
+apple,6781873065,,Piece Of Your Love,,unmatched,Rod Wave,Piece Of Your Love,2026-08-28,2026-09-01,
+apple,6781873307,,Hustle,,unmatched,Rod Wave,Hustle,2026-08-01,2026-09-01,
+apple,6781873308,,Look At Me Momma,,unmatched,Rod Wave,Look At Me Momma,2026-08-29,2026-09-01,
+apple,6781873309,,Feed The Streets,,unmatched,Rod Wave,Feed The Streets,2026-08-29,2026-09-01,
+apple,6781873310,,Mainstay (feat. Luv Von),,unmatched,Rod Wave,Mainstay (feat. Luv Von),2026-08-29,2026-09-01,
+apple,6781873312,,War Wounds,,unmatched,Rod Wave,War Wounds,2026-08-29,2026-09-01,
+apple,6781873314,,Venusian (feat. Hazlett),,unmatched,Rod Wave,Venusian (feat. Hazlett),2026-08-29,2026-09-01,
+apple,6781873315,,TP,,unmatched,Rod Wave,TP,2026-08-29,2026-09-01,
+apple,6781873317,,Keep Dancing (feat. Hazlett),,unmatched,Rod Wave,Keep Dancing (feat. Hazlett),2026-08-29,2026-09-01,
+apple,6781873320,,LaCosa Nostra,,unmatched,Rod Wave,LaCosa Nostra,2026-08-29,2026-09-01,
+apple,6781873323,,One More Time,,unmatched,Rod Wave,One More Time,2026-08-29,2026-09-01,
+apple,6781873325,,Not New To It,,unmatched,Rod Wave,Not New To It,2026-08-29,2026-09-01,
+apple,6781873328,,The Inspo,,unmatched,Rod Wave,The Inspo,2026-08-29,2026-09-01,
+apple,6781873331,,Overrated,,unmatched,Rod Wave,Overrated,2026-08-29,2026-09-01,
+apple,6781873396,,2017 (Streamer U) [feat. Aimee Carty],,unmatched,Rod Wave,2017 (Streamer U) [feat. Aimee Carty],2026-08-29,2026-09-01,
+apple,6781873397,,Lost and Insecure,,unmatched,Rod Wave,Lost and Insecure,2026-08-29,2026-09-01,
+apple,6781873398,,Florida Boy,,unmatched,Rod Wave,Florida Boy,2026-08-29,2026-09-01,
+apple,6781873401,,Kiss Me Interlude,,unmatched,Rod Wave,Kiss Me Interlude,2026-08-29,2026-09-01,
+apple,6781873406,,Dope Girl,,unmatched,Rod Wave,Dope Girl,2026-08-29,2026-09-01,
+apple,6781873408,,Take Care,,unmatched,Rod Wave,Take Care,2026-08-29,2026-09-01,
+apple,6781873409,,All I Ever Had,,unmatched,Rod Wave,All I Ever Had,2026-08-29,2026-09-01,
+apple,6781873410,,Toast,,unmatched,Rod Wave,Toast,2026-08-29,2026-09-01,
 apple,6782749979,,"Yes! 東京 (feat. SUPER★DRAGON, Sakurashimeji, ONE N' ONLY, BUDDiiS, ICEx & Lienel)",,unmatched,"EBiDAN (恵比寿学園男子部), 超特急, M!LK & 原因は自分にある。","Yes! 東京 (feat. SUPER★DRAGON, Sakurashimeji, ONE N' ONLY, BUDDiiS, ICEx & Lienel)",2026-07-26,2026-08-30,
-apple,6783734896,YENA,만찬가,other_agency_master.csv,confirmed,태연,만찬가,2026-07-26,2026-08-30,
+apple,6783734896,YENA,만찬가,other_agency_master.csv,confirmed,태연,만찬가,2026-07-26,2026-09-01,
 apple,6784327272,,F**k A Interview,,unmatched,Future,F**k A Interview,2026-07-26,2026-07-27,
 apple,6784327277,,California Girls,,unmatched,Future,California Girls,2026-07-26,2026-08-02,
 apple,6784327292,,Konnichiwa,,unmatched,Future,Konnichiwa,2026-07-26,2026-07-31,
@@ -384,7 +384,7 @@ apple,6784327294,,Snow in Skyami,,unmatched,Future,Snow in Skyami,2026-07-26,202
 apple,6785367852,YENA,夜鷹 - Yodaka,other_agency_master.csv,confirmed,米津玄師,夜鷹 - Yodaka,2026-07-26,2026-08-30,
 apple,6785411720,,グッタイム,,unmatched,Snow Man,グッタイム,2026-07-26,2026-08-03,
 apple,6785734870,,マイオンリー,,unmatched,SixTONES,マイオンリー,2026-07-26,2026-08-30,
-apple,6786111946,RESCENE,Pretty Girl,,confirmed,리센느,Pretty Girl,2026-07-26,2026-08-30,chart_artist_name_master
+apple,6786111946,RESCENE,Pretty Girl,,confirmed,리센느,Pretty Girl,2026-07-26,2026-09-01,chart_artist_name_master
 apple,6786563432,,Shut The Door,,unmatched,Young K,Shut The Door,2026-07-29,2026-07-30,
 apple,6786677970,YENA,너와 나,other_agency_master.csv,confirmed,한로로,너와 나,2026-07-26,2026-08-05,
 apple,6787303156,,MORNING DEW (DONK),,unmatched,Beyoncé,MORNING DEW (DONK),2026-07-26,2026-08-07,
@@ -393,18 +393,18 @@ apple,6788211810,,Brand New,,unmatched,Mrs. GREEN APPLE,Brand New,2026-07-26,202
 apple,6789046323,,You!Joy!Parade!,,unmatched,M!LK,You!Joy!Parade!,2026-07-26,2026-08-30,
 apple,6789358230,,I See Why,,unmatched,Moneybagg Yo,I See Why,2026-07-26,2026-08-01,
 apple,6790246893,aespa,KISS N TELL,,confirmed,aespa,KISS N TELL,2026-07-26,2026-08-20,chart_artist_name_master
-apple,6790439171,aespa,KISS N TELL,,confirmed,aespa,KISS N TELL,2026-07-27,2026-08-30,chart_artist_name_master
-apple,6790569133,,Dead Fresh,,unmatched,Lil Baby,Dead Fresh,2026-07-26,2026-08-30,
+apple,6790439171,aespa,KISS N TELL,,confirmed,aespa,KISS N TELL,2026-07-27,2026-09-01,chart_artist_name_master
+apple,6790569133,,Dead Fresh,,unmatched,Lil Baby,Dead Fresh,2026-07-26,2026-09-01,
 apple,6790844001,ENHYPEN,Manphasickzuck,artist_master.csv,confirmed,실리카겔,Manphasickzuck,2026-08-21,2026-08-21,
 apple,6791038145,,消えない花火,,unmatched,timelesz,消えない花火,2026-08-05,2026-08-07,
 apple,6791085676,YENA,브레인워시,other_agency_master.csv,confirmed,"희대의, 씨잼 & 블랙넛",브레인워시,2026-07-26,2026-08-01,
 apple,6791085678,YENA,잡아가세요,other_agency_master.csv,confirmed,"희대의, 씨잼 & 블랙넛",잡아가세요,2026-07-26,2026-08-10,
 apple,6791085681,YENA,리킹 더 스카이,other_agency_master.csv,confirmed,"희대의, 씨잼 & 블랙넛",리킹 더 스카이,2026-07-26,2026-07-27,
-apple,6791520498,fromis_9,Vitamin ME,,confirmed,fromis_9,Vitamin ME,2026-07-26,2026-08-30,chart_artist_name_master
-apple,6792226270,YENA,Less than a Lover,other_agency_master.csv,confirmed,제니,Less than a Lover,2026-07-26,2026-08-30,
+apple,6791520498,fromis_9,Vitamin ME,,confirmed,fromis_9,Vitamin ME,2026-07-26,2026-09-01,chart_artist_name_master
+apple,6792226270,YENA,Less than a Lover,other_agency_master.csv,confirmed,제니,Less than a Lover,2026-07-26,2026-09-01,
 apple,6792630529,,恋、はじめました。,,unmatched,=LOVE,恋、はじめました。,2026-08-05,2026-08-30,
-apple,6792676860,,Been By Now,,unmatched,Morgan Wallen,Been By Now,2026-07-26,2026-08-30,
-apple,6792700626,YENA,여름아 부탁해,other_agency_master.csv,confirmed,볼빨간사춘기,여름아 부탁해,2026-07-26,2026-08-30,
+apple,6792676860,,Been By Now,,unmatched,Morgan Wallen,Been By Now,2026-07-26,2026-09-01,
+apple,6792700626,YENA,여름아 부탁해,other_agency_master.csv,confirmed,볼빨간사춘기,여름아 부탁해,2026-07-26,2026-09-01,
 apple,6792947886,ILLIT,I Got Your Back,,confirmed,ILLIT & HANA,I Got Your Back,2026-07-31,2026-08-30,chart_artist_name_master
 apple,6793239196,,GG EZ,,unmatched,M.Sasuke,GG EZ,2026-07-30,2026-08-09,
 apple,6793398196,,モンストロ,,unmatched,Ado,モンストロ,2026-08-10,2026-08-17,
@@ -412,24 +412,24 @@ apple,6793423261,,Overthink,,unmatched,Wale & Elmiene,Overthink,2026-08-02,2026-
 apple,6793456212,,罪と罰と雨とキス (佐野勇斗&吉田仁人),,unmatched,M!LK,罪と罰と雨とキス (佐野勇斗&吉田仁人),2026-08-03,2026-08-30,
 apple,6793870935,,Yes! 東京 (M!LK ver. 体験入学),,unmatched,EBiDAN (恵比寿学園男子部) & M!LK,Yes! 東京 (M!LK ver. 体験入学),2026-08-11,2026-08-16,
 apple,6793888335,Red Velvet,見知らぬ糸,artist_master.csv,confirmed,スピッツ,見知らぬ糸,2026-08-07,2026-08-30,
-apple,6793946478,CORTIS,MOTION (feat. Juicy J),,confirmed,코르티스,MOTION (feat. Juicy J),2026-08-01,2026-08-30,chart_artist_name_master
+apple,6793946478,CORTIS,MOTION (feat. Juicy J),,confirmed,코르티스,MOTION (feat. Juicy J),2026-08-01,2026-09-01,chart_artist_name_master
 apple,6794238043,AKMU,잔혹한 천사의 테제,artist_master.csv,confirmed,한로로,잔혹한 천사의 테제,2026-07-31,2026-08-09,
 apple,6794271993,,GO GHOST,,unmatched,King Gnu,GO GHOST,2026-07-30,2026-08-29,
 apple,6794274433,AKMU,好き,artist_master.csv,confirmed,星野源,好き,2026-07-31,2026-08-23,
-apple,6794291725,Red Velvet,Surfin' Boy,,confirmed,레드벨벳,Surfin' Boy,2026-08-05,2026-08-30,chart_artist_name_master
+apple,6794291725,Red Velvet,Surfin' Boy,,confirmed,레드벨벳,Surfin' Boy,2026-08-05,2026-09-01,chart_artist_name_master
 apple,6794291726,Red Velvet,Hot Girls Cold Vibe,,confirmed,레드벨벳,Hot Girls Cold Vibe,2026-08-05,2026-08-08,chart_artist_name_master
 apple,6794291727,Red Velvet,Orchestra,,confirmed,레드벨벳,Orchestra,2026-08-05,2026-08-09,chart_artist_name_master
 apple,6794291728,Red Velvet,Hula Hoop,,confirmed,레드벨벳,Hula Hoop,2026-08-05,2026-08-07,chart_artist_name_master
 apple,6794291729,Red Velvet,Hawaii,,confirmed,레드벨벳,Hawaii,2026-08-05,2026-08-06,chart_artist_name_master
 apple,6794749091,,Nightmares To Dreams,,unmatched,Meek Mill,Nightmares To Dreams,2026-08-01,2026-08-08,
 apple,6795162982,,Time is money,,unmatched,TAKARA,Time is money,2026-08-08,2026-08-08,
-apple,6795358334,Hearts2Hearts,ICONIC HEART,,confirmed,Hearts2Hearts,ICONIC HEART,2026-08-13,2026-08-30,chart_artist_name_master
-apple,6795782853,TUIDE,ABD,,confirmed,튜이드,ABD,2026-08-25,2026-08-30,chart_artist_name_master
-apple,6795782855,TUIDE,SUN KISS,,confirmed,튜이드,SUN KISS,2026-08-25,2026-08-30,chart_artist_name_master
-apple,6795782858,TUIDE,Echo,,confirmed,튜이드,Echo,2026-08-25,2026-08-30,chart_artist_name_master
-apple,6795782861,TUIDE,Flip-Flop Girl,,confirmed,튜이드,Flip-Flop Girl,2026-08-25,2026-08-30,chart_artist_name_master
-apple,6795782863,TUIDE,GRLS,,confirmed,튜이드,GRLS,2026-08-25,2026-08-30,chart_artist_name_master
-apple,6796123559,,AH HA,,unmatched,Cardi B,AH HA,2026-08-01,2026-08-30,
+apple,6795358334,Hearts2Hearts,ICONIC HEART,,confirmed,Hearts2Hearts,ICONIC HEART,2026-08-13,2026-09-01,chart_artist_name_master
+apple,6795782853,TUIDE,ABD,,confirmed,튜이드,ABD,2026-08-25,2026-09-01,chart_artist_name_master
+apple,6795782855,TUIDE,SUN KISS,,confirmed,튜이드,SUN KISS,2026-08-25,2026-09-01,chart_artist_name_master
+apple,6795782858,TUIDE,Echo,,confirmed,튜이드,Echo,2026-08-25,2026-09-01,chart_artist_name_master
+apple,6795782861,TUIDE,Flip-Flop Girl,,confirmed,튜이드,Flip-Flop Girl,2026-08-25,2026-09-01,chart_artist_name_master
+apple,6795782863,TUIDE,GRLS,,confirmed,튜이드,GRLS,2026-08-25,2026-09-01,chart_artist_name_master
+apple,6796123559,,AH HA,,unmatched,Cardi B,AH HA,2026-08-01,2026-09-01,
 apple,6796859138,,Maverick Intro,,unmatched,Lil Uzi Vert,Maverick Intro,2026-08-02,2026-08-06,
 apple,6796859140,,Go !,,unmatched,Lil Uzi Vert,Go !,2026-08-02,2026-08-03,
 apple,6796859141,,Poured,,unmatched,Lil Uzi Vert,Poured,2026-08-02,2026-08-07,
@@ -438,19 +438,19 @@ apple,6796859144,,Yoko,,unmatched,Lil Uzi Vert,Yoko,2026-08-02,2026-08-03,
 apple,6796859145,,Gas. Brake.,,unmatched,Lil Uzi Vert,Gas. Brake.,2026-08-02,2026-08-02,
 apple,6796859387,,London (Bonus),,unmatched,Lil Uzi Vert,London (Bonus),2026-08-02,2026-08-06,
 apple,6796864743,,Te llevas To,,unmatched,KAROL G,Te llevas To,2026-08-08,2026-08-10,
-apple,6796864746,,Ahí,,unmatched,KAROL G & Drake,Ahí,2026-08-07,2026-08-30,
+apple,6796864746,,Ahí,,unmatched,KAROL G & Drake,Ahí,2026-08-07,2026-09-01,
 apple,6796864748,,Still,,unmatched,KAROL G & Bruno Mars,Still,2026-08-08,2026-08-14,
 apple,6796864750,,MATADORA,,unmatched,KAROL G,MATADORA,2026-08-08,2026-08-08,
-apple,6796864754,,BbY WOW,,unmatched,"KAROL G, Judeline & rusowsky",BbY WOW,2026-08-09,2026-08-30,
+apple,6796864754,,BbY WOW,,unmatched,"KAROL G, Judeline & rusowsky",BbY WOW,2026-08-09,2026-09-01,
 apple,6796878899,,Say What,,unmatched,Trippie Redd & PARTYNEXTDOOR,Say What,2026-08-21,2026-08-25,
 apple,6797481677,aespa,Serenade (KARINA & WINTER),,confirmed,aespa,Serenade (KARINA & WINTER),2026-08-11,2026-08-20,chart_artist_name_master
 apple,6797773846,KiiiKiii,Ever2Late!,,confirmed,키키,Ever2Late!,2026-08-10,2026-08-29,chart_artist_name_master
 apple,6797774238,KiiiKiii,Hey Hi,,confirmed,키키,Hey Hi,2026-08-11,2026-08-25,chart_artist_name_master
-apple,6797774239,KiiiKiii,Pop Off Pop Off,,confirmed,키키,Pop Off Pop Off,2026-08-10,2026-08-30,chart_artist_name_master
-apple,6797774241,KiiiKiii,SWEET SOUR,,confirmed,키키,SWEET SOUR,2026-08-11,2026-08-30,chart_artist_name_master
-apple,6797774242,KiiiKiii,Candy Pink Magic Hole Flip Phone,,confirmed,키키,Candy Pink Magic Hole Flip Phone,2026-08-10,2026-08-30,chart_artist_name_master
+apple,6797774239,KiiiKiii,Pop Off Pop Off,,confirmed,키키,Pop Off Pop Off,2026-08-10,2026-09-01,chart_artist_name_master
+apple,6797774241,KiiiKiii,SWEET SOUR,,confirmed,키키,SWEET SOUR,2026-08-11,2026-09-01,chart_artist_name_master
+apple,6797774242,KiiiKiii,Candy Pink Magic Hole Flip Phone,,confirmed,키키,Candy Pink Magic Hole Flip Phone,2026-08-10,2026-09-01,chart_artist_name_master
 apple,6797774243,KiiiKiii,Blue Hour,,confirmed,키키,Blue Hour,2026-08-11,2026-08-20,chart_artist_name_master
-apple,6798042825,,Jaded,,unmatched,Koe Wetzel & Ella Langley,Jaded,2026-08-08,2026-08-30,
+apple,6798042825,,Jaded,,unmatched,Koe Wetzel & Ella Langley,Jaded,2026-08-08,2026-09-01,
 apple,6798346704,,I'm Back,,unmatched,Pooh Shiesty,I'm Back,2026-08-07,2026-08-19,
 apple,6798346705,,Federal Reality,,unmatched,Pooh Shiesty,Federal Reality,2026-08-07,2026-08-20,
 apple,6798346706,,Reap What You Sow,,unmatched,Pooh Shiesty,Reap What You Sow,2026-08-07,2026-08-28,
@@ -465,116 +465,118 @@ apple,6798347003,,Trip,,unmatched,Pooh Shiesty,Trip,2026-08-08,2026-08-15,
 apple,6798347004,,JPay & CorrLinks,,unmatched,Pooh Shiesty,JPay & CorrLinks,2026-08-08,2026-08-13,
 apple,6798347011,,Bigger Than the Program,,unmatched,Pooh Shiesty,Bigger Than the Program,2026-08-08,2026-08-13,
 apple,6798347016,,FDO (Bonus),,unmatched,Pooh Shiesty,FDO (Bonus),2026-08-11,2026-08-11,
-apple,6798913852,NCT 127,Blingy,,confirmed,NCT 127,Blingy,2026-08-25,2026-08-30,chart_artist_name_master
-apple,6799878518,,없어,,unmatched,Shane,없어,2026-08-20,2026-08-30,
+apple,6798913852,NCT 127,Blingy,,confirmed,NCT 127,Blingy,2026-08-25,2026-09-01,chart_artist_name_master
+apple,6799878518,,없어,,unmatched,Shane,없어,2026-08-20,2026-09-01,
 apple,6800201205,Red Velvet,Godspeed!,artist_master.csv,confirmed,혁오,Godspeed!,2026-08-19,2026-08-23,
 apple,6800467603,,Around Me,,unmatched,Noodah05,Around Me,2026-08-20,2026-08-28,
 apple,6801189583,CORTIS,PACK IT UP,,confirmed,코르티스,PACK IT UP,2026-08-24,2026-08-29,chart_artist_name_master
-apple,6801189588,CORTIS,MONEYMONEYMONEY,,confirmed,코르티스,MONEYMONEYMONEY,2026-08-25,2026-08-30,chart_artist_name_master
+apple,6801189588,CORTIS,MONEYMONEYMONEY,,confirmed,코르티스,MONEYMONEYMONEY,2026-08-25,2026-09-01,chart_artist_name_master
 apple,6801361853,Red Velvet,灰色,artist_master.csv,confirmed,大森元貴,灰色,2026-08-27,2026-08-30,
-apple,6801365250,BIGBANG,BiiiG,,confirmed,BIGBANG,BiiiG,2026-08-19,2026-08-30,chart_artist_name_master
+apple,6801365250,BIGBANG,BiiiG,,confirmed,BIGBANG,BiiiG,2026-08-19,2026-09-01,chart_artist_name_master
 apple,6802196985,ENHYPEN,Stuck,,confirmed,엔하이픈,Stuck,2026-08-22,2026-08-25,chart_artist_name_master
 apple,6802197005,ENHYPEN,Checkmate,,confirmed,엔하이픈,Checkmate,2026-08-22,2026-08-24,chart_artist_name_master
 apple,6802197008,ENHYPEN,Highlight,,confirmed,엔하이픈,Highlight,2026-08-22,2026-08-22,chart_artist_name_master
 apple,6802197979,ENHYPEN,Bad For You,,confirmed,엔하이픈,Bad For You,2026-08-23,2026-08-28,chart_artist_name_master
 apple,6802251268,ENHYPEN,Two Fools,,confirmed,엔하이픈,Two Fools,2026-08-22,2026-08-30,chart_artist_name_master
-apple,6802251495,ENHYPEN,Bloody Paradise,,confirmed,엔하이픈,Bloody Paradise,2026-08-22,2026-08-30,chart_artist_name_master
+apple,6802251495,ENHYPEN,Bloody Paradise,,confirmed,엔하이픈,Bloody Paradise,2026-08-22,2026-09-01,chart_artist_name_master
 apple,6802251501,ENHYPEN,Highlight,,confirmed,엔하이픈,Highlight,2026-08-23,2026-08-24,chart_artist_name_master
 apple,6802879414,,ALL SUITE,,unmatched,Snow Man,ALL SUITE,2026-08-24,2026-08-28,
 apple,6802879416,,奇跡,,unmatched,Snow Man,奇跡,2026-08-24,2026-08-28,
 apple,6802879419,,GO HARD,,unmatched,Snow Man,GO HARD,2026-08-24,2026-08-29,
 apple,6802879421,,マドラー,,unmatched,Snow Man,マドラー,2026-08-24,2026-08-25,
 apple,6802879422,,show time...,,unmatched,Snow Man,show time...,2026-08-24,2026-08-30,
-apple,6803231122,,Some of Your Love,,unmatched,PARTYNEXTDOOR,Some of Your Love,2026-08-21,2026-08-30,
+apple,6803231122,,Some of Your Love,,unmatched,PARTYNEXTDOOR,Some of Your Love,2026-08-21,2026-09-01,
 apple,6803231123,,Routine Rouge,,unmatched,PARTYNEXTDOOR,Routine Rouge,2026-08-22,2026-08-24,
 apple,6803236419,,Routine Rouge,,unmatched,PARTYNEXTDOOR,Routine Rouge,2026-08-25,2026-08-25,
 apple,6803283192,,serena joy,,unmatched,Olivia Rodrigo,serena joy,2026-08-25,2026-08-25,
 apple,6803692030,,No Brakes (feat. Drake),,unmatched,The Game,No Brakes (feat. Drake),2026-08-22,2026-08-22,
-apple,6805292681,Red Velvet,FALLEN ANGEL,artist_master.csv,confirmed,제니,FALLEN ANGEL,2026-08-29,2026-08-30,
-apple,6805292682,Red Velvet,HEAVEN,artist_master.csv,confirmed,제니,HEAVEN,2026-08-29,2026-08-30,
-apple,6805292684,Red Velvet,Less than a Lover,artist_master.csv,confirmed,제니,Less than a Lover,2026-08-29,2026-08-30,
+apple,6805292681,Red Velvet,FALLEN ANGEL,artist_master.csv,confirmed,제니,FALLEN ANGEL,2026-08-29,2026-09-01,
+apple,6805292682,Red Velvet,HEAVEN,artist_master.csv,confirmed,제니,HEAVEN,2026-08-29,2026-09-01,
+apple,6805292684,Red Velvet,Less than a Lover,artist_master.csv,confirmed,제니,Less than a Lover,2026-08-29,2026-09-01,
+apple,6805367598,,노스탈지아,,unmatched,BIG Naughty,노스탈지아,2026-09-01,2026-09-01,
+apple,6805367599,,노스탈지아 (Band ver.),,unmatched,BIG Naughty,노스탈지아 (Band ver.),2026-09-01,2026-09-01,
 apple,895127014,,Don't Look Back in Anger (Remastered),,unmatched,Oasis,Don't Look Back in Anger (Remastered),2026-07-26,2026-08-03,
-apple,913803072,Red Velvet,Love Options,artist_master.csv,confirmed,베스티,Love Options,2026-08-29,2026-08-30,
+apple,913803072,Red Velvet,Love Options,artist_master.csv,confirmed,베스티,Love Options,2026-08-29,2026-09-01,
 apple,947748526,YENA,いとしのエリー,other_agency_master.csv,confirmed,サザンオールスターズ,いとしのエリー,2026-07-26,2026-08-30,
 apple,949248404,YENA,真夏の果実,other_agency_master.csv,confirmed,サザンオールスターズ,真夏の果実,2026-07-26,2026-08-30,
 apple,949250892,YENA,TSUNAMI,other_agency_master.csv,confirmed,サザンオールスターズ,TSUNAMI,2026-07-26,2026-08-30,
-line,mt00000000000dcd7f,BIGBANG,声をきかせて,artist_master.csv,confirmed,BIGBANG,声をきかせて,2026-08-21,2026-08-30,
-line,mt0000000000b10ba6,BIGBANG,FANTASTIC BABY,artist_master.csv,confirmed,BIGBANG,FANTASTIC BABY,2026-07-26,2026-08-30,
-line,mt000000000325ce2d,BIGBANG,BANG BANG BANG,artist_master.csv,confirmed,BIGBANG,BANG BANG BANG,2026-07-26,2026-08-30,
-line,mt000000000c4b6892,BLACKPINK,AS IF IT'S YOUR LAST,artist_master.csv,confirmed,BLACKPINK,AS IF IT'S YOUR LAST,2026-07-26,2026-08-30,
+line,mt00000000000dcd7f,BIGBANG,声をきかせて,artist_master.csv,confirmed,BIGBANG,声をきかせて,2026-08-21,2026-08-31,
+line,mt0000000000b10ba6,BIGBANG,FANTASTIC BABY,artist_master.csv,confirmed,BIGBANG,FANTASTIC BABY,2026-07-26,2026-08-31,
+line,mt000000000325ce2d,BIGBANG,BANG BANG BANG,artist_master.csv,confirmed,BIGBANG,BANG BANG BANG,2026-07-26,2026-08-31,
+line,mt000000000c4b6892,BLACKPINK,AS IF IT'S YOUR LAST,artist_master.csv,confirmed,BLACKPINK,AS IF IT'S YOUR LAST,2026-07-26,2026-08-31,
 line,mt000000000d69ec17,TWICE,What is Love?,artist_master.csv,confirmed,TWICE,What is Love?,2026-07-26,2026-08-02,
-line,mt000000000efca410,BTS,Boy With Luv (feat. Halsey),artist_master.csv,confirmed,BTS,Boy With Luv (feat. Halsey),2026-07-26,2026-08-30,
-line,mt000000000fd1f738,TWICE,Feel Special,artist_master.csv,confirmed,TWICE,Feel Special,2026-07-26,2026-08-30,
-line,mt0000000011b5bfa8,BTS,Dynamite,artist_master.csv,confirmed,BTS,Dynamite,2026-07-26,2026-08-30,
-line,mt0000000013eda145,BTS,Butter,artist_master.csv,confirmed,BTS,Butter,2026-07-26,2026-08-30,
-line,mt000000001444c205,BTS,Permission to Dance,artist_master.csv,confirmed,BTS,Permission to Dance,2026-07-26,2026-08-30,
-line,mt0000000018d0aa99,NewJeans,Ditto,artist_master.csv,confirmed,NewJeans,Ditto,2026-07-26,2026-08-16,
+line,mt000000000efca410,BTS,Boy With Luv (feat. Halsey),artist_master.csv,confirmed,BTS,Boy With Luv (feat. Halsey),2026-07-26,2026-08-31,
+line,mt000000000fd1f738,TWICE,Feel Special,artist_master.csv,confirmed,TWICE,Feel Special,2026-07-26,2026-08-31,
+line,mt0000000011b5bfa8,BTS,Dynamite,artist_master.csv,confirmed,BTS,Dynamite,2026-07-26,2026-08-31,
+line,mt0000000013eda145,BTS,Butter,artist_master.csv,confirmed,BTS,Butter,2026-07-26,2026-08-31,
+line,mt000000001444c205,BTS,Permission to Dance,artist_master.csv,confirmed,BTS,Permission to Dance,2026-07-26,2026-08-31,
+line,mt0000000018d0aa99,NewJeans,Ditto,artist_master.csv,confirmed,NewJeans,Ditto,2026-07-26,2026-08-31,
 line,mt0000000018ee521e,NewJeans,OMG,artist_master.csv,confirmed,NewJeans,OMG,2026-07-26,2026-08-02,
-line,mt000000001b45753e,,Seven (Clean Ver.),,unmatched,"Jung Kook, Latto",Seven (Clean Ver.),2026-07-26,2026-08-30,
-line,mt000000001c8d2174,LE SSERAFIM,Perfect Night,artist_master.csv,confirmed,LE SSERAFIM,Perfect Night,2026-07-26,2026-08-30,
-line,mt000000001e7d77b9,ILLIT,Magnetic,artist_master.csv,confirmed,ILLIT,Magnetic,2026-07-26,2026-08-30,
-line,mt000000001e9dd269,BABYMONSTER,SHEESH,artist_master.csv,confirmed,BABYMONSTER,SHEESH,2026-07-28,2026-08-22,
+line,mt000000001b45753e,,Seven (Clean Ver.),,unmatched,"Jung Kook, Latto",Seven (Clean Ver.),2026-07-26,2026-08-31,
+line,mt000000001c8d2174,LE SSERAFIM,Perfect Night,artist_master.csv,confirmed,LE SSERAFIM,Perfect Night,2026-07-26,2026-08-31,
+line,mt000000001e7d77b9,ILLIT,Magnetic,artist_master.csv,confirmed,ILLIT,Magnetic,2026-07-26,2026-08-31,
+line,mt000000001e9dd269,BABYMONSTER,SHEESH,artist_master.csv,confirmed,BABYMONSTER,SHEESH,2026-07-28,2026-08-31,
 line,mt000000001ef56c73,aespa,Supernova,artist_master.csv,confirmed,aespa,Supernova,2026-07-26,2026-08-30,
-line,mt000000001fd20a7f,LE SSERAFIM,CRAZY,artist_master.csv,confirmed,LE SSERAFIM,CRAZY,2026-07-26,2026-08-30,
-line,mt00000000205e6e5d,,APT.,,unmatched,ROSÉ & Bruno Mars,APT.,2026-07-26,2026-08-30,
-line,mt00000000205fc729,aespa,Whiplash,artist_master.csv,confirmed,aespa,Whiplash,2026-07-26,2026-08-30,
-line,mt000000002074b8de,BABYMONSTER,DRIP,artist_master.csv,confirmed,BABYMONSTER,DRIP,2026-07-26,2026-08-30,
-line,mt00000000213c4c04,ILLIT,Almond Chocolate,artist_master.csv,confirmed,ILLIT,Almond Chocolate,2026-07-26,2026-08-30,
+line,mt000000001fd20a7f,LE SSERAFIM,CRAZY,artist_master.csv,confirmed,LE SSERAFIM,CRAZY,2026-07-26,2026-08-31,
+line,mt00000000205e6e5d,,APT.,,unmatched,ROSÉ & Bruno Mars,APT.,2026-07-26,2026-08-31,
+line,mt00000000205fc729,aespa,Whiplash,artist_master.csv,confirmed,aespa,Whiplash,2026-07-26,2026-08-31,
+line,mt000000002074b8de,BABYMONSTER,DRIP,artist_master.csv,confirmed,BABYMONSTER,DRIP,2026-07-26,2026-08-31,
+line,mt00000000213c4c04,ILLIT,Almond Chocolate,artist_master.csv,confirmed,ILLIT,Almond Chocolate,2026-07-26,2026-08-31,
 line,mt0000000021954e4a,,like JENNIE,,unmatched,JENNIE,like JENNIE,2026-08-15,2026-08-20,
-line,mt0000000022bce001,ILLIT,jellyous,artist_master.csv,confirmed,ILLIT,jellyous,2026-07-26,2026-08-30,
-line,mt0000000022c60f60,Hearts2Hearts,STYLE,artist_master.csv,confirmed,Hearts2Hearts,STYLE,2026-07-26,2026-08-30,
-line,mt0000000022c8e685,,Golden,,unmatched,"HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",Golden,2026-07-26,2026-08-30,
-line,mt000000002301529b,BLACKPINK,JUMP,artist_master.csv,confirmed,BLACKPINK,JUMP,2026-07-26,2026-08-30,
-line,mt0000000023037f5a,TWICE,THIS IS FOR,artist_master.csv,confirmed,TWICE,THIS IS FOR,2026-07-26,2026-08-30,
-line,mt0000000023b62003,BABYMONSTER,WE GO UP,artist_master.csv,confirmed,BABYMONSTER,WE GO UP,2026-07-26,2026-08-30,
+line,mt0000000022bce001,ILLIT,jellyous,artist_master.csv,confirmed,ILLIT,jellyous,2026-07-26,2026-08-31,
+line,mt0000000022c60f60,Hearts2Hearts,STYLE,artist_master.csv,confirmed,Hearts2Hearts,STYLE,2026-07-26,2026-08-31,
+line,mt0000000022c8e685,,Golden,,unmatched,"HUNTR/X, EJAE, AUDREY NUNA, REI AMI, KPop Demon Hunters Cast",Golden,2026-07-26,2026-08-31,
+line,mt000000002301529b,BLACKPINK,JUMP,artist_master.csv,confirmed,BLACKPINK,JUMP,2026-07-26,2026-08-31,
+line,mt0000000023037f5a,TWICE,THIS IS FOR,artist_master.csv,confirmed,TWICE,THIS IS FOR,2026-07-26,2026-08-31,
+line,mt0000000023b62003,BABYMONSTER,WE GO UP,artist_master.csv,confirmed,BABYMONSTER,WE GO UP,2026-07-26,2026-08-31,
 line,mt0000000023b62004,BABYMONSTER,PSYCHO,artist_master.csv,confirmed,BABYMONSTER,PSYCHO,2026-07-26,2026-08-23,
 line,mt0000000023da7c09,LE SSERAFIM,SPAGHETTI (feat. j-hope of BTS),artist_master.csv,confirmed,LE SSERAFIM,SPAGHETTI (feat. j-hope of BTS),2026-07-26,2026-08-09,
 line,mt00000000241eee6b,ILLIT,NOT CUTE ANYMORE,,confirmed,ILLIT,NOT CUTE ANYMORE,2026-07-28,2026-08-02,chart_artist_name_master
-line,mt0000000024b6122d,IVE,BANG BANG,other_agency_master.csv,confirmed,IVE,BANG BANG,2026-07-26,2026-08-30,
+line,mt0000000024b6122d,IVE,BANG BANG,other_agency_master.csv,confirmed,IVE,BANG BANG,2026-07-26,2026-08-31,
 line,mt00000000251173d2,YENA,Catch Catch,other_agency_master.csv,confirmed,YENA,Catch Catch,2026-07-26,2026-08-07,
-line,mt00000000251e014f,BTS,Body to Body,artist_master.csv,confirmed,BTS,Body to Body,2026-07-26,2026-08-30,
+line,mt00000000251e014f,BTS,Body to Body,artist_master.csv,confirmed,BTS,Body to Body,2026-07-26,2026-08-31,
 line,mt00000000251e0150,BTS,Hooligan,artist_master.csv,confirmed,BTS,Hooligan,2026-07-26,2026-08-16,
 line,mt00000000251e0152,BTS,FYA,,confirmed,BTS,FYA,2026-07-28,2026-08-06,chart_artist_name_master
-line,mt00000000251e0153,BTS,2.0,artist_master.csv,confirmed,BTS,2.0,2026-07-26,2026-08-30,
-line,mt00000000251e0155,BTS,SWIM,artist_master.csv,confirmed,BTS,SWIM,2026-07-26,2026-08-30,
-line,mt00000000251e0157,BTS,NORMAL,artist_master.csv,confirmed,BTS,NORMAL,2026-07-26,2026-08-28,
-line,mt0000000025849208,ILLIT,It's Me,artist_master.csv,confirmed,ILLIT,It's Me,2026-07-26,2026-08-30,
-line,mt0000000025943022,BABYMONSTER,춤 (CHOOM),artist_master.csv,confirmed,BABYMONSTER,춤 (CHOOM),2026-07-26,2026-08-30,
-line,mt0000000025943023,BABYMONSTER,I LIKE IT,artist_master.csv,confirmed,BABYMONSTER,I LIKE IT,2026-07-26,2026-08-30,
-line,mt0000000025ae2e95,NMIXX,Heavy Serenade,artist_master.csv,confirmed,NMIXX,Heavy Serenade,2026-08-19,2026-08-30,
+line,mt00000000251e0153,BTS,2.0,artist_master.csv,confirmed,BTS,2.0,2026-07-26,2026-08-31,
+line,mt00000000251e0155,BTS,SWIM,artist_master.csv,confirmed,BTS,SWIM,2026-07-26,2026-08-31,
+line,mt00000000251e0157,BTS,NORMAL,artist_master.csv,confirmed,BTS,NORMAL,2026-07-26,2026-08-31,
+line,mt0000000025849208,ILLIT,It's Me,artist_master.csv,confirmed,ILLIT,It's Me,2026-07-26,2026-08-31,
+line,mt0000000025943022,BABYMONSTER,춤 (CHOOM),artist_master.csv,confirmed,BABYMONSTER,춤 (CHOOM),2026-07-26,2026-08-31,
+line,mt0000000025943023,BABYMONSTER,I LIKE IT,artist_master.csv,confirmed,BABYMONSTER,I LIKE IT,2026-07-26,2026-08-31,
+line,mt0000000025ae2e95,NMIXX,Heavy Serenade,artist_master.csv,confirmed,NMIXX,Heavy Serenade,2026-08-19,2026-08-31,
 line,mt0000000025cbf8df,LE SSERAFIM,BOOMPALA,,confirmed,LE SSERAFIM,BOOMPALA,2026-08-02,2026-08-02,chart_artist_name_master
-line,mt0000000025dd89b9,aespa,LEMONADE,artist_master.csv,confirmed,aespa,LEMONADE,2026-07-26,2026-08-30,
-line,mt0000000025e6b42e,BABYMONSTER,SUGAR HONEY ICE TEA,artist_master.csv,confirmed,BABYMONSTER,SUGAR HONEY ICE TEA,2026-07-26,2026-08-30,
+line,mt0000000025dd89b9,aespa,LEMONADE,artist_master.csv,confirmed,aespa,LEMONADE,2026-07-26,2026-08-31,
+line,mt0000000025e6b42e,BABYMONSTER,SUGAR HONEY ICE TEA,artist_master.csv,confirmed,BABYMONSTER,SUGAR HONEY ICE TEA,2026-07-26,2026-08-31,
 line,mt0000000025ff42d0,BTS,Come Over,artist_master.csv,confirmed,BTS,Come Over,2026-07-26,2026-08-17,
 line,mt000000002602e26d,,ICONIC BY MISTAKE,,unmatched,"LE SSERAFIM, ILLIT, KATSEYE",ICONIC BY MISTAKE,2026-07-28,2026-07-30,
-line,mt0000000026070583,ATEEZ,BAD,other_agency_master.csv,confirmed,ATEEZ,BAD,2026-07-26,2026-08-30,
+line,mt0000000026070583,ATEEZ,BAD,other_agency_master.csv,confirmed,ATEEZ,BAD,2026-07-26,2026-08-31,
 line,mt000000002607fb18,Stray Kids,RUN IT,artist_master.csv,confirmed,Stray Kids,RUN IT,2026-07-26,2026-08-06,
 line,mt00000000260a43a7,Hearts2Hearts,Lemon Tang,artist_master.csv,confirmed,Hearts2Hearts,Lemon Tang,2026-07-26,2026-08-19,
-line,mt00000000260d43aa,NCT WISH,BOY MEETS GIRL,artist_master.csv,confirmed,NCT WISH,BOY MEETS GIRL,2026-07-26,2026-08-30,
+line,mt00000000260d43aa,NCT WISH,BOY MEETS GIRL,artist_master.csv,confirmed,NCT WISH,BOY MEETS GIRL,2026-07-26,2026-08-31,
 line,mt000000002646a7b8,,Ice Cream,,unmatched,YEONJUN,Ice Cream,2026-07-26,2026-07-29,
-line,mt000000002646b832,RESCENE,Pretty Girl,other_agency_master.csv,confirmed,RESCENE,Pretty Girl,2026-08-14,2026-08-30,
+line,mt000000002646b832,RESCENE,Pretty Girl,other_agency_master.csv,confirmed,RESCENE,Pretty Girl,2026-08-14,2026-08-31,
 line,mt0000000026947994,,Time's Tickin',,unmatched,U-KNOW,Time's Tickin',2026-07-26,2026-07-27,
 line,mt00000000269fbd54,TOMORROW X TOGETHER,Nice to Meet Ya,artist_master.csv,confirmed,TOMORROW X TOGETHER,Nice to Meet Ya,2026-08-04,2026-08-16,
-line,mt0000000026a31b68,aespa,KISS N TELL,artist_master.csv,confirmed,aespa,KISS N TELL,2026-07-26,2026-08-30,
+line,mt0000000026a31b68,aespa,KISS N TELL,artist_master.csv,confirmed,aespa,KISS N TELL,2026-07-26,2026-08-31,
 line,mt0000000026a31b69,aespa,Orbit Pop,artist_master.csv,confirmed,aespa,Orbit Pop,2026-07-26,2026-07-27,
 line,mt0000000026a31b6d,aespa,In Halo,artist_master.csv,confirmed,aespa,In Halo,2026-07-26,2026-07-27,
 line,mt0000000026a408e4,,"I Got Your Back (Feat. JISOO, MOMOKA of HANA)",,unmatched,"ILLIT, HANA","I Got Your Back (Feat. JISOO, MOMOKA of HANA)",2026-07-27,2026-08-08,
 line,mt0000000026a6e058,ZEROBASEONE,イグジステンス,,confirmed,ZEROBASEONE,イグジステンス,2026-08-20,2026-08-24,chart_artist_name_master
-line,mt0000000026ae7397,TWS,SODA SODA,artist_master.csv,confirmed,TWS,SODA SODA,2026-08-04,2026-08-30,
+line,mt0000000026ae7397,TWS,SODA SODA,artist_master.csv,confirmed,TWS,SODA SODA,2026-08-04,2026-08-31,
 line,mt0000000026aeed09,Stray Kids,RUN IT,,confirmed,Stray Kids,RUN IT,2026-08-08,2026-08-12,chart_artist_name_master
-line,mt0000000026aeed0a,Stray Kids,This & That,,confirmed,Stray Kids,This & That,2026-08-07,2026-08-30,chart_artist_name_master
+line,mt0000000026aeed0a,Stray Kids,This & That,,confirmed,Stray Kids,This & That,2026-08-07,2026-08-31,chart_artist_name_master
 line,mt0000000026aeed0b,Stray Kids,After You,,confirmed,Stray Kids,After You,2026-08-07,2026-08-13,chart_artist_name_master
 line,mt0000000026aeed0c,Stray Kids,FARMING,,confirmed,Stray Kids,FARMING,2026-08-07,2026-08-12,chart_artist_name_master
 line,mt0000000026aeed0d,Stray Kids,I Do,,confirmed,Stray Kids,I Do,2026-08-08,2026-08-10,chart_artist_name_master
 line,mt0000000026aeed0e,Stray Kids,Way Out,,confirmed,Stray Kids,Way Out,2026-08-08,2026-08-10,chart_artist_name_master
 line,mt0000000026aeed0f,Stray Kids,Back Then,,confirmed,Stray Kids,Back Then,2026-08-08,2026-08-09,chart_artist_name_master
-line,mt0000000026bc7e5c,ZEROBASEONE,イグジステンス,other_agency_master.csv,confirmed,ZEROBASEONE,イグジステンス,2026-08-10,2026-08-30,
+line,mt0000000026bc7e5c,ZEROBASEONE,イグジステンス,other_agency_master.csv,confirmed,ZEROBASEONE,イグジステンス,2026-08-10,2026-08-31,
 line,mt0000000026bcec41,,Less than a Lover,,unmatched,JENNIE,Less than a Lover,2026-07-29,2026-08-04,
 line,mt0000000026be1ad8,RIIZE,Sunburst,artist_master.csv,confirmed,RIIZE,Sunburst,2026-07-27,2026-08-06,
-line,mt0000000026c0e518,Hearts2Hearts,ICONIC HEART,,confirmed,Hearts2Hearts,ICONIC HEART,2026-08-13,2026-08-30,chart_artist_name_master
+line,mt0000000026c0e518,Hearts2Hearts,ICONIC HEART,,confirmed,Hearts2Hearts,ICONIC HEART,2026-08-13,2026-08-31,chart_artist_name_master
 line,mt0000000026c49620,Red Velvet,Surfin' Boy,artist_master.csv,confirmed,Red Velvet,Surfin' Boy,2026-08-04,2026-08-09,
-line,mt0000000026d1ca4f,,BORN DIRE,,unmatched,ALPHA DRIVE ONE,BORN DIRE,2026-08-24,2026-08-30,
-line,mt0000000026da6039,TOMORROW X TOGETHER,セツナハナビ (Setsuna Hanabi),,confirmed,TOMORROW X TOGETHER,セツナハナビ (Setsuna Hanabi),2026-08-17,2026-08-30,chart_artist_name_master
+line,mt0000000026d1ca4f,,BORN DIRE,,unmatched,ALPHA DRIVE ONE,BORN DIRE,2026-08-24,2026-08-31,
+line,mt0000000026da6039,TOMORROW X TOGETHER,セツナハナビ (Setsuna Hanabi),,confirmed,TOMORROW X TOGETHER,セツナハナビ (Setsuna Hanabi),2026-08-17,2026-08-31,chart_artist_name_master
 line,mt0000000026da603a,TOMORROW X TOGETHER,Silence,,confirmed,TOMORROW X TOGETHER,Silence,2026-08-17,2026-08-20,chart_artist_name_master
 line,mt0000000026da603b,TOMORROW X TOGETHER,Nice to Meet Ya,,confirmed,TOMORROW X TOGETHER,Nice to Meet Ya,2026-08-17,2026-08-18,chart_artist_name_master
 line,mt0000000026da603c,TOMORROW X TOGETHER,セツナハナビ (Setsuna Hanabi) (夏宵 Ver.),,confirmed,TOMORROW X TOGETHER,セツナハナビ (Setsuna Hanabi) (夏宵 Ver.),2026-08-17,2026-08-20,chart_artist_name_master
@@ -582,12 +584,12 @@ line,mt0000000026de1083,WayV,鸢 (Vision Wings),artist_master.csv,confirmed,WayV
 line,mt0000000026e2d3ab,KiiiKiii,Pop Off Pop Off,other_agency_master.csv,confirmed,KiiiKiii,Pop Off Pop Off,2026-08-11,2026-08-17,
 line,mt0000000026edc39e,,LOOK AT ME NOW!,,unmatched,n.SSign,LOOK AT ME NOW!,2026-08-26,2026-08-29,
 line,mt0000000026ef988f,aespa,Serenade (KARINA & WINTER),,confirmed,aespa,Serenade (KARINA & WINTER),2026-08-10,2026-08-24,chart_artist_name_master
-line,mt00000000270ec1fd,BOYNEXTDOOR,Boom Boom Boom,artist_master.csv,confirmed,BOYNEXTDOOR,Boom Boom Boom,2026-08-18,2026-08-30,
-line,mt00000000271eb427,BIGBANG,BiiiG,artist_master.csv,confirmed,BIGBANG,BiiiG,2026-08-20,2026-08-30,
-line,mt00000000272754c1,ENHYPEN,Bloody Paradise,artist_master.csv,confirmed,ENHYPEN,Bloody Paradise,2026-08-21,2026-08-30,
+line,mt00000000270ec1fd,BOYNEXTDOOR,Boom Boom Boom,artist_master.csv,confirmed,BOYNEXTDOOR,Boom Boom Boom,2026-08-18,2026-08-31,
+line,mt00000000271eb427,BIGBANG,BiiiG,artist_master.csv,confirmed,BIGBANG,BiiiG,2026-08-20,2026-08-31,
+line,mt00000000272754c1,ENHYPEN,Bloody Paradise,artist_master.csv,confirmed,ENHYPEN,Bloody Paradise,2026-08-21,2026-08-31,
 line,mt0000000027275531,ENHYPEN,Bloody Paradise,,confirmed,ENHYPEN,Bloody Paradise,2026-08-22,2026-08-27,chart_artist_name_master
 line,mt000000002727563f,ENHYPEN,Bloody Paradise,artist_master.csv,confirmed,ENHYPEN,Bloody Paradise,2026-08-21,2026-08-28,
-line,mt0000000027278f72,NCT 127,Blingy,artist_master.csv,confirmed,NCT 127,Blingy,2026-08-25,2026-08-30,
+line,mt0000000027278f72,NCT 127,Blingy,artist_master.csv,confirmed,NCT 127,Blingy,2026-08-25,2026-08-31,
 line,mt00000000272f1615,TUIDE,SUN KISS,artist_master.csv,confirmed,TUIDE,SUN KISS,2026-08-27,2026-08-30,
 line,mt00000000272f174c,CORTIS,PACK IT UP,artist_master.csv,confirmed,CORTIS,PACK IT UP,2026-08-26,2026-08-30,
 spaceshower,0111275,EXO,Love Me Right 〜romantic universe〜,artist_master.csv,confirmed,EXO,Love Me Right 〜romantic universe〜,2026-08-28,2026-08-28,
