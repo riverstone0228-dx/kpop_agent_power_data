@@ -56,7 +56,28 @@ jobs:
               raise SystemExit(2)
           print(f"Validated DATABRICKS_JOB_ID={job_id}")
           PY
-          RUN_NOW_RESP=$(databricks jobs run-now --json "{\"job_id\": ${DATABRICKS_JOB_ID}}" --output json)
+          RUN_NOW_RESP=""
+          for i in 1 2 3 4; do
+            set +e
+            RUN_NOW_RESP=$(databricks jobs run-now --json "{\"job_id\": ${DATABRICKS_JOB_ID}}" --output json 2>&1)
+            rc=$?
+            set -e
+            if [ $rc -eq 0 ]; then
+              break
+            fi
+            echo "${RUN_NOW_RESP}" >&2
+            if echo "${RUN_NOW_RESP}" | grep -q "Triggering new runs for organization .* is currently disabled temporarily"; then
+              wait_s=$((i * 60))
+              echo "Databricks temporarily disabled new runs. retry ${i}/4 in ${wait_s}s..."
+              sleep "${wait_s}"
+              continue
+            fi
+            exit $rc
+          done
+          if [ -z "${RUN_NOW_RESP}" ]; then
+            echo "Databricks run-now produced empty response" >&2
+            exit 1
+          fi
           echo "${RUN_NOW_RESP}"
           RUN_ID=$(python -c 'import json,sys; data=json.loads(sys.stdin.read()); rid=data.get("run_id"); assert rid is not None, data; print(rid)' <<< "${RUN_NOW_RESP}")
           echo "Triggered Databricks run_id=${RUN_ID}"
