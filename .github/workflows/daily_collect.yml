@@ -42,7 +42,34 @@ jobs:
             git commit -m "chore: daily data collection $(date -u +%Y-%m-%d)"
           fi
           git fetch origin main
-          git pull --rebase origin main
+          if ! git pull --rebase origin main; then
+            echo "Rebase conflict detected. Prefer freshly generated files for known outputs."
+            for f in \
+              data/raw/$(date -u +%Y-%m-%d).csv \
+              data/youtube_videos/$(date -u +%Y-%m-%d).csv \
+              data/apple_charts/$(date -u +%Y-%m-%d).csv \
+              data/apple_charts/summary_$(date -u +%Y-%m-%d).csv \
+              data/line_charts/$(date -u +%Y-%m-%d).csv \
+              data/line_charts/summary_$(date -u +%Y-%m-%d).csv \
+              data/other_agency_top15/$(date -u +%Y-%m-%d).csv \
+              data/other_agency_top15/changelog_$(date -u +%Y-%m-%d).txt \
+              data/song_rankings/top_$(date -u +%Y-%m-%d).csv \
+              data/song_rankings/hot_$(date -u +%Y-%m-%d).csv \
+              data/stock_prices/$(date -u +%Y-%m-%d).csv \
+              docs/data/report.json \
+              scripts/artist_external_candidates.csv \
+              scripts/artist_external_ids.csv \
+              scripts/track_external_ids.csv \
+              scripts/track_master.csv
+            do
+              if git diff --name-only --diff-filter=U | grep -qx "$f"; then
+                # rebase中の "theirs" は今まさに積み直しているローカル収集コミット
+                git checkout --theirs -- "$f"
+                git add "$f"
+              fi
+            done
+            GIT_EDITOR=true git rebase --continue
+          fi
           git push origin HEAD:main
 
       # secrets は if: で直接参照できないため、先に有無を判定する
