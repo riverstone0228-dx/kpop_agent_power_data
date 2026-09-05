@@ -87,11 +87,31 @@ jobs:
           DATABRICKS_JOB_ID: ${{ secrets.DATABRICKS_JOB_ID }}
         run: |
           set -euo pipefail
-          RUN_NOW_RESP=$(databricks jobs run-now "${DATABRICKS_JOB_ID}" --output json)
+          databricks -v
+          python - <<'PY'
+          import os, sys
+          job_id = os.environ.get("DATABRICKS_JOB_ID", "").strip()
+          if not job_id:
+              print("DATABRICKS_JOB_ID is empty", file=sys.stderr)
+              raise SystemExit(2)
+          if not job_id.isdigit():
+              print(f"DATABRICKS_JOB_ID is not numeric: {job_id!r}", file=sys.stderr)
+              raise SystemExit(2)
+          print(f"Validated DATABRICKS_JOB_ID={job_id}")
+          PY
+          RUN_NOW_RESP=$(databricks jobs run-now --json "{\"job_id\": ${DATABRICKS_JOB_ID}}" --output json)
           echo "${RUN_NOW_RESP}"
-          RUN_ID=$(python -c 'import json,sys; print(json.loads(sys.stdin.read())["run_id"])' <<< "${RUN_NOW_RESP}")
+          RUN_ID=$(python -c 'import json,sys; data=json.loads(sys.stdin.read()); rid=data.get("run_id"); assert rid is not None, data; print(rid)' <<< "${RUN_NOW_RESP}")
           echo "Triggered Databricks run_id=${RUN_ID}"
-          databricks jobs get-run "${RUN_ID}" --output json
+          for i in 1 2 3; do
+            if databricks jobs get-run "${RUN_ID}" --output json; then
+              exit 0
+            fi
+            echo "get-run retry ${i}/3 after short wait..."
+            sleep 5
+          done
+          echo "Failed to fetch Databricks run status for run_id=${RUN_ID}" >&2
+          exit 1
 
       - name: Slack notify on job failure
         if: failure()
