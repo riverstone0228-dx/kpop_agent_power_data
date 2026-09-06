@@ -57,25 +57,40 @@ jobs:
           print(f"Validated DATABRICKS_JOB_ID={job_id}")
           PY
           RUN_NOW_RESP=""
+          RUN_NOW_RC=1
           for i in 1 2 3 4; do
             set +e
             RUN_NOW_RESP=$(databricks jobs run-now --json "{\"job_id\": ${DATABRICKS_JOB_ID}}" --output json 2>&1)
-            rc=$?
+            RUN_NOW_RC=$?
             set -e
-            if [ $rc -eq 0 ]; then
+            if [ $RUN_NOW_RC -eq 0 ]; then
               break
             fi
             echo "${RUN_NOW_RESP}" >&2
             if echo "${RUN_NOW_RESP}" | grep -q "Triggering new runs for organization .* is currently disabled temporarily"; then
               wait_s=$((i * 60))
               echo "Databricks temporarily disabled new runs. retry ${i}/4 in ${wait_s}s..."
-              sleep "${wait_s}"
-              continue
+              if [ "$i" -lt 4 ]; then
+                sleep "${wait_s}"
+                continue
+              fi
+              echo "Databricks still rejects new runs after all retries." >&2
+              exit 1
             fi
-            exit $rc
+            exit $RUN_NOW_RC
           done
+          if [ $RUN_NOW_RC -ne 0 ]; then
+            echo "${RUN_NOW_RESP}" >&2
+            echo "Databricks run-now failed after retries." >&2
+            exit $RUN_NOW_RC
+          fi
           if [ -z "${RUN_NOW_RESP}" ]; then
             echo "Databricks run-now produced empty response" >&2
+            exit 1
+          fi
+          if ! echo "${RUN_NOW_RESP}" | python -c 'import json,sys; json.loads(sys.stdin.read())' >/dev/null 2>&1; then
+            echo "${RUN_NOW_RESP}" >&2
+            echo "Databricks run-now did not return valid JSON." >&2
             exit 1
           fi
           echo "${RUN_NOW_RESP}"
