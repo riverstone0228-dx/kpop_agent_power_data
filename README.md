@@ -2,6 +2,8 @@
 
 2年後にAI/DXデータアナリティクスコンサルタントとして就職または独立するため、匿名データアナリティクスインフルエンサー「リバーストーン」を育てるプロジェクト。
 
+**ダッシュボード (GitHub Pages): https://riverstone0228-dx.github.io/kpop_agent_power_data/**
+
 ## ゴール
 
 - **2年後 (2028年夏)**: AI/DXコンサルとして就職 or 独立。インフルエンサー実績をポートフォリオ化
@@ -29,9 +31,9 @@
 ### 公開レポート (GitHub Pages)
 
 日次データから生成するインタラクティブHTML: [`docs/`](docs/)  
-公開手順は [docs/README.md](docs/README.md)。有効化後のURL例:
+公開手順は [docs/README.md](docs/README.md)。
 
-`https://riverstone0228-dx.github.io/kpop_agent_power_data/`
+公開URL: https://riverstone0228-dx.github.io/kpop_agent_power_data/
 
 ## ドキュメント構成
 
