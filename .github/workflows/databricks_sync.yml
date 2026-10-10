@@ -1,6 +1,7 @@
 name: Databricks Sync Only
 
-# 日次収集を回さず、Git folder Pull → bronze load Job だけ再実行する
+# 日次収集を回さず、Databricks の Git folder を main に Pull するだけ。
+# bronze load Job は API から起動できないため、Pull 後に Databricks UI で「Run now」する
 on:
   workflow_dispatch: {}
 
@@ -8,9 +9,9 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -18,17 +19,13 @@ jobs:
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          DATABRICKS_JOB_ID: ${{ secrets.DATABRICKS_JOB_ID }}
           DATABRICKS_REPO_PATH: ${{ secrets.DATABRICKS_REPO_PATH }}
         run: |
-          if [ -z "${DATABRICKS_HOST}" ] || [ -z "${DATABRICKS_TOKEN}" ] || [ -z "${DATABRICKS_JOB_ID}" ] || [ -z "${DATABRICKS_REPO_PATH}" ]; then
+          if [ -z "${DATABRICKS_HOST}" ] || [ -z "${DATABRICKS_TOKEN}" ] || [ -z "${DATABRICKS_REPO_PATH}" ]; then
             echo "Databricks secrets incomplete"
             exit 1
           fi
           echo "Databricks secrets present"
-
-      - name: Setup Databricks CLI
-        uses: databricks/setup-cli@main
 
       - name: Pull Databricks Git folder
         env:
@@ -36,72 +33,3 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_REPO_PATH: ${{ secrets.DATABRICKS_REPO_PATH }}
         run: python scripts/databricks_pull_repo.py
-
-      - name: Trigger Databricks bronze load job
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          DATABRICKS_JOB_ID: ${{ secrets.DATABRICKS_JOB_ID }}
-        run: |
-          set -euo pipefail
-          databricks -v
-          python - <<'PY'
-          import os, sys
-          job_id = os.environ.get("DATABRICKS_JOB_ID", "").strip()
-          if not job_id:
-              print("DATABRICKS_JOB_ID is empty", file=sys.stderr)
-              raise SystemExit(2)
-          if not job_id.isdigit():
-              print(f"DATABRICKS_JOB_ID is not numeric: {job_id!r}", file=sys.stderr)
-              raise SystemExit(2)
-          print(f"Validated DATABRICKS_JOB_ID={job_id}")
-          PY
-          RUN_NOW_RESP=""
-          RUN_NOW_RC=1
-          for i in 1 2 3 4; do
-            set +e
-            RUN_NOW_RESP=$(databricks jobs run-now --json "{\"job_id\": ${DATABRICKS_JOB_ID}}" --output json 2>&1)
-            RUN_NOW_RC=$?
-            set -e
-            if [ $RUN_NOW_RC -eq 0 ]; then
-              break
-            fi
-            echo "${RUN_NOW_RESP}" >&2
-            if echo "${RUN_NOW_RESP}" | grep -q "Triggering new runs for organization .* is currently disabled temporarily"; then
-              wait_s=$((i * 60))
-              echo "Databricks temporarily disabled new runs. retry ${i}/4 in ${wait_s}s..."
-              if [ "$i" -lt 4 ]; then
-                sleep "${wait_s}"
-                continue
-              fi
-              echo "Databricks still rejects new runs after all retries." >&2
-              exit 1
-            fi
-            exit $RUN_NOW_RC
-          done
-          if [ $RUN_NOW_RC -ne 0 ]; then
-            echo "${RUN_NOW_RESP}" >&2
-            echo "Databricks run-now failed after retries." >&2
-            exit $RUN_NOW_RC
-          fi
-          if [ -z "${RUN_NOW_RESP}" ]; then
-            echo "Databricks run-now produced empty response" >&2
-            exit 1
-          fi
-          if ! echo "${RUN_NOW_RESP}" | python -c 'import json,sys; json.loads(sys.stdin.read())' >/dev/null 2>&1; then
-            echo "${RUN_NOW_RESP}" >&2
-            echo "Databricks run-now did not return valid JSON." >&2
-            exit 1
-          fi
-          echo "${RUN_NOW_RESP}"
-          RUN_ID=$(python -c 'import json,sys; data=json.loads(sys.stdin.read()); rid=data.get("run_id"); assert rid is not None, data; print(rid)' <<< "${RUN_NOW_RESP}")
-          echo "Triggered Databricks run_id=${RUN_ID}"
-          for i in 1 2 3; do
-            if databricks jobs get-run "${RUN_ID}" --output json; then
-              exit 0
-            fi
-            echo "get-run retry ${i}/3 after short wait..."
-            sleep 5
-          done
-          echo "Failed to fetch Databricks run status for run_id=${RUN_ID}" >&2
-          exit 1
