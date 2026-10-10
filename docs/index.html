@@ -263,6 +263,33 @@
       vertical-align: middle;
     }
 
+    .delta-up { color: var(--ice); }
+    .delta-down { color: var(--hot); }
+    .delta-flat { color: var(--muted); }
+
+    .agency-chips {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .agency-chips li {
+      border: 1px solid var(--bg-line);
+      border-radius: var(--radius);
+      padding: 0.6rem 0.8rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .agency-chips li.is-dim { opacity: 0.35; }
+    .agency-chips strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+
     .empty {
       padding: 2rem 1rem;
       color: var(--muted);
@@ -310,15 +337,19 @@
     <section class="block" id="sec-agency">
       <div class="section-head">
         <h2>01 <span class="accent">Agency</span> Power</h2>
-        <p>YouTube登録者合計でみる事務所パワー</p>
+        <p>所属アーティストのパワー合計（OTHER は TOP15）・右は日次推移</p>
       </div>
-      <div class="panel"><div class="chart-box"><canvas id="chart-agency"></canvas></div></div>
+      <div class="grid-2">
+        <div class="panel"><div class="chart-box"><canvas id="chart-agency"></canvas></div></div>
+        <div class="panel"><div class="chart-box"><canvas id="chart-agency-trend"></canvas></div></div>
+      </div>
+      <ul class="agency-chips" id="agency-chips"></ul>
     </section>
 
     <section class="block" id="sec-artists">
       <div class="section-head">
         <h2>02 Artist <span class="accent">TOP 10</span></h2>
-        <p>登録者数ランキング</p>
+        <p>アーティストパワー（勢い40・楽曲30・規模20・好き度10、各100点）</p>
       </div>
       <div class="grid-2">
         <div class="panel"><div class="chart-box"><canvas id="chart-artists"></canvas></div></div>
@@ -479,7 +510,7 @@
       let rows = STATE.data.agencies;
       // フィルタ時も全体比較を見せつつ選択を強調
       const labels = rows.map((r) => r.agency);
-      const values = rows.map((r) => r.subscribers);
+      const values = rows.map((r) => r.power);
       const colors = rows.map((r) => {
         const base = AGENCY_COLORS[r.agency] || COLORS.soft;
         if (STATE.agency === "ALL" || STATE.agency === r.agency) return base;
@@ -509,6 +540,69 @@
           },
         },
       });
+      renderAgencyTrend();
+      renderAgencyChips(rows);
+    }
+
+    function deltaHtml(v, digits = 1) {
+      if (v == null) return `<span class="delta-flat">—</span>`;
+      if (v > 0) return `<span class="delta-up">▲${v.toFixed(digits)}</span>`;
+      if (v < 0) return `<span class="delta-down">▼${Math.abs(v).toFixed(digits)}</span>`;
+      return `<span class="delta-flat">±0</span>`;
+    }
+
+    function rankDeltaHtml(v) {
+      if (v == null) return `<span class="delta-flat">NEW</span>`;
+      if (v > 0) return `<span class="delta-up">▲${v}</span>`;
+      if (v < 0) return `<span class="delta-down">▼${-v}</span>`;
+      return `<span class="delta-flat">→</span>`;
+    }
+
+    function renderAgencyTrend() {
+      destroyChart("agencyTrend");
+      const hist = STATE.data.agency_history || { dates: [], series: {} };
+      const datasets = Object.entries(hist.series).map(([ag, vals]) => {
+        const active = STATE.agency === "ALL" || STATE.agency === ag;
+        const color = AGENCY_COLORS[ag] || COLORS.soft;
+        return {
+          label: ag,
+          data: vals,
+          borderColor: active ? color : "rgba(255,255,255,0.12)",
+          backgroundColor: color,
+          borderWidth: active ? 2 : 1,
+          pointRadius: 0,
+          tension: 0.3,
+          spanGaps: true,
+        };
+      });
+      STATE.charts.agencyTrend = new Chart(document.getElementById("chart-agency-trend"), {
+        type: "line",
+        data: { labels: hist.dates.map((d) => d.slice(5)), datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: "index", intersect: false },
+          plugins: {
+            legend: { labels: { color: "#cfc6d8", boxWidth: 10, font: { size: 11 } } },
+            tooltip: barOpts().plugins.tooltip,
+          },
+          scales: {
+            x: { ticks: { color: "#a398b0", maxTicksLimit: 8 }, grid: { display: false } },
+            y: { ticks: { color: "#a398b0" }, grid: { color: "rgba(255,255,255,0.06)" } },
+          },
+        },
+      });
+    }
+
+    function renderAgencyChips(rows) {
+      document.getElementById("agency-chips").innerHTML = rows
+        .map((r) => {
+          const dim = STATE.agency !== "ALL" && STATE.agency !== r.agency ? "is-dim" : "";
+          return `<li class="${dim}">${r.agency}<strong>${r.power.toFixed(1)}</strong>
+            7日前比 ${deltaHtml(r.power_change_7d)} · ${r.artists}組 · 平均 ${r.avg_power.toFixed(1)}<br/>
+            トップ: ${r.top_artist || "—"}</li>`;
+        })
+        .join("");
     }
 
     function renderArtists() {
@@ -520,23 +614,30 @@
           labels: top.map((a) => truncate(a.name, 16)),
           datasets: [
             {
-              data: top.map((a) => a.youtube_subscribers),
+              data: top.map((a) => a.power),
               backgroundColor: top.map((a) => AGENCY_COLORS[a.agency] || COLORS.hot),
               borderRadius: 2,
             },
           ],
         },
-        options: barOpts(true),
+        options: (() => {
+          const o = barOpts(true);
+          o.scales.x.max = 100;
+          o.scales.x.ticks.callback = (v) => v;
+          return o;
+        })(),
       });
+      const sc = (v) => (v == null ? "—" : Math.round(v));
       renderList("list-artists", top, (a, i) => `
         <li class="rank-item">
           <div class="rank-num">${String(i + 1).padStart(2, "0")}</div>
           <img class="thumb" src="${placeholder(a.image_url)}" alt="" loading="lazy" />
           <div>
             <div class="rank-title">${a.name}<span class="agency-tag">${a.agency}</span></div>
-            <div class="rank-sub">${a.sub_agency || "—"} · Wiki JA ${fmt(a.wikipedia_pv_ja)}</div>
+            <div class="rank-sub">勢い ${sc(a.momentum_score)} · 楽曲 ${sc(a.songs_score)} · 規模 ${sc(a.scale_score)} · 好き度 ${sc(a.affinity_score)}</div>
+            <div class="rank-sub">全体${a.power_rank || "—"}位 ${rankDeltaHtml(a.rank_change_7d)} · 登録者 ${fmt(a.youtube_subscribers)}</div>
           </div>
-          <div class="rank-metric">${fmt(a.youtube_subscribers)}</div>
+          <div class="rank-metric">${a.power.toFixed(1)}</div>
         </li>`);
     }
 

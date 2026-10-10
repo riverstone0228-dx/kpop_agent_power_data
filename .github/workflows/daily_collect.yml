@@ -34,7 +34,7 @@ jobs:
           set -e
           git config user.name "riverstone-bot"
           git config user.email "riverstone0228@gmail.com"
-          git add data/raw/ data/youtube_videos/ data/apple_charts/ data/line_charts/ data/spaceshower_charts/ data/other_agency_top15/ data/song_rankings/ data/stock_prices/ docs/
+          git add data/raw/ data/youtube_videos/ data/apple_charts/ data/line_charts/ data/spaceshower_charts/ data/other_agency_top15/ data/song_rankings/ data/stock_prices/ data/power/ docs/
           git add scripts/artist_external_ids.csv scripts/track_external_ids.csv scripts/artist_external_candidates.csv scripts/track_master.csv scripts/artist_master.csv scripts/other_agency_master.csv scripts/agency_logos.csv || true
           if git diff --quiet --cached; then
             echo "No data changes to commit."
@@ -56,6 +56,8 @@ jobs:
               data/song_rankings/top_$(date -u +%Y-%m-%d).csv \
               data/song_rankings/hot_$(date -u +%Y-%m-%d).csv \
               data/stock_prices/$(date -u +%Y-%m-%d).csv \
+              data/power/artists_$(date -u +%Y-%m-%d).csv \
+              data/power/agencies_$(date -u +%Y-%m-%d).csv \
               docs/data/report.json \
               scripts/artist_external_candidates.csv \
               scripts/artist_external_ids.csv \

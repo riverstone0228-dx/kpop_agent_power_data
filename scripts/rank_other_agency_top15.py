@@ -91,8 +91,8 @@ def previous_top15(before_date_str):
         return list(csv.DictReader(f))
 
 
-def iter_chart_files(directory, lookback_dates=None, max_files=None):
-    """YYYY-MM-DD.csv のみ (summary除外)。新しい順。"""
+def iter_chart_files(directory, lookback_dates=None, max_files=None, until=None):
+    """YYYY-MM-DD.csv のみ (summary除外)。新しい順。until 指定時はその日以前のみ。"""
     files = sorted(
         [
             p
@@ -101,6 +101,8 @@ def iter_chart_files(directory, lookback_dates=None, max_files=None):
         ],
         reverse=True,
     )
+    if until is not None:
+        files = [p for p in files if os.path.basename(p)[:10] <= until.isoformat()]
     if lookback_dates is not None:
         files = [p for p in files if os.path.basename(p).replace(".csv", "") in lookback_dates]
     if max_files is not None:
@@ -137,7 +139,7 @@ def chart_momentum(pool_names, as_of: datetime.date):
                 platforms_hit[name].add("line")
 
     # SSTV: 直近N週分のファイル
-    for path in iter_chart_files(SSTV_DIR, max_files=SSTV_LOOKBACK_WEEKS):
+    for path in iter_chart_files(SSTV_DIR, max_files=SSTV_LOOKBACK_WEEKS, until=as_of):
         with open(path, newline="", encoding="utf-8") as f:
             rows = list(csv.DictReader(f))
         size = len(rows) or 40

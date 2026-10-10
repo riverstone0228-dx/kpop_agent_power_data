@@ -405,6 +405,78 @@ else:
 # COMMAND ----------
 
 # MAGIC %md
+# MAGIC ## fact_artist_power_daily / fact_agency_power_daily
+
+# COMMAND ----------
+
+power_dir = os.path.join(DATA_DIR, "power")
+
+spark.sql("""
+    CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_artist_power_daily (
+      date DATE, rank INT, agency STRING, sub_agency STRING, artist_name STRING,
+      power DOUBLE, momentum_score DOUBLE, songs_score DOUBLE, scale_score DOUBLE, affinity_score DOUBLE,
+      yt_views_7d BIGINT, wiki_pv_7d BIGINT, chart_points_7d DOUBLE, youtube_subscribers BIGINT,
+      like_rate DOUBLE, power_7d_ago DOUBLE, rank_7d_ago INT, rank_change_7d INT, loaded_at TIMESTAMP
+    ) USING DELTA PARTITIONED BY (date)
+""")
+spark.sql("""
+    CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_agency_power_daily (
+      date DATE, rank INT, agency STRING, power DOUBLE, artists INT, avg_power DOUBLE,
+      top_artist STRING, power_7d_ago DOUBLE, power_change_7d DOUBLE, loaded_at TIMESTAMP
+    ) USING DELTA PARTITIONED BY (date)
+""")
+
+artist_power_files = list_csv(power_dir, prefix="artists_")
+if not artist_power_files:
+    print("skip artist power: not found")
+else:
+    ap = read_csv(artist_power_files).withColumn("date", to_date("date"))
+    for c in ("rank", "rank_7d_ago", "rank_change_7d"):
+        ap = ap.withColumn(c, to_int(c))
+    for c in ("yt_views_7d", "wiki_pv_7d", "youtube_subscribers"):
+        ap = ap.withColumn(c, to_bigint(c))
+    for c in ("power", "momentum_score", "songs_score", "scale_score", "affinity_score",
+              "chart_points_7d", "like_rate", "power_7d_ago"):
+        ap = ap.withColumn(c, to_double(c))
+    ap = ap.withColumn("loaded_at", F.lit(LOADED_AT).cast("timestamp"))
+    ap.createOrReplaceTempView("stg_artist_power")
+    spark.sql("""
+        MERGE INTO workspace.kpop_bronze.fact_artist_power_daily t
+        USING stg_artist_power s
+        ON t.date = s.date AND t.artist_name = s.artist_name
+        WHEN MATCHED THEN UPDATE SET *
+        WHEN NOT MATCHED THEN INSERT *
+    """)
+    print("fact_artist_power_daily merge done:", ap.count())
+
+agency_power_files = list_csv(power_dir, prefix="agencies_")
+if not agency_power_files:
+    print("skip agency power: not found")
+else:
+    gp = (
+        read_csv(agency_power_files)
+        .withColumn("date", to_date("date"))
+        .withColumn("rank", to_int("rank"))
+        .withColumn("artists", to_int("artists"))
+        .withColumn("power", to_double("power"))
+        .withColumn("avg_power", to_double("avg_power"))
+        .withColumn("power_7d_ago", to_double("power_7d_ago"))
+        .withColumn("power_change_7d", to_double("power_change_7d"))
+        .withColumn("loaded_at", F.lit(LOADED_AT).cast("timestamp"))
+    )
+    gp.createOrReplaceTempView("stg_agency_power")
+    spark.sql("""
+        MERGE INTO workspace.kpop_bronze.fact_agency_power_daily t
+        USING stg_agency_power s
+        ON t.date = s.date AND t.agency = s.agency
+        WHEN MATCHED THEN UPDATE SET *
+        WHEN NOT MATCHED THEN INSERT *
+    """)
+    print("fact_agency_power_daily merge done:", gp.count())
+
+# COMMAND ----------
+
+# MAGIC %md
 # MAGIC ## 確認
 
 # COMMAND ----------
@@ -418,6 +490,8 @@ for t in [
     "workspace.kpop_bronze.fact_youtube_video_daily",
     "workspace.kpop_bronze.fact_song_rank_daily",
     "workspace.kpop_bronze.fact_stock_price_daily",
+    "workspace.kpop_bronze.fact_artist_power_daily",
+    "workspace.kpop_bronze.fact_agency_power_daily",
 ]:
     try:
         n = spark.table(t).count()

@@ -175,15 +175,21 @@ def collect_charts():
 
     safe_call("song rankings", rank_songs_main)
 
-    print("\n=== GitHub Pages report ===")
-    from build_report import main as build_report_main
-
-    safe_call("build_report", build_report_main)
-
     print("\n=== OTHER TOP15 rebalance ===")
     from rank_other_agency_top15 import main as rank_other_main
 
     safe_call("OTHER TOP15", rank_other_main)
+
+    # OTHER の事務所パワーは当日の TOP15 を使うので TOP15 の後に計算する
+    print("\n=== Artist / Agency power ===")
+    from compute_power import main as compute_power_main
+
+    safe_call("power", compute_power_main, [])
+
+    print("\n=== GitHub Pages report ===")
+    from build_report import main as build_report_main
+
+    safe_call("build_report", build_report_main)
 
 
 def main():

@@ -21,6 +21,10 @@ SCRIPTS = os.path.dirname(__file__)
 ROOT = os.path.join(SCRIPTS, "..")
 DATA = os.path.join(ROOT, "data")
 OUT = os.path.join(ROOT, "docs", "data", "report.json")
+POWER_DIR = os.path.join(DATA, "power")
+HISTORY_DAYS = 90
+# 勢い(7日再生増)が揃うのは収集開始から7日後以降
+HISTORY_WARMUP_DAYS = 7
 
 
 def latest(directory, prefix=""):
@@ -84,6 +88,32 @@ def load_logos():
     }
 
 
+def load_agency_history():
+    """事務所パワーの日次推移 {dates: [...], series: {agency: [...]}}。"""
+    files = sorted(glob.glob(os.path.join(POWER_DIR, "agencies_*.csv")))
+    dates = [os.path.basename(p)[len("agencies_"):-4] for p in files]
+    if not dates:
+        return {"dates": [], "series": {}}
+    start = datetime.strptime(dates[0], "%Y-%m-%d").date()
+    pairs = [
+        (d, p)
+        for d, p in zip(dates, files)
+        if (datetime.strptime(d, "%Y-%m-%d").date() - start).days >= HISTORY_WARMUP_DAYS
+    ][-HISTORY_DAYS:]
+
+    series = defaultdict(list)
+    out_dates = []
+    for i, (d, p) in enumerate(pairs):
+        out_dates.append(d)
+        for r in read_csv(p):
+            ag = r["agency"]
+            series[ag].extend([None] * (i - len(series[ag])))
+            series[ag].append(safe_float(r.get("power")))
+    for ag in series:
+        series[ag].extend([None] * (len(out_dates) - len(series[ag])))
+    return {"dates": out_dates, "series": dict(series)}
+
+
 def days_age(published_at: str, as_of: str) -> int:
     """公開日から as_of までの日数。不明なら 14。"""
     pub = (published_at or "")[:10]
@@ -128,16 +158,32 @@ def main():
     elif yt_path:
         report_date = os.path.basename(yt_path).replace(".csv", "")
 
-    # Artists
+    # Artists (パワーは compute_power.py の出力。raw 未収集のアーティストもパワー側から補う)
+    power_path = os.path.join(POWER_DIR, f"artists_{report_date}.csv")
+    if not os.path.exists(power_path):
+        power_path = latest(POWER_DIR, "artists_")
+    power_rows = {r["artist_name"]: r for r in read_csv(power_path)}
+
+    raw_by_name = {(r.get("artist_name") or "").strip(): r for r in raw}
     artists = []
-    for r in raw:
-        name = (r.get("artist_name") or "").strip()
-        agency = (r.get("agency") or "").strip() or "OTHER"
+    for name in dict.fromkeys([*raw_by_name, *power_rows]):
+        r = raw_by_name.get(name, {})
+        p = power_rows.get(name, {})
+        agency = (r.get("agency") or p.get("agency") or "").strip() or "OTHER"
         artists.append(
             {
                 "name": name,
                 "agency": agency,
-                "sub_agency": r.get("sub_agency", ""),
+                "sub_agency": r.get("sub_agency") or p.get("sub_agency", ""),
+                "power": safe_float(p.get("power")),
+                "power_rank": safe_int(p.get("rank")) or None,
+                "rank_change_7d": safe_int(p["rank_change_7d"]) if p.get("rank_change_7d") not in ("", None) else None,
+                "momentum_score": safe_float(p.get("momentum_score")),
+                "songs_score": safe_float(p.get("songs_score")),
+                "scale_score": safe_float(p.get("scale_score")),
+                "affinity_score": safe_float(p.get("affinity_score")) if p.get("affinity_score") else None,
+                "yt_views_7d": safe_int(p.get("yt_views_7d")),
+                "chart_points_7d": safe_float(p.get("chart_points_7d")),
                 "youtube_subscribers": safe_int(r.get("youtube_subscribers")),
                 "youtube_total_views": safe_int(r.get("youtube_total_views")),
                 "wikipedia_pv_ja": safe_int(r.get("wikipedia_pv_ja")),
@@ -148,26 +194,31 @@ def main():
             }
         )
 
-    # Agency power = sum of YT subscribers
-    agency_map = defaultdict(lambda: {"subscribers": 0, "artists": 0, "views": 0})
+    # Agency power = 所属アーティストのパワー合計 (OTHER は TOP15 のみ)
+    subs_map = defaultdict(lambda: {"subscribers": 0, "views": 0})
     for a in artists:
-        ag = a["agency"]
-        agency_map[ag]["subscribers"] += a["youtube_subscribers"]
-        agency_map[ag]["views"] += a["youtube_total_views"]
-        agency_map[ag]["artists"] += 1
+        subs_map[a["agency"]]["subscribers"] += a["youtube_subscribers"]
+        subs_map[a["agency"]]["views"] += a["youtube_total_views"]
 
+    agency_power_path = power_path.replace("artists_", "agencies_") if power_path else None
     agencies = []
-    for ag, v in agency_map.items():
+    for r in read_csv(agency_power_path):
+        ag = r["agency"]
         agencies.append(
             {
                 "agency": ag,
-                "subscribers": v["subscribers"],
-                "views": v["views"],
-                "artists": v["artists"],
+                "power": safe_float(r.get("power")),
+                "power_change_7d": safe_float(r["power_change_7d"]) if r.get("power_change_7d") else None,
+                "avg_power": safe_float(r.get("avg_power")),
+                "top_artist": r.get("top_artist", ""),
+                "artists": safe_int(r.get("artists")),
+                "subscribers": subs_map[ag]["subscribers"],
+                "views": subs_map[ag]["views"],
                 "logo_url": logos.get(ag, ""),
             }
         )
-    agencies.sort(key=lambda x: -x["subscribers"])
+    agencies.sort(key=lambda x: -x["power"])
+    agency_history = load_agency_history()
 
     def song_payload(rows):
         out = []
@@ -283,7 +334,13 @@ def main():
                 "top_songs": os.path.basename(top_path or ""),
                 "hot_songs": os.path.basename(hot_path or ""),
                 "youtube_videos": os.path.basename(yt_path or ""),
+                "power": os.path.basename(power_path or ""),
             },
+            "power_method": (
+                "artist power = 100 × (momentum 40% + songs 30% + scale 20% + affinity 10%), "
+                "each component = percentile among artists; agency power = sum of artist power "
+                "(OTHER = TOP15 only)"
+            ),
             "youtube_hot_method": (
                 "hot_mv first; score = view_count / (age_days+7). "
                 "Not day-over-day delta (needs more history). "
@@ -295,7 +352,8 @@ def main():
             "agencies": [a["agency"] for a in agencies],
         },
         "agencies": agencies,
-        "artists": sorted(artists, key=lambda x: -x["youtube_subscribers"]),
+        "agency_history": agency_history,
+        "artists": sorted(artists, key=lambda x: (-x["power"], -x["youtube_subscribers"])),
         "top_songs": song_payload(top),
         "hot_songs": song_payload(hot),
         "youtube_hot": youtube_hot[:80],

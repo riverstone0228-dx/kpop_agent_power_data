@@ -13,6 +13,7 @@ GitHub Actions (日次cron JST 6:00)
  ├─ ③ mine_chart_ids.py → external_ids 更新 → build_track_master.py
  ├─ ③b rank_songs.py → data/song_rankings/ (TOP20 / HOT20)
  ├─ ④ OTHER TOP15 リバランス → data/other_agency_top15/
+ ├─ ④b compute_power.py (アーティスト/事務所パワー) → data/power/ → build_report.py (Pages)
  └─ ⑤ git commit & push (リポジトリの data/ が原本)
       └─ (Phase 4) Databricks Delta にも書き込み
 ```
@@ -35,6 +36,7 @@ kpop_agent_power_data/
 ├── data/raw/
 ├── data/apple_charts/ / data/line_charts/ / data/spaceshower_charts/
 ├── data/other_agency_top15/
+├── data/power/
 └── README.md
 ```
 

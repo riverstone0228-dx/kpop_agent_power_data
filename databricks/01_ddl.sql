@@ -184,3 +184,43 @@ CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_stock_price_daily (
 )
 USING DELTA
 PARTITIONED BY (date);
+
+-- アーティスト / 事務所パワー (scripts/compute_power.py)。02_load.py でも IF NOT EXISTS で作成する
+CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_artist_power_daily (
+  date DATE,
+  rank INT,
+  agency STRING,
+  sub_agency STRING,
+  artist_name STRING,
+  power DOUBLE,          -- 0〜100
+  momentum_score DOUBLE, -- 勢い (40%)
+  songs_score DOUBLE,    -- 楽曲 (30%)
+  scale_score DOUBLE,    -- 規模 (20%)
+  affinity_score DOUBLE, -- 好き度 (10%)。算出不可は NULL
+  yt_views_7d BIGINT,
+  wiki_pv_7d BIGINT,
+  chart_points_7d DOUBLE,
+  youtube_subscribers BIGINT,
+  like_rate DOUBLE,
+  power_7d_ago DOUBLE,
+  rank_7d_ago INT,
+  rank_change_7d INT,
+  loaded_at TIMESTAMP
+)
+USING DELTA
+PARTITIONED BY (date);
+
+CREATE TABLE IF NOT EXISTS workspace.kpop_bronze.fact_agency_power_daily (
+  date DATE,
+  rank INT,
+  agency STRING,         -- HYBE / JYP / YG / SM / OTHER(TOP15)
+  power DOUBLE,          -- 所属アーティストのパワー合計
+  artists INT,
+  avg_power DOUBLE,
+  top_artist STRING,
+  power_7d_ago DOUBLE,
+  power_change_7d DOUBLE,
+  loaded_at TIMESTAMP
+)
+USING DELTA
+PARTITIONED BY (date);
