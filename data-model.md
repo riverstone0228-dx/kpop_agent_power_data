@@ -116,7 +116,7 @@ HYBE内のマッピング例: BTS/TXT/CORTIS→BIGHIT MUSIC、SEVENTEEN→PLEDIS
 ✅ **izna / PLAVE / YENA**: チャート初出をきっかけに OTHER プールへ追加 (2026-07-26)。
 
 ⚠️ **CORTISについて**: 調査の結果、CORTISは実際にはBIGHIT MUSIC(HYBE)所属と判明したため、「他事務所」ではなくHYBE側のartist_master.csvに分類しました。
-✅ **MEOVV/THE BLACK LABELについて**: THE BLACK LABELはYGが出資しTEDDY氏が設立したレーベルのため、2026-07-25にユーザー指示で「他事務所」からYG(sub_agency=THE BLACK LABEL)へ移動しました。
+✅ **MEOVV/THE BLACK LABELについて**: THE BLACK LABELはYGが出資しTEDDY氏が設立したレーベル。2026-07-25にユーザー指示で一度YGへ移動したが、2026-10-10に同レーベルのALLDAY PROJECTと揃えて **OTHER(sub_agency=THE BLACK LABEL)** に戻した。過去データ(data/raw, youtube_videos, apple/spaceshower charts)のagencyもOTHERに書き換え済み。
 
 ### dim_track (楽曲マスタ) — 2026-07-25方針確定: **タイトル曲のみ追跡**
 

@@ -193,22 +193,25 @@ def composite_scores(pool, as_of_str):
     momentum, platforms_hit = chart_momentum(pool_names, as_of)
 
     raw = load_raw_by_date(as_of_str)
+    # 登録者数が取れていないアーティスト（マスタ追加直後など）は 0 人扱いにせず、正規化から外す
     yt = {}
     for name in pool_names:
         try:
-            yt[name] = math.log1p(float((raw.get(name) or {}).get("youtube_subscribers") or 0))
+            subs = float((raw.get(name) or {}).get("youtube_subscribers") or 0)
         except ValueError:
-            yt[name] = 0.0
+            subs = 0.0
+        if subs > 0:
+            yt[name] = math.log1p(subs)
 
-    has_yt = any(v > 0 for v in yt.values())
+    has_yt = bool(yt)
     mom_n = normalize({n: momentum.get(n, 0.0) for n in pool_names})
-    yt_n = normalize(yt) if has_yt else {n: 0.0 for n in pool_names}
+    yt_n = normalize(yt) if has_yt else {}
 
     results = []
     for name, row in pool.items():
         chart_score = mom_n.get(name, 0.0)
         yt_score = yt_n.get(name, 0.0)
-        if has_yt:
+        if name in yt_n:
             total = CHART_WEIGHT * chart_score + YT_WEIGHT * yt_score
         else:
             total = chart_score
@@ -218,7 +221,7 @@ def composite_scores(pool, as_of_str):
                 "sub_agency": row.get("sub_agency", ""),
                 "chart_momentum_raw": round(momentum.get(name, 0.0), 1),
                 "chart_momentum_norm": round(chart_score, 4),
-                "youtube_subs_norm": round(yt_score, 4) if has_yt else "",
+                "youtube_subs_norm": round(yt_score, 4) if name in yt_n else "",
                 "platforms_hit": len(platforms_hit.get(name, set())),
                 "score": round(total, 6),
                 "youtube_subscribers": (raw.get(name) or {}).get("youtube_subscribers", ""),

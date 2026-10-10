@@ -2,7 +2,7 @@
   "meta": {
     "title": "RIVERSTONE K-POP POWER REPORT",
     "report_date": "2026-10-10",
-    "generated_at": "2026-10-10T00:23:02Z",
+    "generated_at": "2026-10-10T17:00:35Z",
     "sources": {
       "raw": "2026-10-10.csv",
       "top_songs": "top_2026-10-10.csv",
@@ -28,9 +28,9 @@
     },
     {
       "agency": "YG",
-      "subscribers": 161441690,
-      "views": 77450464209,
-      "artists": 11,
+      "subscribers": 159811690,
+      "views": 76617398173,
+      "artists": 10,
       "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/YG_Entertainment_Logo.svg/330px-YG_Entertainment_Logo.svg.png"
     },
     {
@@ -49,9 +49,9 @@
     },
     {
       "agency": "OTHER",
-      "subscribers": 49198000,
-      "views": 28557266876,
-      "artists": 17,
+      "subscribers": 50828000,
+      "views": 29390332912,
+      "artists": 18,
       "logo_url": ""
     }
   ],
@@ -608,14 +608,14 @@
     },
     {
       "name": "MEOVV",
-      "agency": "YG",
+      "agency": "OTHER",
       "sub_agency": "THE BLACK LABEL",
       "youtube_subscribers": 1630000,
       "youtube_total_views": 833066036,
       "wikipedia_pv_ja": 0,
       "wikipedia_pv_en": 0,
       "image_url": "https://yt3.ggpht.com/NxoBuYZdbffhyDihaiDFO_AOVsnj11EgjZKR4zGIFDSQEIijrzel3ZvE1x9MkvMsyFd1EG4ytVQ=s88-c-k-c0x00ffffff-no-rj",
-      "agency_logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/YG_Entertainment_Logo.svg/330px-YG_Entertainment_Logo.svg.png"
+      "agency_logo_url": ""
     },
     {
       "name": "ONEUS",
@@ -1264,6 +1264,22 @@
     },
     {
       "rank": 8,
+      "track_id": "trk_3fc97d0ce78a",
+      "artist": "ALLDAY PROJECT",
+      "track": "CRASH",
+      "agency": "OTHER",
+      "sub_agency": "THE BLACK LABEL",
+      "score": 0.504878,
+      "chart_points": 198.0,
+      "youtube_views": 0,
+      "artwork_url": "",
+      "artist_image_url": "https://yt3.googleusercontent.com/wHpPL0oGXFHWdWrWBWUAorFdwsMGHexQJmilhyi2PcKLbIXCyjHqTfMQ_1fki4C-Lm6Rjikl=s88-c-k-c0x00ffffff-no-rj",
+      "agency_logo_url": "",
+      "youtube_thumbnail_url": "",
+      "youtube_video_id": ""
+    },
+    {
+      "rank": 9,
       "track_id": "trk_d563686936bf",
       "artist": "RESCENE",
       "track": "LOVE ATTACK",
@@ -1279,7 +1295,7 @@
       "youtube_video_id": ""
     },
     {
-      "rank": 9,
+      "rank": 10,
       "track_id": "trk_5b92e5e30ce8",
       "artist": "RESCENE",
       "track": "Deja Vu",
@@ -1295,7 +1311,7 @@
       "youtube_video_id": "kalnsqjQD0Y"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "track_id": "trk_4385d0e22e4d",
       "artist": "CORTIS",
       "track": "REDRED",
@@ -1311,7 +1327,7 @@
       "youtube_video_id": "Q-ItC3Xcl3c"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "track_id": "trk_c8e7de4fc5c8",
       "artist": "RESCENE",
       "track": "Pretty Girl",
@@ -1327,7 +1343,7 @@
       "youtube_video_id": "bd42NE8dFDI"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "track_id": "trk_b29c29173f84",
       "artist": "KiiiKiii",
       "track": "Pop Off Pop Off",
@@ -1343,7 +1359,7 @@
       "youtube_video_id": "HJSgp7YQkXQ"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "track_id": "trk_a3a47d09e88b",
       "artist": "RESCENE",
       "track": "Pinball",
@@ -1359,7 +1375,7 @@
       "youtube_video_id": ""
     },
     {
-      "rank": 14,
+      "rank": 15,
       "track_id": "trk_92d2f00a715a",
       "artist": "NewJeans",
       "track": "Hype Boy",
@@ -1375,7 +1391,7 @@
       "youtube_video_id": "KrtYasOGibU"
     },
     {
-      "rank": 15,
+      "rank": 16,
       "track_id": "trk_07f30cd63216",
       "artist": "NewJeans",
       "track": "How Sweet",
@@ -1391,7 +1407,7 @@
       "youtube_video_id": "Ec0Z1v7jKDQ"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "track_id": "trk_f35879686881",
       "artist": "Hearts2Hearts",
       "track": "RUDE!",
@@ -1407,7 +1423,7 @@
       "youtube_video_id": "-PuKvBkDqUw"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "track_id": "trk_46179551e4b5",
       "artist": "Hearts2Hearts",
       "track": "ICONIC HEART",
@@ -1423,7 +1439,7 @@
       "youtube_video_id": "JCyf5heNFOE"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "track_id": "trk_74258d834407",
       "artist": "BTS",
       "track": "Butter",
@@ -1439,7 +1455,7 @@
       "youtube_video_id": "DbXMjAYSa68"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "track_id": "trk_d4d46923b488",
       "artist": "BTS",
       "track": "2.0",
@@ -1453,22 +1469,6 @@
       "agency_logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Big_Hit_Music_Logo.svg/330px-Big_Hit_Music_Logo.svg.png",
       "youtube_thumbnail_url": "https://i.ytimg.com/vi/7UWBYJjuIL0/mqdefault.jpg",
       "youtube_video_id": ""
-    },
-    {
-      "rank": 20,
-      "track_id": "trk_ab669bd9e0b3",
-      "artist": "BTS",
-      "track": "Dynamite",
-      "agency": "HYBE",
-      "sub_agency": "BIGHIT MUSIC",
-      "score": 0.401034,
-      "chart_points": 41.0,
-      "youtube_views": 144904920,
-      "artwork_url": "https://resource-jp-linemusic.line-scdn.net/r/musicjp/c/c07a319e42694t0c7789ca/m470x470",
-      "artist_image_url": "https://resource-jp-linemusic.line-scdn.net/r/musicjp/c/cj0zMTYxdWdqa2FzcHJuJnM9anA2JnQ9bSZ1PTFrNzVsZTJvODUwZzAmaT0w/m470x470",
-      "agency_logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Big_Hit_Music_Logo.svg/330px-Big_Hit_Music_Logo.svg.png",
-      "youtube_thumbnail_url": "https://i.ytimg.com/vi/CN4fffh7gmk/mqdefault.jpg",
-      "youtube_video_id": "kwAhKmSWdx8"
     }
   ],
   "youtube_hot": [

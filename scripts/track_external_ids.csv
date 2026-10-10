@@ -254,7 +254,7 @@ apple,1819694546,Hearts2Hearts,STYLE,,confirmed,Hearts2Hearts,STYLE,2026-07-26,2
 apple,1819829902,,28,,unmatched,Zach Bryan,28,2026-07-28,2026-10-09,
 apple,1820264150,,Golden,,unmatched,"HUNTR/X, EJAE, オードリー・ヌナ, REI AMI & KPop Demon Hunters Cast",Golden,2026-07-26,2026-09-29,
 apple,1821087731,YENA,革命道中 - On The Way,other_agency_master.csv,confirmed,アイナ・ジ・エンド,革命道中 - On The Way,2026-07-26,2026-10-10,
-apple,1821577352,,FAMOUS,,unmatched,ALLDAY PROJECT,FAMOUS,2026-10-01,2026-10-10,
+apple,1821577352,ALLDAY PROJECT,FAMOUS,,confirmed,ALLDAY PROJECT,FAMOUS,2026-10-01,2026-10-10,chart_artist_name_master
 apple,1821849522,,Blue Jeans,,unmatched,HANA,Blue Jeans,2026-07-26,2026-10-10,
 apple,1822439986,RESCENE,Deja Vu,,confirmed,리센느,Deja Vu,2026-07-26,2026-10-10,chart_artist_name_master
 apple,1825994649,,DAISIES,,unmatched,Justin Bieber,DAISIES,2026-07-26,2026-08-19,
@@ -634,10 +634,10 @@ apple,6812477131,,Last Thing You Need (from GTAVI: The Album),,unmatched,Morgan 
 apple,6812477268,,RHYNO,,unmatched,Travis Scott,RHYNO,2026-09-18,2026-09-18,
 apple,6812477290,,Last Thing You Need,,unmatched,Morgan Wallen,Last Thing You Need,2026-09-19,2026-10-10,
 apple,6813244854,,MISS MY DAWG,,unmatched,Yeat & Drake,MISS MY DAWG,2026-09-18,2026-09-25,
-apple,6813395913,,TALK,,unmatched,ALLDAY PROJECT,TALK,2026-09-30,2026-10-04,
-apple,6813395915,,CRASH,,unmatched,ALLDAY PROJECT,CRASH,2026-09-30,2026-10-10,
-apple,6813395917,,DO IT LIKE THIS,,unmatched,ALLDAY PROJECT,DO IT LIKE THIS,2026-09-30,2026-10-07,
-apple,6813395919,,UP ALL NIGHT,,unmatched,ALLDAY PROJECT,UP ALL NIGHT,2026-10-01,2026-10-01,
+apple,6813395913,ALLDAY PROJECT,TALK,,confirmed,ALLDAY PROJECT,TALK,2026-09-30,2026-10-04,chart_artist_name_master
+apple,6813395915,ALLDAY PROJECT,CRASH,,confirmed,ALLDAY PROJECT,CRASH,2026-09-30,2026-10-10,chart_artist_name_master
+apple,6813395917,ALLDAY PROJECT,DO IT LIKE THIS,,confirmed,ALLDAY PROJECT,DO IT LIKE THIS,2026-09-30,2026-10-07,chart_artist_name_master
+apple,6813395919,ALLDAY PROJECT,UP ALL NIGHT,,confirmed,ALLDAY PROJECT,UP ALL NIGHT,2026-10-01,2026-10-01,chart_artist_name_master
 apple,6814694661,YENA,보기 드문 여자 (feat. 나우아임영),,confirmed,최예나,보기 드문 여자 (feat. 나우아임영),2026-10-03,2026-10-10,chart_artist_name_master
 apple,6814871229,,Draw You Out,,unmatched,Noah Kahan & The Hunger Games,Draw You Out,2026-10-03,2026-10-10,
 apple,6814996157,,Patient Zero,,unmatched,Taylor Swift,Patient Zero,2026-09-25,2026-09-25,
@@ -854,7 +854,7 @@ spaceshower,0166968,izna,METRONOME,other_agency_master.csv,confirmed,izna,METRON
 spaceshower,0167017,ATEEZ,BAD,other_agency_master.csv,confirmed,ATEEZ,BAD,2026-07-17,2026-10-09,
 spaceshower,0167055,,MUAH!,,unmatched,VAYONN,MUAH!,2026-07-31,2026-08-21,
 spaceshower,0167071,,Ice Cream,,unmatched,YEONJUN,Ice Cream,2026-07-31,2026-10-02,
-spaceshower,0167095,MEOVV,DDI RO RI,artist_master.csv,confirmed,MEOVV,DDI RO RI,2026-07-24,2026-07-24,
+spaceshower,0167095,MEOVV,DDI RO RI,other_agency_master.csv,confirmed,MEOVV,DDI RO RI,2026-07-24,2026-07-24,
 spaceshower,0167111,NCT WISH,YO-I-DON!,,confirmed,NCT WISH,YO-I-DON!,2026-07-31,2026-10-09,chart_artist_name_master
 spaceshower,0167164,ONEUS,Under,other_agency_master.csv,confirmed,ONEUS,Under,2026-07-31,2026-08-21,
 spaceshower,0167187,ILLIT,"I Got Your Back (Feat.JISOO, MOMOKA of HANA)",,confirmed,ILLIT,"I Got Your Back (Feat.JISOO, MOMOKA of HANA)",2026-08-21,2026-10-09,chart_artist_name_master

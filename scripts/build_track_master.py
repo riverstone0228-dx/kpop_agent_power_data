@@ -158,8 +158,8 @@ def build_from_external_ids():
 
         row = {
             "track_id": tid,
-            "agency": prev.get("agency") or master.get("agency", ""),
-            "sub_agency": prev.get("sub_agency") or master.get("sub_agency", ""),
+            "agency": master.get("agency") or prev.get("agency", ""),
+            "sub_agency": master.get("sub_agency") or prev.get("sub_agency", ""),
             "artist_name_en": artist,
             "track_name": prev.get("track_name") or track_name,
             "release_date": prev.get("release_date", ""),
@@ -178,6 +178,13 @@ def build_from_external_ids():
             if "youtube" not in row["platforms"]:
                 row["platforms"] = (row["platforms"] + "|youtube").strip("|")
         out[tid] = row
+
+    # 今回チャートに出ていない既存曲も、事務所移動があればマスタに追従させる
+    for row in out.values():
+        master = artists.get(row.get("artist_name_en", ""))
+        if master and master.get("agency"):
+            row["agency"] = master["agency"]
+            row["sub_agency"] = master.get("sub_agency", "")
 
     rows = list(out.values())
     rows.sort(key=lambda r: (r.get("agency", ""), r.get("artist_name_en", ""), r.get("track_name", "")))

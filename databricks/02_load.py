@@ -177,6 +177,15 @@ for c in ["youtube_channel_thumbnail"]:
 
 raw.createOrReplaceTempView("stg_artist_daily")
 
+# 事務所の分類変更（例: MEOVV を YG→OTHER）で CSV を書き換えた場合、
+# キーに agency を含むため旧事務所の行が残って二重計上になる。先に削除する
+spark.sql("""
+    MERGE INTO workspace.kpop_bronze.fact_artist_daily t
+    USING (SELECT DISTINCT date, agency, artist_name FROM stg_artist_daily) s
+    ON t.date = s.date AND t.artist_name = s.artist_name AND t.agency <> s.agency
+    WHEN MATCHED THEN DELETE
+""")
+
 spark.sql("""
     MERGE INTO workspace.kpop_bronze.fact_artist_daily t
     USING stg_artist_daily s

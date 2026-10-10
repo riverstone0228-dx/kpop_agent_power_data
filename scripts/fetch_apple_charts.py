@@ -2,7 +2,7 @@
 Apple Music の公式RSSフィードから日本(jp)・韓国(kr)・米国(us)のトップソングチャートを取得する。
 
 - 認証不要・完全無料・公式提供のためスクレイピング不要
-- 各曲の genres に {"genreId":"51","name":"K-Pop"} が含まれるかでK-pop判定
+- 各曲の genres に {"genreId":"51","name":"K-Pop"} が含まれるか、マスタ一致アーティストならK-pop判定
 - artist_master.csv / other_agency_master.csv の apple_artist_id と突合し、
   4大事務所およびOTHERのアーティストを識別する
   (韓国版はアーティスト名が韓国語表記になるため、名前ではなくIDで名寄せする)
@@ -111,7 +111,9 @@ def main():
                     "apple_track_id": entry.get("id", ""),
                     "release_date": entry.get("releaseDate", ""),
                     "artwork_url": apple_artwork_larger(entry.get("artworkUrl100", "")),
-                    "is_kpop_genre": "1" if is_kpop(entry) else "0",
+                    # Apple は日本語版を J-Pop、一部グループを Dance 等で登録するため、
+                    # マスタ一致アーティストはジャンルに関係なく K-pop 扱い
+                    "is_kpop_genre": "1" if (is_kpop(entry) or master) else "0",
                     # マスタに載っているアーティストなら事務所情報を付与
                     "agency": master["agency"] if master else "",
                     "sub_agency": master.get("sub_agency", "") if master else "",

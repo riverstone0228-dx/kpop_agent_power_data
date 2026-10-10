@@ -383,6 +383,14 @@ def main():
             existing_tracks, tracks, platform, artist_lookup_by_observed
         )
 
+    # 事務所移動（artist_master ⇔ other_agency_master）で source_file が古くならないよう追従
+    for r in existing_artists + existing_tracks:
+        if not (r.get("source_file") and r.get("artist_name_en")):
+            continue
+        hits = master_index.get(norm_name(r["artist_name_en"]), [])
+        if len(hits) == 1:
+            r["source_file"] = hits[0].get("_source_file", "")
+
     existing_artists.sort(key=lambda r: (r.get("platform", ""), r.get("external_artist_id", "")))
     existing_tracks.sort(key=lambda r: (r.get("platform", ""), r.get("external_track_id", "")))
     all_candidates.sort(key=lambda r: (r.get("platform", ""), r.get("external_artist_id", "")))

@@ -100,7 +100,7 @@ apple,1745678083,SIENNA SPIRO,,,,unmatched,2026-07-29,2026-10-10,no_master_match
 apple,1745727874,King & Prince,,,,unmatched,2026-09-01,2026-09-15,no_master_match
 apple,1752134,Chris Stapleton,,,,unmatched,2026-07-26,2026-10-10,no_master_match
 apple,1754284416,KATSEYE,KATSEYE,artist_master.csv,HYBE,confirmed,2026-07-28,2026-08-19,apple_artist_id
-apple,1765256889,MEOVV,MEOVV,artist_master.csv,YG,confirmed,2026-07-26,2026-08-24,apple_artist_id
+apple,1765256889,MEOVV,MEOVV,other_agency_master.csv,OTHER,confirmed,2026-07-26,2026-08-24,apple_artist_id
 apple,1765924916,ADÉLA,,,,unmatched,2026-09-14,2026-10-10,no_master_match
 apple,1772019148,Snow Man,,,,unmatched,2026-07-26,2026-09-15,no_master_match
 apple,1779409310,이즈나,izna,other_agency_master.csv,OTHER,confirmed,2026-09-30,2026-10-10,apple_artist_id
@@ -110,7 +110,7 @@ apple,1795471746,키키,KiiiKiii,other_agency_master.csv,OTHER,confirmed,2026-07
 apple,1797624061,timelesz,,,,unmatched,2026-08-05,2026-08-07,no_master_match
 apple,1808322699,SixTONES,,,,unmatched,2026-07-26,2026-10-10,no_master_match
 apple,1812849650,SYSTEM SEOUL & ycs,,,,unmatched,2026-09-13,2026-10-10,no_master_match
-apple,1819675764,ALLDAY PROJECT,,,,unmatched,2026-09-30,2026-10-10,no_master_match
+apple,1819675764,ALLDAY PROJECT,ALLDAY PROJECT,other_agency_master.csv,OTHER,confirmed,2026-09-30,2026-10-10,apple_artist_id
 apple,1831651635,코르티스,CORTIS,artist_master.csv,HYBE,confirmed,2026-07-26,2026-10-10,apple_artist_id
 apple,18756224,宇多田ヒカル,,,,unmatched,2026-07-26,2026-10-10,empty_name
 apple,1876970625,Alyssa Grace,,,,unmatched,2026-09-27,2026-10-10,no_master_match
@@ -290,7 +290,7 @@ spaceshower,025668,NCT WISH,NCT WISH,artist_master.csv,SM,confirmed,2026-07-17,2
 spaceshower,025726,ILLIT,ILLIT,artist_master.csv,HYBE,confirmed,2026-07-17,2026-10-09,exact_name
 spaceshower,025737,BABYMONSTER,BABYMONSTER,artist_master.csv,YG,confirmed,2026-07-17,2026-10-09,exact_name
 spaceshower,025812,NEXZ,NEXZ,artist_master.csv,JYP,confirmed,2026-08-28,2026-10-09,exact_name
-spaceshower,025982,MEOVV,MEOVV,artist_master.csv,YG,confirmed,2026-07-24,2026-07-24,exact_name
+spaceshower,025982,MEOVV,MEOVV,other_agency_master.csv,OTHER,confirmed,2026-07-24,2026-07-24,exact_name
 spaceshower,026001,YEONJUN,,,,unmatched,2026-07-31,2026-10-02,no_master_match
 spaceshower,026093,izna,izna,other_agency_master.csv,OTHER,confirmed,2026-07-17,2026-10-09,chart+user
 spaceshower,026203,KiiiKiii,KiiiKiii,other_agency_master.csv,OTHER,confirmed,2026-09-04,2026-10-09,exact_name
