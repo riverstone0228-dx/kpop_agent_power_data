@@ -1,16 +1,16 @@
 rank,artist_name,sub_agency,score,chart_momentum_raw,chart_momentum_norm,youtube_subs_norm,platforms_hit,youtube_subscribers
-1,RESCENE,THE MUZE Entertainment,1.0,2692.0,1.0,,2,
-2,KiiiKiii,Starship Entertainment,0.362927,977.0,0.3629,,2,
-3,ATEEZ,KQ Entertainment,0.318722,858.0,0.3187,,4,
-4,ALLDAY PROJECT,THE BLACK LABEL,0.2474,666.0,0.2474,,1,
-5,YENA,Yuehua Entertainment,0.132987,358.0,0.133,,1,
-6,IVE,Starship Entertainment,0.067979,183.0,0.068,,2,
-7,ZEROBASEONE,WakeOne,0.029346,79.0,0.0293,,1,
-8,izna,WakeOne,0.023403,63.0,0.0234,,2,
-9,PLAVE,VLAST,0.020431,55.0,0.0204,,2,
-10,Kep1er,WakeOne,0.0,0.0,0.0,,0,
-11,MAMAMOO,RBW,0.0,0.0,0.0,,0,
-12,ONEUS,RBW,0.0,0.0,0.0,,0,
-13,P1Harmony,FNC Entertainment,0.0,0.0,0.0,,0,
-14,STAYC,High Up Entertainment,0.0,0.0,0.0,,0,
-15,i-dle,Cube Entertainment,0.0,0.0,0.0,,0,
+1,RESCENE,THE MUZE Entertainment,0.764701,2686.0,1.0,0.2157,2,1290000
+2,ATEEZ,KQ Entertainment,0.460292,859.0,0.3198,0.7881,4,5700000
+3,i-dle,Cube Entertainment,0.3,0.0,0.0,1.0,0,9880000
+4,IVE,Starship Entertainment,0.276013,185.0,0.0689,0.7593,2,5290000
+5,MAMAMOO,RBW,0.25733,0.0,0.0,0.8578,0,6830000
+6,KiiiKiii,Starship Entertainment,0.254617,977.0,0.3637,0.0,2,737000
+7,ALLDAY PROJECT,THE BLACK LABEL,0.231733,673.0,0.2506,0.1878,1,1200000
+8,YENA,Yuehua Entertainment,0.158485,343.0,0.1277,0.2303,1,1340000
+9,ZEROBASEONE,WakeOne,0.142705,79.0,0.0294,0.4071,1,2120000
+10,Kep1er,WakeOne,0.142551,0.0,0.0,0.4752,0,2530000
+11,izna,WakeOne,0.134695,61.0,0.0227,0.396,2,2060000
+12,STAYC,High Up Entertainment,0.106994,0.0,0.0,0.3566,0,1860000
+13,P1Harmony,FNC Entertainment,0.101913,0.0,0.0,0.3397,0,1780000
+14,ONEUS,RBW,0.088867,0.0,0.0,0.2962,0,1590000
+15,PLAVE,VLAST,0.072938,60.0,0.0223,0.191,2,1210000
